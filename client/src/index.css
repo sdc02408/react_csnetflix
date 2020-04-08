@@ -76,6 +76,17 @@ height: 100px;
   text-align: center;
 }
 
+.boxer{
+  transition: transform 300ms ease 100ms;
+}
+
+.slideboxer:hover .boxer{
+  transform: translateX(-25%);
+}
+.boxer:hover ~ .boxer{
+  transform: translateX(25%);
+  transform: scale(1.5) !important;
+}
 /*.big:hover .slideimage{*/
 /*  transform: translateX(-25%);*/
 /*}*/

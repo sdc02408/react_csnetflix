@@ -4,21 +4,28 @@ import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
 import MainImage from './Sections/MainImage'
 import Slideimage from '../commons/Slideimage'
 import MainText from './Sections/MainText.jsx'
-import {DownOutlined} from '@ant-design/icons'
+import {DownOutlined,RightOutlined} from '@ant-design/icons'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import {withRouter} from 'react-router-dom';
 
-function Arrow(props) {
-  let className = props.type === "next" ? "nextArrow" : "prevArrow";
-  className += " arrow";
-  const char = props.type === "next" ? "👉" : "👈";
+
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+
+  
   return (
-    <span className={className} onClick={props.onClick}>
-      {char}
-    </span>
+    
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+
+      onClick={onClick}
+
+    />
+
   );
 }
 
@@ -66,7 +73,8 @@ function LandingPage () {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 6,
-    cssEase:'linear'
+    cssEase:'linear',
+    nextArrow: <SampleNextArrow />,
   };
   
   
@@ -89,25 +97,27 @@ function LandingPage () {
       />
       }
       
-      <div style={{width:'95%', margin:'0 auto'}} className="big">
+      
+      
+      
+      <div style={{width:'95%', margin:'0 auto'}} className='slideboxer'>
         <div className='slide-title'>Netflix 인기 콘텐츠</div>
-        <Slider
-          nextArrow={<Arrow type="next" />}
-          prevArrow={<Arrow type="prev" />}
-          {...settings}
-          
-        >
+        <Slider {...settings} >
         {Movies && Movies.map((movie,index) => (
-          <React.Fragment key={index} >
+          <React.Fragment key={index}  >
           <Slideimage
             image={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
-       
           />
           
           </React.Fragment>
           ))}
         </Slider>
       </div>
+      
+      
+      
+      
+      
   
       <div style={{width:'95%', margin:'3vh auto'}}>
         <div className='slide-title'> 내가 찜한 콘텐츠</div>
@@ -115,7 +125,7 @@ function LandingPage () {
           {Tv && Tv.map((tv,index) => (
             <React.Fragment key={index}>
               <Slideimage
-                image={tv.backdrop_path?
+                image={tv.backdrop_path ?
                   `${IMAGE_BASE_URL}w300${tv.poster_path}` : null }
               
               />
