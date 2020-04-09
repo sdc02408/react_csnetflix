@@ -3,6 +3,7 @@ import axios from 'axios';
 import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
 import MainImage from './Sections/MainImage'
 import Slideimage from '../commons/Slideimage'
+import Common_slide from '../commons/common_slide'
 import MainText from './Sections/MainText.jsx'
 import {DownOutlined,RightOutlined} from '@ant-design/icons'
 import Slider from "react-slick";
@@ -135,6 +136,8 @@ function LandingPage () {
       </div>
 
     
+      <Common_slide
+      />
       
       
     </div>

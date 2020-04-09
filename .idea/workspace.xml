@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../react_travel/react_travel" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -133,7 +133,9 @@
       <workItem from="1586010026098" duration="2422000" />
       <workItem from="1586020158967" duration="141000" />
       <workItem from="1586226011337" duration="728000" />
-      <workItem from="1586344110963" duration="8018000" />
+      <workItem from="1586344110963" duration="8202000" />
+      <workItem from="1586399973068" duration="617000" />
+      <workItem from="1586439542251" duration="4094000" />
     </task>
     <servers />
   </component>
