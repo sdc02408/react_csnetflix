@@ -3,7 +3,7 @@ import axios from 'axios';
 import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
 import MainImage from './Sections/MainImage'
 import Slideimage from '../commons/Slideimage'
-import Common_slide from '../commons/common_slide'
+// import Common_slide from '../commons/common_slide'
 import MainText from './Sections/MainText.jsx'
 import {DownOutlined,RightOutlined} from '@ant-design/icons'
 import Slider from "react-slick";
@@ -22,7 +22,6 @@ function SampleNextArrow(props) {
     <div
       className={className}
       style={{ ...style, display: "block", background: "red" }}
-
       onClick={onClick}
 
     />
@@ -37,6 +36,7 @@ function LandingPage () {
   const [MainMovieImage, setMainMovieImage] = useState(null)
   const [Tv, setTv] = useState([])
   
+
   
   useEffect(() => {
     const endpoint = `${API_URL}movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
@@ -44,8 +44,10 @@ function LandingPage () {
     
     const tvshow = `${API_URL}tv/top_rated?api_key=${API_KEY}&language=en-US&page=1`
     fetchTv(tvshow)
-    
-    
+  
+    // const newmovie = `${API_URL}tv/popular?api_key=${API_KEY}&language=en-US&page=1`
+    // fetchNewMovie(newmovie)
+    //
   }, [])
   
   const fetchMovies = (endpoint) => {
@@ -67,6 +69,17 @@ function LandingPage () {
      
     })
   }
+  
+  // const fetchNewMovie = (newmovie) => {
+  //   fetch(newmovie)
+  //   .then(response => response.json())
+  //   .then(response => {
+  //     console.log(response)
+  //     setNewMovies([...NewMovies, ...response.results])
+  //
+  //   })
+  // }
+  //
   
   const settings = {
 
@@ -114,11 +127,6 @@ function LandingPage () {
           ))}
         </Slider>
       </div>
-      
-      
-      
-      
-      
   
       <div style={{width:'95%', margin:'3vh auto'}}>
         <div className='slide-title'> 내가 찜한 콘텐츠</div>
@@ -134,11 +142,15 @@ function LandingPage () {
           ))}
         </Slider>
       </div>
+  
+  
+      {/*{NewMovies && Movies.map((newmovie,index) => (*/}
+      {/*  <Common_slide*/}
+      {/*    image={`${IMAGE_BASE_URL}w300${newmovie.poster_path}`}*/}
+      {/*  />*/}
+      {/*))}*/}
 
-    
-      <Common_slide
-      />
-      
+
       
     </div>
     
