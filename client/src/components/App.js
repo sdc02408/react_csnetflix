@@ -13,7 +13,8 @@ import RegisterPage from './views/RegisterPage/RegisterPage'
 import Slider from './views/Topten/Topten'
 import Auth from '../hoc/auth'
 import NavBar from './views/NavBar/NavBar'
-
+import TrendContainer from '../container/TrendContainer'
+import Layout from '../container/Layout'
 function App() {
   return (
     <Router>
@@ -27,7 +28,7 @@ function App() {
         <NavBar />
         <div style={{paddingTop: '1px', minHeight: 'calc(100vh -80px'}}>
         <Switch>
-          <Route exact path="/" component={Auth(LandingPage, null,true )} />
+          <Route exact path="/" component={Layout} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
           <Route exact path="/topten" component={Auth(Slider, false)} />

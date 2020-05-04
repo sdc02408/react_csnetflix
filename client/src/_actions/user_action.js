@@ -1,9 +1,34 @@
 import axios from 'axios';
+import {API_KEY,API_URL,IMAGE_BASE_URL} from '../components/Config'
 import {
   LOGIN_USER,
   REGISTER_USER,
-  AUTH_USER
+  AUTH_USER,
+  FETCH_TRENDING
 } from './types';
+
+export const fetchTrendData = (data) => {
+  return {
+    type:FETCH_TRENDING,
+    data,
+ 
+  }
+}
+
+export const fetchTrending = () => {
+    return (dispatch) => {
+      return axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-US`)
+      .then(response => {
+        dispatch(fetchTrendData(response.data))
+      })
+      .catch(error => {
+        throw(error);
+      })
+    }
+}
+
+
+
 
 export function loginUser (dataToSubmit) {
   const request = axios.post('/api/users/login', dataToSubmit)
@@ -42,3 +67,5 @@ export function auth () {
     payload: request
   }
 }
+
+

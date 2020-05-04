@@ -1,0 +1,15 @@
+@import "abstracts/variables";
+@import "abstracts/function";
+
+@import "components/Landingpage";
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  width: 100vw;
+  background: $color-background;
+}
