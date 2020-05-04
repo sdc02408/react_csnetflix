@@ -4,7 +4,8 @@ import {
   LOGIN_USER,
   REGISTER_USER,
   AUTH_USER,
-  FETCH_TRENDING
+  FETCH_TRENDING,
+  FETCH_TOPRATED
 } from './types';
 
 export const fetchTrendData = (data) => {
@@ -20,13 +21,33 @@ export const fetchTrending = () => {
       return axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-US`)
       .then(response => {
         dispatch(fetchTrendData(response.data))
+        
       })
+      
       .catch(error => {
         throw(error);
       })
     }
 }
 
+export const fetchTopRatedData = (data) => {
+  return {
+    type: FETCH_TOPRATED,
+    data,
+  }
+}
+
+export const fetchTopRated = () => {
+  return (dispatch) => {
+    return axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US`)
+    .then(response => {
+      dispatch(fetchTopRatedData(response.data))
+    })
+    .catch(error => {
+      throw(error);
+    })
+  }
+}
 
 
 

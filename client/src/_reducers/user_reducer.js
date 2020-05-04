@@ -1,4 +1,4 @@
-import { LOGIN_USER, REGISTER_USER, AUTH_USER,FETCH_TRENDING} from '../_actions/types'
+import { LOGIN_USER, REGISTER_USER, AUTH_USER,FETCH_TRENDING, FETCH_TOPRATED} from '../_actions/types'
 
 
 export default function(state = {}, action) {
@@ -18,6 +18,11 @@ export default function(state = {}, action) {
         movies:action.data
       }
       break
+    case FETCH_TOPRATED:
+      return {
+        ...state,
+        movies: action.data
+      }
     default:
       return state
   }

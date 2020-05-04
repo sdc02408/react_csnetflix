@@ -154,8 +154,8 @@
 //       {/*    image={`${IMAGE_BASE_URL}w300${newmovie.poster_path}`}*/}
 //       {/*  />*/}
 //       {/*))}*/}
-//
-//
+
+
 //
 //     </div>
 //
@@ -164,20 +164,15 @@
 //
 //
 // export default withRouter(LandingPage)
+
 import React from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Movie from '../commons/Movie'
+
 
 function LandingPage (props) {
   return (
     <>
-      <div className="movie">
-        <img src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} alt={props.props.id}/>
-      </div>
-  
-
-      
+      <Movie />
     </>
   )
 }

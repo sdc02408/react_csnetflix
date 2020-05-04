@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchTrending } from '../_actions/user_action';
-import LandingPage from '../components/views/LandingPage/LandingPage';
+import Movie from '../components/views/commons/Movie';
 import {withRouter } from 'react-router-dom';
 
 const TrendContainer = (props) => {
@@ -15,20 +15,22 @@ const TrendContainer = (props) => {
   
   const TrendData = useSelector(state => state.trending.movies, []) || [];
   console.log(TrendData)
-  // 변경된 부분 you could use memoization to improve performance.
+  
+  const [MainMovieImage, setMainMovieImage] = useState(null)
   
   return (
-    <div>
+    <>
       
       <p>Trend Movies</p>
       <div className="movieContainer"> // 변경된 부분
         { TrendData.results && TrendData.results.map(movie => (
-          <LandingPage props={movie} key={movie.id}/>
+          <Movie props={movie} key={movie.id}/>
         
         ))}
       </div>
-    
-    </div>
+      
+ 
+</>
   )
 }
 
