@@ -1,6 +1,7 @@
 import React from 'react';
 import TrendContainer from './TrendContainer';
 import TopRated from './TopRated'
+
 const Layout = () => {
   
   return (

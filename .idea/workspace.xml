@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/static/sass/abstracts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Netflix_Clone-master/Netflix_Clone-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -141,7 +141,9 @@
       <workItem from="1586515511310" duration="10766000" />
       <workItem from="1586582483970" duration="1230000" />
       <workItem from="1588432890219" duration="4043000" />
-      <workItem from="1588579090765" duration="14441000" />
+      <workItem from="1588579090765" duration="14698000" />
+      <workItem from="1588665251934" duration="392000" />
+      <workItem from="1588682650256" duration="8514000" />
     </task>
     <servers />
   </component>

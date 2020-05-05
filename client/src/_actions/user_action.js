@@ -5,7 +5,8 @@ import {
   REGISTER_USER,
   AUTH_USER,
   FETCH_TRENDING,
-  FETCH_TOPRATED
+  FETCH_TOPRATED,
+  FETCH_NETFLIX
 } from './types';
 
 export const fetchTrendData = (data) => {
@@ -49,6 +50,25 @@ export const fetchTopRated = () => {
   }
 }
 
+export const fetchNetFlixData = (data) => {
+  return {
+    type: FETCH_NETFLIX,
+    data,
+  }
+}
+
+export const fetchNetFlix =() => {
+  return (dispatch) => {
+    return axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213`)
+    .then(response => {
+      dispatch(fetchNetFlixData(response.data))
+      
+    })
+    .catch(error => {
+      throw(error);
+    })
+  }
+}
 
 
 export function loginUser (dataToSubmit) {

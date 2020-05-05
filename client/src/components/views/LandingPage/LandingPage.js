@@ -167,12 +167,16 @@
 
 import React from 'react';
 import Movie from '../commons/Movie'
+import MainText from './Sections/MainText'
+import Layout from '../../../container/Layout'
+import Netflix from '../../../container/Netflix'
 
 
 function LandingPage (props) {
   return (
     <>
-      <Movie />
+      <Netflix />
+      <Layout />
     </>
   )
 }
