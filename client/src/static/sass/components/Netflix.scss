@@ -1,93 +1,42 @@
 .layout {
-  width: 90vw;
+  width: 95%;
   margin: auto;
-
 
   p {
     color: white;
-    font-size: 1em;
+    font-size: 1.9em;
     font-weight: 700;
     text-transform: uppercase;
-
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 0;
   }
 }
 
 .csslider {
   margin: 2em 0;
-  height: 15rem;
+  height: 10rem;
   padding: 15px;
   align-items: center;
-  position: static;
-  display: flex;
 
-  &:hover .movie {
-    opacity: .3;
-    transform: translateX(-25%);
-  }
+  .slick-list {
 
-  .movie {
-    background: black;
-    margin: 5px;
-    transition: all 0.2s ease-in;
-    display: inline-block;
-
-    &:hover {
+    &:hover .slick-slide{
       opacity: 1;
       z-index: 1;
-
     }
-
-    &:hover ~ .movie{
-      transform: translateX(25%);
-    }
-
     .slick-slide{
+      .movie {
 
-
-      &:hover {
-        transform: scale(1.5) !important;
-      }
-
-
-
-
-    img {
-
-      cursor: pointer;
-      transition: all 0.2s ease-in;
-
-      @include responsive(tab_port) {
-        height: 6em;
-      }
-
-      @include responsive(phone) {
-        height: 13em;
-      }
-
-      &:hover {
-        height: 11em;
-
-
-
-        @include responsive(tab_port) {
-          height: 9em;
-        }
-
-        @include responsive(phone) {
-          height: 14em;
+        img {
+          height: auto;
+          cursor: pointer;
+          transition: all 0.2s ease-in;
         }
       }
-    }
-
-
-    }
   }
 
-  &:hover .netflixMovie {
-    opacity: .3;
-  }
 
+  }
 }
-//.slick-slide{
-//  margin: 0 2px!important;
-//}
+

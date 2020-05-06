@@ -8,7 +8,7 @@ function MainText(props) {
 
 
       <div style={{position:'relative', maxWidth:'600px', top:'25rem', marginLeft:'60px',height:'90vh'}}>
-        <p style={{color:'white', fontSize:'70px', margin:'0 auto',textAlign:'center',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',}}>{props.title}</p>
+        <p style={{color:'white', fontSize:'70px', margin:'0 auto',textAlign:'left',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',}}>{props.title}</p>
         <p style={{color:'white', fontSize:'1.2rem',
           fontWeight: 'normal',
           lineHeight: 'normal',

@@ -13,7 +13,7 @@ import ReduxThunk from 'redux-thunk';
 import Reducer from './_reducers';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import './static/sass/style.scss';
+
 // const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

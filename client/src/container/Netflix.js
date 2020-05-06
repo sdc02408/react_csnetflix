@@ -3,11 +3,13 @@ import { fetchNetFlix } from '../_actions/user_action'
 import { useDispatch, useSelector } from 'react-redux'
 import Movie from '../components/views/commons/Movie'
 import Slider from 'react-slick'
-import '../static/sass/style.scss';
-// import '../static/sass/components/Netflix.scss';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import '../static/sass/components/Netflix.scss';
 
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+
+
+
 import { Card, Col } from 'antd'
 
 const Netflix = (props) => {
@@ -15,8 +17,8 @@ const Netflix = (props) => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 4,
+    slidesToShow: 6,
+    slidesToScroll: 6,
   }
   const dispatch = useDispatch()
   
@@ -29,8 +31,8 @@ const Netflix = (props) => {
   const netflixData = useSelector(state => state.netflix.movies, []) || []
   
   return (
-    <div>
-      <p>Netflix</p>
+    <>
+      <p style={{}}>Netflix</p>
       <Slider {...settings} className="csslider">
         
         {netflixData.results && netflixData.results.map(movie => (
@@ -40,7 +42,7 @@ const Netflix = (props) => {
         ))}
       
       </Slider>
-    </div>
+    </>
   )
 }
 
