@@ -23,12 +23,6 @@ const TopRated = (props) =>{
           <Movie props={movie} key={movie.id}/>
         ))}
     </div>
-  
-      {/*{ topRatedData.results &&*/}
-      {/*<MainText*/}
-      {/*  title={props.original_title}*/}
-      {/*  text={props.overview}/>*/}
-      {/*}*/}
     </div>
   )
 }

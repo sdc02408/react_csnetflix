@@ -165,19 +165,55 @@
 //
 // export default withRouter(LandingPage)
 
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Movie from '../commons/Movie'
 import MainText from './Sections/MainText'
 import Layout from '../../../container/Layout'
 import Netflix from '../../../container/Netflix'
-
+import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
+import MainImage from './Sections/MainImage'
 
 function LandingPage (props) {
+  
+
+  const [MainMovieImage, setMainMovieImage] = useState(null)
+
+  useEffect(() => {
+    const endpoint = `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213&page=1`
+    fetchMovies(endpoint)
+  }, [])
+
+  const fetchMovies = (endpoint) => {
+    fetch(endpoint)
+    .then(response => response.json())
+    .then(response => {
+      console.log("main",response)
+      setMainMovieImage(response.results[1])
+    })
+  }
+  
   return (
-    <>
-      <Netflix />
+      <div style={{width:'100%', margin:'0'}}>
+    
+    
+        {MainMovieImage &&
+        <MainImage
+          image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
+        />
+        }
+    
+    
+        {MainMovieImage &&
+        <MainText
+          title={MainMovieImage.original_name}
+          text={MainMovieImage.overview}
+        />
+        }
+        
+        
+   
       <Layout />
-    </>
+      </div>
   )
 }
 

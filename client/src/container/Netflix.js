@@ -1,28 +1,46 @@
 import React, { useEffect, useState } from 'react'
-import {fetchNetFlix} from '../_actions/user_action';
-import MainText from '../components/views/LandingPage/Sections/MainText'
-import MainImage from '../components/views/LandingPage/Sections/MainImage'
-import { useDispatch,useSelector } from 'react-redux'
+import { fetchNetFlix } from '../_actions/user_action'
+import { useDispatch, useSelector } from 'react-redux'
+import Movie from '../components/views/commons/Movie'
+import Slider from 'react-slick'
+import '../static/sass/style.scss';
+// import '../static/sass/components/Netflix.scss';
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import { Card, Col } from 'antd'
 
 const Netflix = (props) => {
-  const [MainMovieImage, setMainMovieImage] = useState(null)
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 4,
+  }
+  const dispatch = useDispatch()
   
-  const dispatch = useDispatch();
+  useEffect(() => {
+    
+    dispatch(fetchNetFlix())
+    
+  }, [])
   
-  useEffect(() =>{
-    dispatch(fetchNetFlix());
-
-  },[])
+  const netflixData = useSelector(state => state.netflix.movies, []) || []
   
   return (
-    <>
-      {MainMovieImage.results &&
-       <MainText
-        title={props.original_title}
-        text={props.overview}
-      />}
+    <div>
+      <p>Netflix</p>
+      <Slider {...settings} className="csslider">
+        
+        {netflixData.results && netflixData.results.map(movie => (
+          
+          <Movie props={movie} key={movie.id}/>
+        
+        ))}
       
-      </>
+      </Slider>
+    </div>
   )
 }
 

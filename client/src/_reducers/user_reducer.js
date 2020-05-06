@@ -1,6 +1,6 @@
 import { LOGIN_USER, REGISTER_USER, AUTH_USER,FETCH_TRENDING,FETCH_NETFLIX} from '../_actions/types'
 
-
+//리듀서 ㅁ함수 만들기.
 export default function(state = {}, action) {
   switch (action.type) {
     case LOGIN_USER:

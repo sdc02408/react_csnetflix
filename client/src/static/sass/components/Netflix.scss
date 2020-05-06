@@ -1,6 +1,7 @@
 .layout {
-  width: 95%;
+  width: 90vw;
   margin: auto;
+
 
   p {
     color: white;
@@ -11,9 +12,9 @@
   }
 }
 
-.movieContainer {
+.csslider {
   margin: 2em 0;
-  height: 10rem;
+  height: 15rem;
   padding: 15px;
   align-items: center;
   position: static;
@@ -24,8 +25,7 @@
     transform: translateX(-25%);
   }
 
-
-  .slick-slide {
+  .movie {
     background: black;
     margin: 5px;
     transition: all 0.2s ease-in;
@@ -34,15 +34,25 @@
     &:hover {
       opacity: 1;
       z-index: 1;
-      transform: scale(1.5) !important;
+
     }
 
     &:hover ~ .movie{
       transform: translateX(25%);
     }
 
+    .slick-slide{
+
+
+      &:hover {
+        transform: scale(1.5) !important;
+      }
+
+
+
+
     img {
-      height: 8em;
+
       cursor: pointer;
       transition: all 0.2s ease-in;
 
@@ -58,6 +68,7 @@
         height: 11em;
 
 
+
         @include responsive(tab_port) {
           height: 9em;
         }
@@ -67,6 +78,9 @@
         }
       }
     }
+
+
+    }
   }
 
   &:hover .netflixMovie {
@@ -74,49 +88,6 @@
   }
 
 }
-
-.netflixContainer {
-  margin: 2em 0;
-  padding: 15px;
-  align-items: center;
-  position: static;
-  display: flex;
-  overflow-y: hidden;
-
-  &::-webkit-scrollbar {
-    background: none;
-    border: 1px solid rgb(48, 48, 48);
-  }
-  &::-webkit-scrollbar-thumb {
-    background: rgb(85, 85, 85);
-    border-radius: 30px;
-  }
-
-  &:hover .netflixMovie {
-    opacity: .3;
-  }
-
-  .netflixMovie {
-    margin-right: 1rem;
-    transition: all 0.2s ease-in;
-
-    &:hover {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-
-    img {
-      height: 27em;
-      cursor: pointer;
-      transition: all 0.2s ease-in;
-
-      @include responsive(tab_port) {
-        height: 20em;
-      }
-
-      @include responsive(phone) {
-        height: 33em;
-      }
-    }
-  }
-}
+//.slick-slide{
+//  margin: 0 2px!important;
+//}
