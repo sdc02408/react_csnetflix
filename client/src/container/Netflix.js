@@ -8,10 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 import '../static/sass/components/Netflix.scss';
 
 
-
-
-import { Card, Col } from 'antd'
-
 const Netflix = (props) => {
   const settings = {
     dots: false,

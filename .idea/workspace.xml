@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/static/sass/abstracts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/static/sass/components" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -36,19 +36,19 @@
     <property name="ts.external.directory.path" value="D:\webstrom\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\static\sass\components" />
+      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\static\sass\abstracts" />
+      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src" />
+      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\Topten\Sections" />
+      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\Topten" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src" />
       <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\Topten" />
       <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\Topten\Sections" />
       <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\commons" />
       <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\LandingPage\Sections" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\static\sass\abstracts" />
-      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src" />
-      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\Topten\Sections" />
-      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\Topten" />
-      <recent name="D:\etc\리액트 프로젝트\csnetflix\csnetflix\client\src\components\views\NetflixSlider" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -145,7 +145,8 @@
       <workItem from="1588579090765" duration="14698000" />
       <workItem from="1588665251934" duration="392000" />
       <workItem from="1588682650256" duration="8644000" />
-      <workItem from="1588745911809" duration="18048000" />
+      <workItem from="1588745911809" duration="18165000" />
+      <workItem from="1588820010390" duration="21555000" />
     </task>
     <servers />
   </component>

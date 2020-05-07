@@ -31,6 +31,7 @@
     transition: all 0.2s ease-in;
     display: inline-block;
 
+
     &:hover {
       opacity: 1;
       z-index: 1;
@@ -41,32 +42,22 @@
       transform: translateX(25%);
     }
 
+
     img {
       height: 8em;
       cursor: pointer;
       transition: all 0.2s ease-in;
 
-      @include responsive(tab_port) {
-        height: 6em;
-      }
-
-      @include responsive(phone) {
-        height: 13em;
-      }
 
       &:hover {
         height: 11em;
 
 
-        @include responsive(tab_port) {
-          height: 9em;
-        }
 
-        @include responsive(phone) {
-          height: 14em;
-        }
       }
     }
+
+
   }
 
   &:hover .netflixMovie {

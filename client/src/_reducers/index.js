@@ -10,7 +10,8 @@ const rootReducer = combineReducers({
   user,
   trending: trendingReducer,
   toprated: topratedReducer,
-  netflix: netflixReducer
+  netflix: netflixReducer,
+ 
 //comment
 })
 

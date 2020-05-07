@@ -12,7 +12,23 @@
     margin-bottom: 0;
   }
 }
+.ant-popover-content{
+  width:95vw!important;
+  margin: 0 auto;
+  background-color:#ffffff;
+  left:0;
 
+
+  .ant-popover-title{
+    background-color:#ffffff;
+  }
+
+  .ant-popover-inner-content{
+    background-color: #ffffff;
+  }
+
+
+}
 .csslider {
   margin: 2em 0;
   height: 10rem;
@@ -21,20 +37,43 @@
 
   .slick-list {
 
-    &:hover .slick-slide{
+    &:hover .slick-slide {
       opacity: 1;
       z-index: 1;
     }
-    .slick-slide{
+
+    .slick-slide {
+
       .movie {
+        position: relative;
+
+        &:hover .detailIcon {
+          display: block;
+          transform: scale(1.5);
+        }
+
+        //&:hover img {
+        //  transform: scale(1.2);
+        //}
 
         img {
           height: auto;
           cursor: pointer;
           transition: all 0.2s ease-in;
         }
+
+
+
+        .detailIcon {
+          position: sticky;
+          bottom: 15%;
+          color: #ffffff;
+          display: block;
+        }
+
+
       }
-  }
+    }
 
 
   }
