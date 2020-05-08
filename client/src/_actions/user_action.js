@@ -8,7 +8,9 @@ import {
   FETCH_TOPRATED,
   FETCH_NETFLIX,
 
+
 } from './types';
+
 
 //액션 생성 함수 만들기 ,  data는 파라미터. 파라미터는 액션 객체 안에 추가 필드로 들어간다.
 export const fetchTrendData = (data) => {

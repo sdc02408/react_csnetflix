@@ -13,7 +13,7 @@ const Layout = () => {
       {/*<TrendContainer/>*/}
    
       <Netflix />
-      <TopRated />
+      {/*<TopRated />*/}
     </div>
   )
 }

@@ -23,7 +23,8 @@ export default function(state = {}, action) {
         ...state,
         movies: action.data
       }
-     
+break
+  
     default:
       return state
   }

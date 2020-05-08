@@ -37,6 +37,10 @@
 
   .slick-list {
 
+    &:click{
+      overflow: visible;
+    }
+
     &:hover .slick-slide {
       opacity: 1;
       z-index: 1;
