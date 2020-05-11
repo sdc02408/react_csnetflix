@@ -25,7 +25,7 @@ const TopRated = (props) =>{
   const topRatedData = useSelector(state => state.toprated.movies,[]) || [];
   
   return (
-    <>
+    <div className="sliders">
     <p>Top Rated Movies</p>
   <Slider {...settings} className="csslider">
   
@@ -36,7 +36,7 @@ const TopRated = (props) =>{
     ))}
   
   </Slider>
-  </>
+  </div>
   )
 }
 

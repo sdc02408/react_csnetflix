@@ -3,13 +3,12 @@
   width: 100vw;
   height: 100vh;
   background: rgba(44, 44, 44, 0.733);
-  position: absolute;
-  top: 0;
+  position: fixed;
+  //top: 100px;
   left: 0;
 
   &.show {
     display: block;
-    margin-top:200px;
   }
 
   &.hide {
@@ -17,7 +16,7 @@
   }
 
   .modal {
-    position: relative;
+    position: absolute;
     bottom: 10%;
     width: 100vw;
     height: 70vh;
@@ -25,7 +24,7 @@
     overflow: hidden;
 
     img {
-      width: 100%;
+      width: 120%;
       height: auto;
       position: absolute;
       opacity: 0.6;
@@ -73,6 +72,7 @@
           }
 
 
+
           span {
             font-size: 12px;
             font-weight: 600;
@@ -83,3 +83,40 @@
     }
   }
 }
+.searchMovie {
+  z-index: 100;
+  width: 100vw;
+  height: 86vh;
+  background: #333333;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  .listContainer {
+    width: 80vw;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: scroll;
+
+
+    .lists {
+      img {
+        height: 300px;
+        z-index: 5;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+}
+
+
+

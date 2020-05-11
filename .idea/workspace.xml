@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../reactmoiveapi/boilerplate-mern-stack-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -147,7 +147,11 @@
       <workItem from="1588682650256" duration="8644000" />
       <workItem from="1588745911809" duration="18165000" />
       <workItem from="1588820010390" duration="21584000" />
-      <workItem from="1588936176910" duration="9026000" />
+      <workItem from="1588936176910" duration="9461000" />
+      <workItem from="1589004850586" duration="4115000" />
+      <workItem from="1589037105540" duration="2738000" />
+      <workItem from="1589119937188" duration="1360000" />
+      <workItem from="1589175955056" duration="19867000" />
     </task>
     <servers />
   </component>

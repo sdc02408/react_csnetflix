@@ -32,7 +32,6 @@ input.error {
   border-color: red;
 }
 
-
 .input-feedback {
   color: red;
   height: 5px;
@@ -44,11 +43,9 @@ input.error {
   background-color:rgb(29, 161, 242)!important;
 }
 
-
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
-
 .slick-prev:before, .slick-next:before {
   color:white !important;
 height: 100px;
@@ -64,7 +61,6 @@ height: 100px;
   font-weight: bold;
   margin-bottom: 15px;
 }
-
 
 .slideimage{
 

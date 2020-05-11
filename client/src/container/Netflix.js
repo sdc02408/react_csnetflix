@@ -27,18 +27,18 @@ const Netflix = (props) => {
   const netflixData = useSelector(state => state.netflix.movies, []) || []
   
   return (
-    <>
+    <div className="sliders">
       <p style={{}}>Netflix</p>
       <Slider {...settings} className="csslider">
         
         {netflixData.results && netflixData.results.map(movie => (
           
           <Movie props={movie} key={movie.id}/>
-        
+         
         ))}
       
       </Slider>
-    </>
+    </div>
   )
 }
 

@@ -1,15 +1,21 @@
 import React from 'react';
-import '../../../../static/sass/components/modal.scss'
-export const DetailMovie = ({name, overview, img, show, containerName,onClick}) => {
+import {Modal} from 'antd';
+import '../../../../static/sass/components/modal.scss';
+
+
+
+export const DetailMovie = ({name, overview, img, show, containerName,onClick,voteaverage,first_air_date}) => {
   
   return (
     show ?
       <div className={containerName} onClick={onClick}>
-        <div className="modal" >
+        <div className="modal">
           <img src={`https://image.tmdb.org/t/p/original/${img}`} alt="bg"/>
           <div className="bg"></div>
           <div className="modal-content">
             <h1>{name}</h1>
+            <p>{voteaverage}</p>
+            <p>{first_air_date}</p>
             <p>{overview}</p>
             <div className="btn">
               <button><span>PLAY</span></button>
@@ -21,6 +27,7 @@ export const DetailMovie = ({name, overview, img, show, containerName,onClick}) 
       </div>
       :
       null
+
   )
 };
 

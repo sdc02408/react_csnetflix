@@ -6,6 +6,7 @@ import {SearchOutlined,BellOutlined,UserOutlined} from '@ant-design/icons'
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import SearchInput from '../../../../container/SearchInput'
 
 function RightMenu(props) {
   const user = useSelector(state => state.user)
@@ -25,7 +26,9 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="search">
-          <a href="/"><SearchOutlined /></a>
+          <div className="search-box">
+          <SearchInput />
+          </div>
         </Menu.Item>
         <Menu.Item key="kids">
           <a href="/">키즈</a>
@@ -45,7 +48,9 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="search">
-          <a href="/"><SearchOutlined /></a>
+          <div className="search-box">
+            <SearchInput />
+          </div>
         </Menu.Item>
         <Menu.Item key="kids">
           <a href="/">키즈</a>

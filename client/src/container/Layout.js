@@ -11,9 +11,11 @@ const Layout = () => {
     <div className="layout">
       
       {/*<TrendContainer/>*/}
-   
+  
+  
       <Netflix />
-      {/*<TopRated />*/}
+     
+    
     </div>
   )
 }
