@@ -5,7 +5,7 @@ import Movie from '../components/views/commons/Movie'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../static/sass/components/Netflix.scss';
+import '../static/sass/components/Netflix.scss'
 
 
 const Netflix = (props) => {
@@ -27,7 +27,7 @@ const Netflix = (props) => {
   const netflixData = useSelector(state => state.netflix.movies, []) || []
   
   return (
-    <div className="sliders">
+    <div className="sliders" style={{width:'95%',margin:'0 auto'}}>
       <p style={{}}>Netflix</p>
       <Slider {...settings} className="csslider">
         

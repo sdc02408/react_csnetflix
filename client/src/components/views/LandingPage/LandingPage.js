@@ -168,10 +168,11 @@
 import React,{useState,useEffect} from 'react';
 import Movie from '../commons/Movie'
 import MainText from './Sections/MainText'
-import Layout from '../../../container/Layout'
+// import Layout from '../../../container/Layout'
 import Netflix from '../../../container/Netflix'
 import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
 import MainImage from './Sections/MainImage'
+import TopRated from '../../../container/TopRated'
 
 function LandingPage (props) {
   
@@ -194,14 +195,12 @@ function LandingPage (props) {
   
   return (
       <div style={{width:'100%', margin:'0'}}>
-    
-    
+        
         {MainMovieImage &&
         <MainImage
           image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
         />
         }
-    
     
         {MainMovieImage &&
         <MainText
@@ -210,9 +209,10 @@ function LandingPage (props) {
         />
         }
         
-        
-   
-      <Layout />
+      {/*<Layout />*/}
+      <Netflix />
+        <Netflix />
+     
       </div>
   )
 }

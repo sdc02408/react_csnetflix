@@ -1,5 +1,5 @@
 .layout {
-  width: 95%;
+  width: 90%;
   margin: auto;
 
   p {
@@ -35,18 +35,48 @@
 
 
   .slick-list {
-    display: flex;
-    //height: 600px;
+    //display: flex;
+    height: 600px;
 
-    &:hover .slick-slide {
-      opacity: 1;
-      z-index: 1;
-    }
+
 
     .slick-slide {
+      margin-top:50px;
+
 
       .movie {
         position: relative;
+
+        &:hover {
+          transform: scale(1.5);
+          z-index: 100;
+          transition: all 0.2s ease-in;
+        }
+
+        .detailTitle{
+          position: absolute;
+          bottom: 20%;
+          left:50%;
+          color: #ffffff;
+          display: none;
+        }
+
+        &:hover .detailTitle {
+          display: block;
+          transform: scale(1.5);
+          position: absolute;
+          bottom: 10%;
+          left:50%;
+          color: #ffffff;
+        }
+
+        .detailIcon {
+          position: absolute;
+          bottom: 10%;
+          left:50%;
+          color: #ffffff;
+          display: none;
+        }
 
         &:hover .detailIcon {
           display: block;
@@ -57,27 +87,17 @@
           color: #ffffff;
         }
 
-        &:hover img {
-          transform: scale(1.2);
-        }
+        //&:hover img {
+        //  transform: scale(1.5);
+        //  position: static;
+        //
+        //}
 
         img {
           height: auto;
           cursor: pointer;
           transition: all 0.2s ease-in;
         }
-
-
-
-        .detailIcon {
-          position: absolute;
-          bottom: 10%;
-          left:50%;
-          color: #ffffff;
-          display: none;
-        }
-
-
       }
     }
 

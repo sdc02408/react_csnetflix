@@ -14,14 +14,12 @@ const Movie = (props) => {
   
   const clickhi= () => {
     console.log("hi")
-    //   var changes = document.getElementsByClassName("sliders")
-    //   console.log(changes,"chages")
-    // }
   }
   
   const showModal = () => {
     setModal(true);
     clickhi()
+ 
   }
   
   const closeModal = () => {
@@ -32,6 +30,9 @@ const Movie = (props) => {
     <>
       <div className="movie" >
         <img style={{width:"98%"}} src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} alt={props.props.id} />
+        <h3 className="detailTitle" style={{color:'white'}}>{props.props.name}</h3>
+          
+         
           <DownOutlined className="detailIcon" onClick={() => showModal()} style={{fontSize:"20px"}}></DownOutlined>
       </div>
   

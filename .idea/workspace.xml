@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../reactmoiveapi/boilerplate-mern-stack-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -151,7 +151,16 @@
       <workItem from="1589004850586" duration="4115000" />
       <workItem from="1589037105540" duration="2738000" />
       <workItem from="1589119937188" duration="1360000" />
-      <workItem from="1589175955056" duration="19867000" />
+      <workItem from="1589175955056" duration="20084000" />
+      <workItem from="1589250057560" duration="1264000" />
+      <workItem from="1589352659803" duration="2194000" />
+      <workItem from="1589509051220" duration="745000" />
+      <workItem from="1589522488820" duration="15654000" />
+      <workItem from="1589596863051" duration="2841000" />
+      <workItem from="1589615601494" duration="240000" />
+      <workItem from="1589717056124" duration="2188000" />
+      <workItem from="1590027310634" duration="3999000" />
+      <workItem from="1590647232218" duration="7190000" />
     </task>
     <servers />
   </component>
@@ -184,5 +193,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/_actions/user_action.js</url>
+          <line>43</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

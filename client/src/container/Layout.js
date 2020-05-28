@@ -10,12 +10,14 @@ const Layout = () => {
   return (
     <div className="layout">
       
-      {/*<TrendContainer/>*/}
-  
+     
   
       <Netflix />
-     
-    
+      {/*<div style={{backgroundColor:'white', width:'100%', height:'300px'}}>*/}
+      {/*</div>*/}
+      <TopRated />
+
+
     </div>
   )
 }

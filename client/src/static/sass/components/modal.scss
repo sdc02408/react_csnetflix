@@ -1,10 +1,10 @@
 .modalContainer {
   z-index: 500;
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   background: rgba(44, 44, 44, 0.733);
   position: fixed;
-  //top: 100px;
+  top: 100px;
   left: 0;
 
   &.show {
@@ -17,7 +17,7 @@
 
   .modal {
     position: absolute;
-    bottom: 10%;
+    bottom: 0%;
     width: 100vw;
     height: 70vh;
     background: rgb(44, 44, 44);
