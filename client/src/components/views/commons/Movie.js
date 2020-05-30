@@ -19,7 +19,6 @@ const Movie = (props) => {
   const showModal = () => {
     setModal(true);
     clickhi()
- 
   }
   
   const closeModal = () => {
