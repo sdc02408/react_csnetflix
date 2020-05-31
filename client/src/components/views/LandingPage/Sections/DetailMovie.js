@@ -1,12 +1,12 @@
 import React from 'react';
 import {Modal} from 'antd';
-import '../../../../static/sass/components/modal.scss';
-
-
 
 export const DetailMovie = ({name, overview, img, show, containerName,onClick,voteaverage,first_air_date}) => {
   
   return (
+  
+
+    
     show ?
       <div className={containerName} onClick={onClick}>
         <div className="modal">

@@ -30,21 +30,43 @@ const Movie = (props) => {
       <div className="movie" >
         <img style={{width:"98%"}} src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} alt={props.props.id} />
         <h3 className="detailTitle" style={{color:'white'}}>{props.props.name}</h3>
-          
-         
+  
+  
           <DownOutlined className="detailIcon" onClick={() => showModal()} style={{fontSize:"20px"}}></DownOutlined>
       </div>
-  
-      <DetailMovie
-        containerName={"modalContainer " + (modal ? "show" : "hide")}
-        name={props.props.title}
-        overview={props.props.overview}
-        show={modal}
-        img={props.props.backdrop_path}
-        onClick={() => closeModal()}
-        voteaverage={props.props.vote_average}
-        date={props.props.first_air_date}
-      />
+      
+      
+      
+      <Modal
+ 
+        maskClosable={false}
+        visible={modal}
+        onOk={() => closeModal()}
+        
+        
+      >
+       
+        
+        <p>{props.props.name}</p>
+        <p>{props.props.overview}</p>
+        
+      </Modal>
+
+      
+      
+      
+      
+      
+      {/*<DetailMovie*/}
+      {/*  containerName={"modalContainer " + (modal ? "show" : "hide")}*/}
+      {/*  name={props.props.title}*/}
+      {/*  overview={props.props.overview}*/}
+      {/*  show={modal}*/}
+      {/*  img={props.props.backdrop_path}*/}
+      {/*  onClick={() => closeModal()}*/}
+      {/*  voteaverage={props.props.vote_average}*/}
+      {/*  date={props.props.first_air_date}*/}
+      {/*/>*/}
       
     </>
   )

@@ -15,6 +15,7 @@ const Netflix = (props) => {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 6,
+
   }
   const dispatch = useDispatch()
   

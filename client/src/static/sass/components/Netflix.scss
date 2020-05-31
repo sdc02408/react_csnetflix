@@ -33,15 +33,17 @@
   padding: 15px;
   align-items: center;
 
+  //.slick-arrow{
+  //  margin-top: 50px;
+  //}
 
   .slick-list {
     //display: flex;
-    height: 600px;
-
-
+    //height: 600px;
+    padding: 20px 0;
 
     .slick-slide {
-      margin-top:50px;
+      //margin-top:50px;
 
 
       .movie {
