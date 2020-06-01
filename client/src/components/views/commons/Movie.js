@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import {DownOutlined} from '@ant-design/icons'
+import {DownOutlined,CloseOutlined} from '@ant-design/icons'
 import '../../../static/sass/components/modal.scss'
 import {Popover,Button,Modal} from 'antd'
 import DetailMovie from '../LandingPage/Sections/DetailMovie'
-
+import '../../../static/sass/components/Movie.scss'
 import { useSelector,useDispatch } from 'react-redux'
 
 
@@ -30,26 +30,44 @@ const Movie = (props) => {
       <div className="movie" >
         <img style={{width:"98%"}} src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} alt={props.props.id} />
         <h3 className="detailTitle" style={{color:'white'}}>{props.props.name}</h3>
-  
-  
           <DownOutlined className="detailIcon" onClick={() => showModal()} style={{fontSize:"20px"}}></DownOutlined>
       </div>
       
       
       
       <Modal
- 
+       
         maskClosable={false}
         visible={modal}
-        onOk={() => closeModal()}
-        
-        
+        centered
+        closeIcon={<DownOutlined/> }
+        bodyStyle={{width:'100%'}}
+        onCancel={false}
       >
+        <CloseOutlined style={{color:'white',float:'right',fontSize:'20px',
+          position:'absolute', right:'35px',zIndex:'200',top:'35px'}}  onClick={() => closeModal()} />
+        
+        <div style={{width:'25%', backgroundColor:'black' }}>
+          <p>{props.props.name}</p>
+          <p>{props.props.overview}</p>
+        </div>
+        
+        <div style={{width:'10%',backgroundImage: 'linear-gradient(to right,#000,transparent);'}}>
+        </div>
+        
+        <div className="rigthmoal"
+             style={{
+               background: `url('https://image.tmdb.org/t/p/original/${props.props.backdrop_path}')`,
+               backgroundRepeat: 'no-repeat',
+               backgroundSize: 'cover',
+               backgroundPosition: 'center, center',
+               zIndex: '0',
+               width: '65%',
+             }}>
+        </div>
+        
+        
        
-        
-        <p>{props.props.name}</p>
-        <p>{props.props.overview}</p>
-        
       </Modal>
 
       
