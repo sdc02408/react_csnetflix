@@ -18,7 +18,7 @@ export const DetailMovie = ({name, overview, img, show, containerName,onClick,vo
             <p>{first_air_date}</p>
             <p>{overview}</p>
             <div className="btn">
-              <button><span>PLAY</span></button>
+              <button><span>LAY</span></button>
               <button><span>MY LIST</span></button>
               <button><span>DETAILS</span></button>
             </div>
