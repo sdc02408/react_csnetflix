@@ -41,33 +41,34 @@ const Movie = (props) => {
         visible={modal}
         centered
         closeIcon={<DownOutlined/> }
-        bodyStyle={{width:'100%'}}
+        bodyStyle={{width:'100%',height:'auto',display:'flex'}}
         onCancel={false}
       >
         <CloseOutlined style={{color:'white',float:'right',fontSize:'20px',
           position:'absolute', right:'35px',zIndex:'200',top:'35px'}}  onClick={() => closeModal()} />
         
-        <div style={{width:'25%', backgroundColor:'black' }}>
+        <div style={{width:'35%', backgroundColor:'black' }} className="modalLeft">
           <p>{props.props.name}</p>
           <p>{props.props.overview}</p>
         </div>
         
-        <div style={{width:'10%',backgroundImage: 'linear-gradient(to right,#000,transparent);'}}>
-        </div>
-        
-        <div className="rigthmoal"
-             style={{
-               background: `url('https://image.tmdb.org/t/p/original/${props.props.backdrop_path}')`,
-               backgroundRepeat: 'no-repeat',
-               backgroundSize: 'cover',
-               backgroundPosition: 'center, center',
-               zIndex: '0',
-               width: '65%',
-             }}>
-        </div>
-        
-        
        
+      
+        <div className="rigthmoal" style={{width:'65%',position:'relative'}}>
+          <div style={{width:'10%',backgroundImage: 'linear-gradient(to right,#000,transparent);'}}>
+          </div>
+          <img src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`} style={{width:'100%'}}></img>
+        </div>
+      {/*  style={{*/}
+      {/*  background: `url('https://image.tmdb.org/t/p/original/${props.props.backdrop_path}')`,*/}
+      {/*  backgroundRepeat: 'no-repeat',*/}
+      {/*  backgroundSize: 'cover',*/}
+      {/*  backgroundPosition: 'center, center',*/}
+      {/*  zIndex: '0',*/}
+      {/*  width: '65%',*/}
+      {/*}}>*/}
+      
+      
       </Modal>
 
       
