@@ -175,7 +175,7 @@ import MainImage from './Sections/MainImage'
 import TopRated from '../../../container/TopRated'
 
 function LandingPage (props) {
-  
+
 
   const [MainMovieImage, setMainMovieImage] = useState(null)
 
@@ -188,31 +188,31 @@ function LandingPage (props) {
     fetch(endpoint)
     .then(response => response.json())
     .then(response => {
-      console.log("main",response)
-      setMainMovieImage(response.results[1])
+      console.log("main",response.results[1])
+      setMainMovieImage(response.results[2])
     })
   }
-  
+
   return (
       <div style={{width:'100%', margin:'0'}}>
-        
+
         {MainMovieImage &&
         <MainImage
           image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
         />
         }
-    
+
         {MainMovieImage &&
         <MainText
           title={MainMovieImage.original_name}
           text={MainMovieImage.overview}
         />
         }
-        
+
       {/*<Layout />*/}
       <Netflix />
         <Netflix />
-     
+
       </div>
   )
 }

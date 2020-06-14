@@ -48,9 +48,7 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="search">
-          <div className="search-box">
             <SearchInput />
-          </div>
         </Menu.Item>
         <Menu.Item key="kids">
           <a href="/">키즈</a>

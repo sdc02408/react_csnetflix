@@ -4,37 +4,37 @@ import axios from 'axios';
 import {SearchOutlined} from '@ant-design/icons'
 import '../static/sass/components/modal.scss'
 const SearchInput = () => {
+
   const [search, setSearch] = useState('');
   const [lists, setLists] = useState(false);
   const [movieLists, setMovieLists] = useState([]);
-  
-  
+
   const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&sort_by=&include_adult=false&query=${search}&language=en-US&page=1`;
    console.log(url,"fdfd")
   let data = [];
-  
+
   const fetch = async () => {
     const response = await axios.get(url);
     data = response.data.results || [];
     setMovieLists(data);
   }
-  
+
   const onChange = (e) => {
     setSearch(e.target.value);
     fetch(setMovieLists());
     setLists(true);
   }
-  
+
   const hideLists = () => {
     setLists(false);
     setSearch('');
   }
-  
+
   return (
-    <div className="searchContainer">
+    <div className="searchContainer" style={{padding: '10px 15px'}}>
       <div className="inputContainer">
-        <input className="search-txt" type="text" value={search} onChange={onChange} placeholder="title"/>
-        <a className="searchLogo"><SearchOutlined/></a>
+        <input className="search-txt" style={{display:'none'}} type="text" value={search} onChange={onChange} placeholder="title"/>
+        <a className="searchLogo" style={{color:'#ffffff'}}><SearchOutlined/></a>
       </div>
       <div className={"searchMovie " + (lists ? "show" : "")} onClick={() => hideLists()}>
         <div className="listContainer">
@@ -48,7 +48,7 @@ const SearchInput = () => {
 }
 
 const List = (props) => {
-  
+
   return (
     <>
       <div className="lists">
