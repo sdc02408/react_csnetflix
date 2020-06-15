@@ -1,62 +1,77 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import {API_KEY,API_URL,IMAGE_BASE_URL} from '../components/Config'
 import axios from 'axios';
 import {SearchOutlined} from '@ant-design/icons'
-import '../static/sass/components/modal.scss'
+import '../static/sass/components/Search.scss'
+import {Input} from 'antd'
+import SearchPage from '../components/views/SearchPage/SearchPage'
+import { withRouter, useHistory } from 'react-router-dom'
 const SearchInput = () => {
-
+  
+  let history = useHistory()
+  
   const [search, setSearch] = useState('');
   const [lists, setLists] = useState(false);
   const [movieLists, setMovieLists] = useState([]);
-
-  const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&sort_by=&include_adult=false&query=${search}&language=en-US&page=1`;
-   console.log(url,"fdfd")
+ 
+ 
+  const url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${search}`;
   let data = [];
 
   const fetch = async () => {
     const response = await axios.get(url);
     data = response.data.results || [];
     setMovieLists(data);
+    console.log(setMovieLists(data),'url')
   }
-
+  
   const onChange = (e) => {
     setSearch(e.target.value);
-    fetch(setMovieLists());
-    setLists(true);
+    fetch(setMovieLists)
+   
+    return history.push('/searchpage',movieLists)
   }
-
-  const hideLists = () => {
-    setLists(false);
-    setSearch('');
-  }
+  console.log(search,"ccc")
+  
+  // const hideLists = () => {
+  //   setLists(false);
+  //   setSearch('');
+  // }
 
   return (
-    <div className="searchContainer" style={{padding: '10px 15px'}}>
+    <div className="searchContainer" style={{padding: '10px 1px'}}>
+     
       <div className="inputContainer">
-        <input className="search-txt" style={{display:'none'}} type="text" value={search} onChange={onChange} placeholder="title"/>
-        <a className="searchLogo" style={{color:'#ffffff'}}><SearchOutlined/></a>
+  
+        {lists &&
+        <Input className="searchText"  type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
+        }
+        <a className="searchLogo" style={{color:'#ffffff'}} onClick={() => setLists(!lists)}><SearchOutlined/></a>
+       
       </div>
-      <div className={"searchMovie " + (lists ? "show" : "")} onClick={() => hideLists()}>
-        <div className="listContainer">
+      
+      <div className={"searchMovie " + (lists ? "show" : "")} style={{width:'100%', position:'fixed'}}>
+        <div className="listContainer" style={{width:'100%',display:'flex',flexWrap:'wrap'}}>
           { movieLists && movieLists.map(movie => (
-            <List props={movie} key={movie.id}/>
+            <SearchPage props={movie} imageList={movie.poster_path} key={movie.id}/>
           ))}
-        </div>
+     
+      </div>
       </div>
     </div>
   )
 }
 
-const List = (props) => {
-
-  return (
-    <>
-      <div className="lists">
-        <img src={`https://image.tmdb.org/t/p/original/${props.props.poster_path}`}
-        />
-      </div>
-    </>
-  )
-}
+// const List = (props) => {
+//
+//   return (
+//     <>
+//       <div style={{width:'100%'}}>
+//         <img src={`https://image.tmdb.org/t/p/original/${props.props.poster_path}`} style={{width:'150px'}}
+//         />
+//       </div>
+//     </>
+//   )
+// }
 
 export default SearchInput

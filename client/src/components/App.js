@@ -10,7 +10,7 @@ import {
 import LandingPage from './views/LandingPage/LandingPage'
 import LoginPage from './views/LoginPage/LoginPage'
 import RegisterPage from './views/RegisterPage/RegisterPage'
-
+import SearchPage from './views/SearchPage/SearchPage'
 import Auth from '../hoc/auth'
 import NavBar from './views/NavBar/NavBar'
 import TrendContainer from '../container/TrendContainer'
@@ -31,7 +31,7 @@ function App() {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
-         
+          <Route exact path="/searchpage" component={SearchPage}/>
         </Switch>
       </div>
     </Router>
