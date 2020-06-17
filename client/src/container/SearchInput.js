@@ -50,7 +50,7 @@ const SearchInput = () => {
        
       </div>
       
-      <div className={"searchMovie " + (lists ? "show" : "")} style={{width:'100%', position:'fixed'}}>
+      <div className={"searchMovie " + (lists ? "show" : "")} style={{width:'100%',position:'absolute'}}>
         <div className="listContainer" style={{width:'100%',display:'flex',flexWrap:'wrap'}}>
           { movieLists && movieLists.map(movie => (
             <SearchPage props={movie} imageList={movie.poster_path} key={movie.id}/>
