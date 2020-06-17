@@ -172,11 +172,9 @@ import MainText from './Sections/MainText'
 import Netflix from '../../../container/Netflix'
 import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
 import MainImage from './Sections/MainImage'
-import TopRated from '../../../container/TopRated'
 
 function LandingPage (props) {
-
-
+  
   const [MainMovieImage, setMainMovieImage] = useState(null)
 
   useEffect(() => {

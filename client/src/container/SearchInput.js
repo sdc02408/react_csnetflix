@@ -6,6 +6,8 @@ import '../static/sass/components/Search.scss'
 import {Input} from 'antd'
 import SearchPage from '../components/views/SearchPage/SearchPage'
 import { withRouter, useHistory } from 'react-router-dom'
+import {Noimage} from '../components/views/SearchPage/noimage.jpg'
+
 const SearchInput = () => {
   
   let history = useHistory()
@@ -15,21 +17,20 @@ const SearchInput = () => {
   const [movieLists, setMovieLists] = useState([]);
  
  
-  const url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${search}`;
+  const url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&page=1&query=${search}`;
   let data = [];
 
   const fetch = async () => {
     const response = await axios.get(url);
     data = response.data.results || [];
     setMovieLists(data);
-    console.log(setMovieLists(data),'url')
   }
   
   const onChange = (e) => {
     setSearch(e.target.value);
     fetch(setMovieLists)
    
-    return history.push('/searchpage',movieLists)
+    return history.push('/searchpage', movieLists)
   }
   console.log(search,"ccc")
   
@@ -50,10 +51,11 @@ const SearchInput = () => {
        
       </div>
       
-      <div className={"searchMovie " + (lists ? "show" : "")} style={{width:'100%',position:'absolute'}}>
-        <div className="listContainer" style={{width:'100%',display:'flex',flexWrap:'wrap'}}>
+      <div className={"searchMovie " + (lists ? "show" : "")} style={{width:'100%',position:'fixed',left:'0px',top:'100px'}}>
+        <div className="listContainer" style={{width:'100%',display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
           { movieLists && movieLists.map(movie => (
-            <SearchPage props={movie} imageList={movie.poster_path} key={movie.id}/>
+            <SearchPage props={movie} imageList={movie.poster_path ?
+              `https://image.tmdb.org/t/p/original/${movie.poster_path}` : null} key={movie.id}/>
           ))}
      
       </div>

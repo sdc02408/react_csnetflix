@@ -6,8 +6,8 @@ function SearchPage (props) {
 
   
   return (
-    <div>
-      <img src={`https://image.tmdb.org/t/p/original/${props.imageList}`} style={{width:'150px'}}/>
+    <div style={{margin:'10px 10px'}}>
+      <img src={props.imageList} style={{width:'150px'}}/>
     </div>
   )
 }

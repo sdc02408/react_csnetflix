@@ -42,15 +42,25 @@
     //height: 600px;
     padding: 20px 0;
 
+    &:hover .movie{
+      transform: translateX(-25%);
+    }
+
+
     .slick-slide {
       //margin-top:50px;
 
+      &:hover ~ .movie{
+        transform: translateX(25%);
+      }
 
       .movie {
         position: relative;
 
+
+
         &:hover {
-          transform: scale(1.5);
+          transform: scale(1.6);
           z-index: 100;
           transition: all 0.2s ease-in;
         }
