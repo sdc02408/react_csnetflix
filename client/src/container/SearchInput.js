@@ -53,12 +53,13 @@ const SearchInput = () => {
       
       <div className={"searchMovie " + (lists ? "show" : "")} style={{width:'100%',position:'fixed',left:'0px',top:'100px'}}>
         <div className="listContainer" style={{width:'100%',display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
+       
           { movieLists && movieLists.map(movie => (
             <SearchPage props={movie} imageList={movie.poster_path ?
               `https://image.tmdb.org/t/p/original/${movie.poster_path}` : null} key={movie.id}/>
-          ))}
-     
-      </div>
+              ))}
+          </div>
+        
       </div>
     </div>
   )

@@ -27,93 +27,157 @@
 //    background-color: #ffffff;
 //  }
 //}
-.csslider {
-  margin: 2em 0;
-  height: 10rem;
-  padding: 15px;
-  align-items: center;
 
-  //.slick-arrow{
-  //  margin-top: 50px;
-  //}
+  .csslider {
+    margin: 2em 0;
+    height: 10rem;
 
-  .slick-list {
-    //display: flex;
-    //height: 600px;
-    padding: 20px 0;
+    //padding: 15px 0;
+    //align-items: center;
 
-    &:hover .movie{
-      transform: translateX(-25%);
-    }
+    //.slick-arrow{
+    //  margin-top: 50px;
+    //}
 
+    .slick-list {
+      padding: 40px 0;
 
-    .slick-slide {
-      //margin-top:50px;
-
-      &:hover ~ .movie{
-        transform: translateX(25%);
+      &:hover .movie {
+        transform: translateX(-25%);
+        transition: all 0.2s ease-in;
       }
 
-      .movie {
-        position: relative;
+      .slick-slide {
 
-
-
-        &:hover {
-          transform: scale(1.6);
-          z-index: 100;
+        &:hover ~ .slick-slide {
+          transform: translateX(50%);
           transition: all 0.2s ease-in;
         }
 
-        .detailTitle{
-          position: absolute;
-          bottom: 20%;
-          left:50%;
-          color: #ffffff;
-          display: none;
-        }
+        .movie {
+          position: relative;
 
-        &:hover .detailTitle {
-          display: block;
-          font-size:14px;
-          position: absolute;
-          bottom: 10%;
-          left:7%;
-          color: #ffffff;
-        }
+          &:hover {
+            transform: scale(1.6);
+            z-index: 100;
+            transition: all 0.2s ease-in;
+          }
 
-        .detailIcon {
-          position: absolute;
-          bottom: 10%;
-          left:50%;
-          color: #ffffff;
-          display: none;
-        }
+          .detailTitle {
+            display: none;
+          }
 
-        &:hover .detailIcon {
-          display: block;
-          transform: scale(1.5);
-          position: absolute;
-          bottom: 10%;
-          left:50%;
-          color: #ffffff;
-        }
+          &:hover .detailTitle {
+            display: block;
+            font-size: 16px;
+            position: absolute;
+            bottom: 30%;
+            font-weight: 600;
+            left: 7%;
+            color: #ffffff;
+            margin-bottom: 0;
+          }
 
-        //&:hover img {
-        //  transform: scale(1.5);
-        //  position: static;
-        //
-        //}
+          .detailVoteAverage {
+            display: none;
+          }
 
-        img {
-          height: auto;
-          cursor: pointer;
-          transition: all 0.2s ease-in;
+          &:hover .detailVoteAverage {
+            display: block;
+            font-size: 10px;
+            position: absolute;
+            bottom: 20%;
+            left: 7%;
+            color: #ffffff;
+            margin-bottom: 0;
+          }
+
+          .detailLan {
+            display: none;
+          }
+
+          &:hover .detailLan {
+            display: block;
+            font-size: 10px;
+            position: absolute;
+            bottom: 20%;
+            left: 15%;
+            color: #ffffff;
+            margin-bottom: 0;
+          }
+
+          .playBtn {
+            display: none;
+          }
+
+          &:hover .playBtn {
+            display: block;
+            position: absolute;
+            bottom: 47%;
+            left: 7%;
+            color: #E50914;
+          }
+
+          .detailIcon {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            color: #ffffff;
+            display: none;
+          }
+
+          &:hover .detailIcon {
+            display: block;
+            position: absolute;
+            bottom: 18%;
+            left: 50%;
+            color: #ffffff;
+          }
+
+          .likeBtn {
+            display: none;
+          }
+
+          &:hover .likeBtn {
+            display: block;
+            position: absolute;
+            bottom: 60%;
+            left: 85%;
+            color: #ffffff;
+          }
+
+          .dislikeBtn {
+            display: none;
+          }
+
+          &:hover .dislikeBtn {
+            display: block;
+            position: absolute;
+            bottom: 45%;
+            left: 85%;
+            color: #ffffff;
+          }
+
+          .plusBtn {
+            display: none;
+          }
+
+          &:hover .plusBtn {
+            display: block;
+            position: absolute;
+            bottom: 30%;
+            left: 85%;
+            color: #ffffff;
+          }
+
+          img {
+            height: auto;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+          }
         }
       }
+
+
     }
-
-
   }
-}
-

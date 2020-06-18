@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { DownOutlined, CloseOutlined, CaretRightOutlined, InfoCircleOutlined } from '@ant-design/icons'
+import { DownOutlined, CloseOutlined, CaretRightOutlined, InfoCircleOutlined,PlusCircleOutlined,LikeOutlined,DislikeOutlined ,PlayCircleOutlined } from '@ant-design/icons'
 import { Popover, Button, Modal } from 'antd'
 import DetailMovie from '../LandingPage/Sections/DetailMovie'
 import '../../../static/sass/components/Movie.scss'
@@ -8,15 +8,9 @@ import { useSelector, useDispatch } from 'react-redux'
 const Movie = (props) => {
   
   const [modal, setModal] = useState(false)
-  // const [chass, setChass] = useState("")
-  
-  const clickhi = () => {
-    console.log('hi')
-  }
-  
+
   const showModal = () => {
     setModal(true)
-    clickhi()
   }
   
   const closeModal = () => {
@@ -26,11 +20,24 @@ const Movie = (props) => {
   return (
     <>
       <div className="movie">
+      
+      
         <img style={{ width: '98%' }} src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`}
              alt={props.props.id}/>
-        <h3 className="detailTitle" style={{ color: 'white' }}>{props.props.name}</h3>
+  
+        <PlayCircleOutlined className="playBtn"/>
+        <p className="detailTitle" >{props.props.name}</p>
+        <p className="detailVoteAverage" >{props.props.vote_average}</p>
+        <p className="detailLan" >{props.props.original_language}</p>
+        <LikeOutlined className="likeBtn"/>
+        <DislikeOutlined className="dislikeBtn"/>
+        <PlusCircleOutlined className="plusBtn"/>
         <DownOutlined className="detailIcon" onClick={showModal} style={{ fontSize: '20px' }}></DownOutlined>
       </div>
+      
+      
+      
+      
       
       <Modal
         maskClosable={false}
@@ -101,26 +108,9 @@ const Movie = (props) => {
                   상세정보</Button>
               </div>
             </div>
-          
-          
           </div>
-        
-        
         </div>
       </Modal>
-      
-      
-      {/*<DetailMovie*/}
-      {/*  containerName={"modalContainer " + (modal ? "show" : "hide")}*/}
-      {/*  name={props.props.title}*/}
-      {/*  overview={props.props.overview}*/}
-      {/*  show={modal}*/}
-      {/*  img={props.props.backdrop_path}*/}
-      {/*  onClick={() => closeModal()}*/}
-      {/*  voteaverage={props.props.vote_average}*/}
-      {/*  date={props.props.first_air_date}*/}
-      {/*/>*/}
-    
     </>
   )
 }
