@@ -1,30 +1,40 @@
-import React ,{useEffect} from "react";
-import {useSelector,useDispatch} from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { fetchTopRated } from '../_actions/user_action'
+import { useDispatch, useSelector } from 'react-redux'
+import Movie from '../components/views/commons/Movie'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import '../static/sass/components/CsSlider.scss'
 
-import {fetchTopRated} from "../_actions/user_action"
-import Mmm from '../components/views/commons/Mmm'
-const TopRated = (props) =>{
-
-  const dispatch = useDispatch();
+const TopRated = (props) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+  }
+  
+  const dispatch = useDispatch()
   
   useEffect(() => {
     dispatch(fetchTopRated())
-  },[])
+  }, [])
   
   const topRatedData = useSelector(state => state.toprated.movies,[]) || [];
-  
+  console.log(topRatedData,"toprate")
   return (
-    <div className="sliderr"  style={{display:'flex'}}>
-    <p>Top Rated Movies</p>
-
-    {topRatedData.results && topRatedData.results.map(movie => (
+    <div className="sliders" >
+      <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>TOP20</p>
+      <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}>
+        
+        {topRatedData.results && topRatedData.results.map(movie => (
+          <Movie props={movie} key={movie.id}/>
+        ))}
       
-      <Mmm props={movie} key={movie.id}/>
-    
-    ))}
-  
- 
-  </div>
+      </Slider>
+    </div>
   )
 }
 

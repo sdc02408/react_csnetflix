@@ -196,7 +196,8 @@
       <workItem from="1592118513276" duration="5061000" />
       <workItem from="1592404106414" duration="367000" />
       <workItem from="1592404985793" duration="5025000" />
-      <workItem from="1592457662669" duration="12131000" />
+      <workItem from="1592457662669" duration="12260000" />
+      <workItem from="1592535068153" duration="17410000" />
     </task>
     <servers />
   </component>
@@ -237,6 +238,12 @@
           <url>file://$PROJECT_DIR$/client/src/_actions/user_action.js</url>
           <line>43</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/_actions/user_action.js</url>
+          <line>36</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -3,9 +3,6 @@
   box-shadow: none!important;
 }
 
-.ant-modal-wrap{
-
-}
 .ant-modal{
   width:100%!important;
 }
@@ -22,12 +19,13 @@
 .ant-modal-footer{
 display: none;}
 
-//.closemodal{
-// position:absolute!important;
-//  right:26px!important;
-//  z-index:200!important;
-//}
-//
+.modalLeft{
+  width: 60%;
+  background-color: red;
+  height: inherit;
+  background: linear-gradient(90deg, #000 50%, transparent);
+}
+
 .modalLeft:before{
   background-image: linear-gradient(to right,#000,transparent);
   position: absolute;
@@ -72,7 +70,5 @@ display: none;}
 }
 
 .modalBtn{
-
-
   top:60%;
 }

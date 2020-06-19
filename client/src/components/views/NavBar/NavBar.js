@@ -7,6 +7,7 @@ import './Sections/Navbar.css'
 
 function NavBar () {
   const [visible, setVisible] = useState(false)
+  const [scrolling, setScrolling] = useState(false);
   
   const showDrawer = () => {
     setVisible(true)
@@ -15,9 +16,18 @@ function NavBar () {
   const onClose = () => {
     setVisible(false)
   }
-
+ 
+  const handleScroll = () => {
+    if(window.scrollY === 0) {
+      setScrolling(false);
+    } else if (window.scrollY > 50) {
+      setScrolling(true);
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll);
   return (
-    <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%', margin:'0 auto' }} >
+    <nav className={"menu " + (scrolling ? "black" : "" )} style={{ position: 'fixed', zIndex: 5, width: '100%', margin:'0 auto' }} >
       <div className="menu__logo">
         <a href="/">NETFLIX</a>
       </div>

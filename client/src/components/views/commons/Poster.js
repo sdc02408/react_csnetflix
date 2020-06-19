@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { DownOutlined, CloseOutlined, CaretRightOutlined, InfoCircleOutlined,PlusCircleOutlined,LikeOutlined,DislikeOutlined ,PlayCircleOutlined,PlayCircleFilled  } from '@ant-design/icons'
+import { SoundFilled, DownOutlined, CloseOutlined, CaretRightOutlined, InfoCircleOutlined,PlusCircleOutlined,PlayCircleFilled ,PlayCircleOutlined } from '@ant-design/icons'
 import { Popover, Button, Modal } from 'antd'
-import '../../../static/sass/components/Movie.scss'
+import '../../../static/sass/components/Poster.scss'
 import SetButton from './SetButton'
 
-const Movie = (props) => {
+const Poster = (props) => {
   
   const [modal, setModal] = useState(false)
-
+  
   const showModal = () => {
     setModal(true)
   }
@@ -18,17 +18,16 @@ const Movie = (props) => {
   
   return (
     <>
-      <div className="movie">
+      <div className="postermovie">
         
-        <img style={{ width: '98%' }} src={`https://image.tmdb.org/t/p/original/${props.props.backdrop_path}`}
+        <img style={{ width: '98%' }} src={`https://image.tmdb.org/t/p/original/${props.props.poster_path}`}
              alt={props.props.id}/>
-  
-        <PlayCircleFilled  className="playBtn"/>
-        <p className="detailTitle" >{props.props.name}{props.props.title}</p>
+        
+        <PlayCircleFilled className="playBtn"/>
+        <p className="detailTitle" >{props.props.title}{props.props.name}</p>
         <p className="detailVoteAverage" >{props.props.vote_average}</p>
         <p className="detailLan" >{props.props.original_language}</p>
-        <LikeOutlined className="likeBtn"/>
-        <DislikeOutlined className="dislikeBtn"/>
+        <SoundFilled className="soundBtn"/>
         <PlusCircleOutlined className="plusBtn"/>
         <DownOutlined className="detailIcon" onClick={showModal} style={{ fontSize: '20px' }}></DownOutlined>
       </div>
@@ -46,7 +45,7 @@ const Movie = (props) => {
           position: 'absolute', right: '35px', zIndex: '200', top: '35px',
         }} onClick={() => closeModal()}/>
         
-        <div className="mainmodal"
+        <div className="rigthmoal"
              style={{
                width: '100%', position: 'relative',
                background: `url('https://image.tmdb.org/t/p/original/${props.props.backdrop_path}')`,
@@ -54,7 +53,12 @@ const Movie = (props) => {
                backgroundSize: ' cover',
              }}>
           
-          <div className="modalLeft">
+          <div style={{
+            width: '60%',
+            backgroundColor: 'black',
+            height: 'inherit',
+            background: 'linear-gradient(90deg, #000 50%, transparent)',
+          }} className="modalLeft">
             <div style={{
               display: 'flex',
               flexDirection: 'column',
@@ -62,7 +66,7 @@ const Movie = (props) => {
               height: '500px',
               marginLeft: '50px',
             }}>
-              <p id={'modaltitle'}>{props.props.name}{props.props.title}</p>
+              <p id={'modaltitle'}>{props.props.title}</p>
               
               <div className={'subinfo'}>
                 <span className={'modalaverage'}>평점 {props.props.vote_average}</span>
@@ -71,8 +75,8 @@ const Movie = (props) => {
               
               <p id={'modaloverview'}>{props.props.overview}</p>
               
-            <SetButton />
-            
+         <SetButton />
+         
             </div>
           </div>
         </div>
@@ -81,4 +85,4 @@ const Movie = (props) => {
   )
 }
 
-export default Movie
+export default Poster

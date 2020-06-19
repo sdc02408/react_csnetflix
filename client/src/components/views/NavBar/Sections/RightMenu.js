@@ -7,6 +7,7 @@ import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import SearchInput from '../../../../container/SearchInput'
+import Alarm from '../../NavBar/Sections/Alarm'
 
 function RightMenu(props) {
   const user = useSelector(state => state.user)
@@ -48,15 +49,15 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="search">
-      <div className="ss">
+   
             <SearchInput />
-      </div>
+   
         </Menu.Item>
         <Menu.Item key="kids">
           <a href="/">키즈</a>
         </Menu.Item>
         <Menu.Item key="alarm">
-          <a href="/"><BellOutlined /></a>
+          <Alarm />
         </Menu.Item>
         <Menu.Item key="avatar">
           <a href="/"><Avatar shape="square" icon={<UserOutlined />} /></a>

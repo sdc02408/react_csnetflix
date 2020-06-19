@@ -1,6 +1,6 @@
 .layout {
   width: 90%;
-  margin: auto;
+  //margin: auto;
 
   p {
     color: white;
@@ -12,32 +12,14 @@
     margin-bottom: 0;
   }
 }
-//.ant-popover-content{
-//  width:95vw!important;
-//  margin: 0 auto;
-//  background-color:#ffffff;
-//  left:0;
-//
-//
-//  .ant-popover-title{
-//    background-color:#ffffff;
-//  }
-//
-//  .ant-popover-inner-content{
-//    background-color: #ffffff;
-//  }
-//}
+.sliders {
+
+  width: 95%;
+  margin: -50px auto;
 
   .csslider {
-    margin: 2em 0;
-    height: 10rem;
-
-    //padding: 15px 0;
-    //align-items: center;
-
-    //.slick-arrow{
-    //  margin-top: 50px;
-    //}
+    //margin: 2em 0;
+    //height: 10rem;
 
     .slick-list {
       padding: 40px 0;
@@ -76,6 +58,11 @@
             left: 7%;
             color: #ffffff;
             margin-bottom: 0;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width:90%
           }
 
           .detailVoteAverage {
@@ -119,17 +106,13 @@
           }
 
           .detailIcon {
-            position: absolute;
-            bottom: 10%;
-            left: 50%;
-            color: #ffffff;
             display: none;
           }
 
           &:hover .detailIcon {
             display: block;
             position: absolute;
-            bottom: 18%;
+            bottom: 10%;
             left: 50%;
             color: #ffffff;
           }
@@ -177,7 +160,6 @@
           }
         }
       }
-
-
     }
   }
+}

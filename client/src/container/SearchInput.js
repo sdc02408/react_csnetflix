@@ -5,8 +5,7 @@ import {SearchOutlined} from '@ant-design/icons'
 import '../static/sass/components/Search.scss'
 import {Input} from 'antd'
 import SearchPage from '../components/views/SearchPage/SearchPage'
-import { withRouter, useHistory } from 'react-router-dom'
-import {Noimage} from '../components/views/SearchPage/noimage.jpg'
+import { useHistory } from 'react-router-dom'
 
 const SearchInput = () => {
   
@@ -15,8 +14,7 @@ const SearchInput = () => {
   const [search, setSearch] = useState('');
   const [lists, setLists] = useState(false);
   const [movieLists, setMovieLists] = useState([]);
- 
- 
+  
   const url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&page=1&query=${search}`;
   let data = [];
 
@@ -34,11 +32,6 @@ const SearchInput = () => {
   }
   console.log(search,"ccc")
   
-  // const hideLists = () => {
-  //   setLists(false);
-  //   setSearch('');
-  // }
-
   return (
     <div className="searchContainer" style={{padding: '10px 1px'}}>
      
@@ -64,17 +57,5 @@ const SearchInput = () => {
     </div>
   )
 }
-
-// const List = (props) => {
-//
-//   return (
-//     <>
-//       <div style={{width:'100%'}}>
-//         <img src={`https://image.tmdb.org/t/p/original/${props.props.poster_path}`} style={{width:'150px'}}
-//         />
-//       </div>
-//     </>
-//   )
-// }
 
 export default SearchInput

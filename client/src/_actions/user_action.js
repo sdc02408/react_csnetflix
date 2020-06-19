@@ -22,7 +22,7 @@ export const fetchTrendData = (data) => {
 
 export const fetchTrending = () => {
     return (dispatch) => {
-      return axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-US`)
+      return axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=ko`)
       .then(response => {
         dispatch(fetchTrendData(response.data))
         
@@ -43,7 +43,7 @@ export const fetchTopRatedData = (data) => {
 
 export const fetchTopRated = () => {
   return (dispatch) => {
-    return axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US`)
+    return axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=ko`)
     .then(response => {
       dispatch(fetchTopRatedData(response.data))
     })
@@ -62,7 +62,7 @@ export const fetchNetFlixData = (data) => {
 
 export const fetchNetFlix =() => {
   return (dispatch) => {
-    return axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213`)
+    return axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213&language=ko`)
     .then(response => {
       dispatch(fetchNetFlixData(response.data))
       
@@ -72,7 +72,6 @@ export const fetchNetFlix =() => {
     })
   }
 }
-
 
 export function loginUser (dataToSubmit) {
   const request = axios.post('/api/users/login', dataToSubmit)
@@ -86,7 +85,6 @@ export function loginUser (dataToSubmit) {
   }
 }
 
-
 export function registerUser (dataToSubmit) {
   const request = axios.post('/api/users/register', dataToSubmit)
   .then(response =>response.data)
@@ -98,7 +96,6 @@ export function registerUser (dataToSubmit) {
     payload: request
   }
 }
-
 
 export function auth () {
   const request = axios.get('/api/users/auth')

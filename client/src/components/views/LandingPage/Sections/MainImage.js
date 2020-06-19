@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button} from 'antd'
 import {CaretRightOutlined,InfoCircleOutlined } from '@ant-design/icons'
+import SetButton from '../../commons/SetButton'
 
 function MainImage (props) {
   return (
+    <>
     <div style={{
       background: `linear-gradient(to top, rgba(0,0,0,0)
         39%,rgba(0,0,0,0)
@@ -22,6 +24,20 @@ function MainImage (props) {
     
     
     </div>
+  
+      <div style={{position:'relative', maxWidth:'600px', top:'25rem', marginLeft:'60px',height:'90vh'}}>
+        <p style={{color:'white', fontSize:'70px', margin:'0 auto',textAlign:'left',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',}}>{props.title}</p>
+        <p style={{color:'white', fontSize:'1.2rem',
+          fontWeight: 'normal',
+          lineHeight: 'normal',
+          width: '100%',
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',
+          marginTop: '.1vw',
+        }}>{props.text}</p>
+    
+        <SetButton />
+      </div>
+    </>
   )
 }
 

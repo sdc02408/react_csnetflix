@@ -15,7 +15,7 @@ export default function(state = {}, action) {
     case FETCH_TRENDING:
       return {
         ...state,
-        movies:action.data
+        trending:action.data
       }
       break
     case FETCH_NETFLIX:
