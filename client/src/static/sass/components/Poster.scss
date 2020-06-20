@@ -79,14 +79,14 @@
   padding: 40px 0;
 
   &:hover .postermovie {
-    transform: translateX(-10%)!important;
+    //transform: translateX(-10%);
     transition: all 0.2s ease-in;
   }
 
   .slick-slide {
 
     &:hover ~ .slick-slide {
-      transform: translateX(20%)!important;
+      //transform: translateX(20%);
       transition: all 0.2s ease-in;
     }
 

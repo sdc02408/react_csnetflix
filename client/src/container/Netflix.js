@@ -16,15 +16,15 @@ const Netflix = (props) => {
     slidesToScroll: 6,
   }
   const dispatch = useDispatch()
-  
+
   useEffect(() => {
-    
+
     dispatch(fetchNetFlix())
-    
+
   }, [])
-  
+
   const netflixData = useSelector(state => state.netflix.movies, []) || []
-  
+
   return (
     <div className="sliders" >
       <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>Netflix 인기 컨텐츠</p>
@@ -33,7 +33,7 @@ const Netflix = (props) => {
         {netflixData.results && netflixData.results.map(movie => (
           <Movie props={movie} key={movie.id}/>
         ))}
-      
+
       </Slider>
     </div>
   )

@@ -15,24 +15,24 @@ const TopRated = (props) => {
     slidesToShow: 6,
     slidesToScroll: 6,
   }
-  
+
   const dispatch = useDispatch()
-  
+
   useEffect(() => {
     dispatch(fetchTopRated())
   }, [])
-  
+
   const topRatedData = useSelector(state => state.toprated.movies,[]) || [];
   console.log(topRatedData,"toprate")
   return (
     <div className="sliders" >
       <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>TOP20</p>
       <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}>
-        
+
         {topRatedData.results && topRatedData.results.map(movie => (
           <Movie props={movie} key={movie.id}/>
         ))}
-      
+
       </Slider>
     </div>
   )
