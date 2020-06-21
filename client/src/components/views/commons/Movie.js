@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { DownOutlined, CloseOutlined, CaretRightOutlined, InfoCircleOutlined,PlusCircleOutlined,LikeOutlined,DislikeOutlined ,PlayCircleOutlined,PlayCircleFilled  } from '@ant-design/icons'
+import { DownOutlined, CloseOutlined, HeartOutlined,CaretRightOutlined, InfoCircleOutlined,PlusCircleOutlined,LikeOutlined,DislikeOutlined ,PlayCircleOutlined,PlayCircleFilled  } from '@ant-design/icons'
 import { Popover, Button, Modal } from 'antd'
 import '../../../static/sass/components/Movie.scss'
 import SetButton from './SetButton'
+import Star from '../../../static/star.png'
 
 const Movie = (props) => {
 
@@ -25,11 +26,21 @@ const Movie = (props) => {
 
         <PlayCircleFilled  className="playBtn"/>
         <p className="detailTitle" >{props.props.name}{props.props.title}</p>
+        <img src={Star} className="voteStart"/>
         <p className="detailVoteAverage" >{props.props.vote_average}</p>
-        <p className="detailLan" >{props.props.original_language}</p>
+        <p className="releaseDateText">개봉연도</p>
+        {props.props.first_air_date &&
+        <p className="releaseDate">{props.props.first_air_date.substr(0,4)}</p>
+        }
+
+
+        {props.props.release_date &&
+          <p className="releaseDate">{props.props.release_date.substr(0,4)}</p>
+        }
+
         <LikeOutlined className="likeBtn"/>
         <DislikeOutlined className="dislikeBtn"/>
-        <PlusCircleOutlined className="plusBtn"/>
+        <HeartOutlined className="plusBtn"/>
         <DownOutlined className="detailIcon" onClick={showModal} style={{ fontSize: '20px' }}></DownOutlined>
       </div>
 

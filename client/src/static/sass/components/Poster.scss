@@ -94,9 +94,10 @@
       position: relative;
 
       &:hover {
-        transform: scale(1.2)!important;
+        //transform: scale(1.2)!important;
         z-index: 100;
         transition: all 0.2s ease-in;
+
       }
 
       .playBtn {
@@ -108,7 +109,7 @@
         position: absolute;
         bottom: 32%;
         left: 7%;
-        color: #E50914;
+        color: #ffffff;
         font-size: 24px;
         font-weight: bold;
       }
@@ -119,7 +120,7 @@
 
       &:hover .detailTitle {
         display: block;
-        font-size: 25px;
+        font-size: 18px;
         position: absolute;
         bottom: 22%;
         font-weight: 600;
@@ -133,6 +134,18 @@
         width:90%
       }
 
+      .voteStart{
+        display: none;
+      }
+
+      &:hover .voteStart {
+        display: block;
+        position: absolute;
+        bottom: 16%;
+        left: 7%;
+        width:17px;
+      }
+
       .detailVoteAverage {
         display: none;
       }
@@ -141,25 +154,41 @@
         display: block;
         font-size: 16px;
         position: absolute;
-        bottom: 17%;
-        left: 7%;
-        color: #ffffff;
-        margin-bottom: 0;
-      }
-
-      .detailLan {
-        display: none;
-      }
-
-      &:hover .detailLan {
-        display: block;
-        font-size: 16px;
-        position: absolute;
-        bottom: 17%;
+        bottom: 15%;
         left: 18%;
         color: #ffffff;
         margin-bottom: 0;
       }
+
+      .releaseDateText {
+        display: none;
+      }
+
+      &:hover .releaseDateText {
+        display: block;
+        font-size: 14px;
+        position: absolute;
+        bottom: 15%;
+        left: 31%;
+        color: #ffffff;
+        margin-bottom: 0;
+      }
+
+      .releaseDate {
+        display: none;
+      }
+
+      &:hover .releaseDate {
+        display: block;
+        font-size: 14px;
+        position: absolute;
+        bottom: 15%;
+        left: 57%;
+        color: #ffffff;
+        margin-bottom: 0;
+      }
+
+
 
 
 

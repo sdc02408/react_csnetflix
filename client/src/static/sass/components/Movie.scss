@@ -72,3 +72,178 @@ display: none;}
 .modalBtn{
   top:60%;
 }
+.csslider {
+  //margin: 2em 0;
+  //height: 10rem;
+
+  .slick-list {
+    padding: 40px 0;
+
+    &:hover .movie {
+      transform: translateX(-25%);
+      transition: all 0.2s ease-in;
+    }
+
+    .slick-slide {
+
+      &:hover ~ .slick-slide {
+        transform: translateX(50%);
+        transition: all 0.2s ease-in;
+      }
+
+      .movie {
+        position: relative;
+
+        &:hover {
+          transform: scale(1.6);
+          z-index: 100;
+          transition: all 0.2s ease-in;
+        }
+
+        .detailTitle {
+          display: none;
+        }
+
+        &:hover .detailTitle {
+          display: block;
+          font-size: 14px;
+          position: absolute;
+          bottom: 30%;
+          font-weight: 600;
+          left: 7%;
+          color: #ffffff;
+          margin-bottom: 0;
+          text-align: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width:90%
+        }
+
+        .voteStart{
+          display: none;
+        }
+
+        &:hover .voteStart {
+          display: block;
+          position: absolute;
+          bottom: 23%;
+          left: 7%;
+          width:8px;
+        }
+
+        .detailVoteAverage {
+          display: none;
+        }
+
+        &:hover .detailVoteAverage {
+          display: block;
+          font-size: 10px;
+          position: absolute;
+          bottom: 20%;
+          left: 11%;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
+
+        .releaseDateText {
+          display: none;
+        }
+
+        &:hover .releaseDateText {
+          display: block;
+          font-size: 10px;
+          position: absolute;
+          bottom: 20%;
+          left: 19%;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
+
+
+
+
+
+        .releaseDate {
+          display: none;
+        }
+
+        &:hover .releaseDate {
+          display: block;
+          font-size: 10px;
+          position: absolute;
+          bottom: 20%;
+          left: 37%;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
+
+        .playBtn {
+          display: none;
+        }
+
+        &:hover .playBtn {
+          display: block;
+          position: absolute;
+          bottom: 47%;
+          left: 7%;
+          color: #ffffff;
+        }
+
+        .detailIcon {
+          display: none;
+        }
+
+        &:hover .detailIcon {
+          display: block;
+          position: absolute;
+          bottom: 10%;
+          left: 50%;
+          color: #ffffff;
+        }
+
+        .likeBtn {
+          display: none;
+        }
+
+        &:hover .likeBtn {
+          display: block;
+          position: absolute;
+          bottom: 60%;
+          left: 85%;
+          color: #ffffff;
+        }
+
+        .dislikeBtn {
+          display: none;
+        }
+
+        &:hover .dislikeBtn {
+          display: block;
+          position: absolute;
+          bottom: 45%;
+          left: 85%;
+          color: #ffffff;
+        }
+
+        .plusBtn {
+          display: none;
+        }
+
+        &:hover .plusBtn {
+          display: block;
+          position: absolute;
+          bottom: 30%;
+          left: 85%;
+          color: #ffffff;
+        }
+
+        img {
+          height: auto;
+          cursor: pointer;
+          transition: all 0.2s ease-in;
+        }
+      }
+    }
+  }
+}

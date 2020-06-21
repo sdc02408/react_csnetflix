@@ -19,13 +19,13 @@ function MainImage (props) {
       position:'absolute',
       zIndex:'0'
     }} >
-    
-    
-    
-    
+
+
+
+
     </div>
-  
-      <div style={{position:'relative', maxWidth:'600px', top:'25rem', marginLeft:'60px',height:'90vh'}}>
+
+      <div style={{position:'relative', maxWidth:'600px', top:'17rem', marginLeft:'60px',height:'90vh'}}>
         <p style={{color:'white', fontSize:'70px', margin:'0 auto',textAlign:'left',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',}}>{props.title}</p>
         <p style={{color:'white', fontSize:'1.2rem',
           fontWeight: 'normal',
@@ -34,7 +34,7 @@ function MainImage (props) {
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',
           marginTop: '.1vw',
         }}>{props.text}</p>
-    
+
         <SetButton />
       </div>
     </>
