@@ -74,169 +74,173 @@
 }
 
 
+.sliderss {
 
-.slick-list {
-  padding: 40px 0;
+  width: 95%;
+  margin: -50px auto;
 
-  &:hover .postermovie {
-    //transform: translateX(-10%);
-    transition: all 0.2s ease-in;
-  }
+  .slick-list {
+    padding: 40px 0;
 
-  .slick-slide {
-
-    &:hover ~ .slick-slide {
-      //transform: translateX(20%);
+    &:hover .postermovie {
+      transform: translateX(-10%);
       transition: all 0.2s ease-in;
     }
 
-    .postermovie {
-      position: relative;
+    .slick-slide {
 
-      &:hover {
-        //transform: scale(1.2)!important;
-        z-index: 100;
+      &:hover ~ .slick-slide {
+        transform: translateX(20%);
         transition: all 0.2s ease-in;
-
       }
 
-      .playBtn {
-        display: none;
-      }
+      .postermovie {
+        position: relative;
 
-      &:hover .playBtn {
-        display: block;
-        position: absolute;
-        bottom: 32%;
-        left: 7%;
-        color: #ffffff;
-        font-size: 24px;
-        font-weight: bold;
-      }
+        &:hover {
+          transform: scale(1.2)!important;
+          z-index: 100;
+          transition: all 0.2s ease-in;
+        }
 
-      .detailTitle {
-        display: none;
-      }
+        .playBtn {
+          display: none;
+        }
 
-      &:hover .detailTitle {
-        display: block;
-        font-size: 18px;
-        position: absolute;
-        bottom: 22%;
-        font-weight: 600;
-        left: 5%;
-        color: #ffffff;
-        margin-bottom: 0;
-        text-align: left;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        width:90%
-      }
+        &:hover .playBtn {
+          display: block;
+          position: absolute;
+          bottom: 32%;
+          left: 7%;
+          color: #ffffff;
+          font-size: 24px;
+          font-weight: bold;
+        }
 
-      .voteStart{
-        display: none;
-      }
+        .detailTitle {
+          display: none;
+        }
 
-      &:hover .voteStart {
-        display: block;
-        position: absolute;
-        bottom: 16%;
-        left: 7%;
-        width:17px;
-      }
+        &:hover .detailTitle {
+          display: block;
+          font-size: 18px;
+          position: absolute;
+          bottom: 22%;
+          font-weight: 600;
+          left: 5%;
+          color: #ffffff;
+          margin-bottom: 0;
+          text-align: left;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 90%
+        }
 
-      .detailVoteAverage {
-        display: none;
-      }
+        .voteStart {
+          display: none;
+        }
 
-      &:hover .detailVoteAverage {
-        display: block;
-        font-size: 16px;
-        position: absolute;
-        bottom: 15%;
-        left: 18%;
-        color: #ffffff;
-        margin-bottom: 0;
-      }
+        &:hover .voteStart {
+          display: block;
+          position: absolute;
+          bottom: 16%;
+          left: 7%;
+          width: 17px;
+        }
 
-      .releaseDateText {
-        display: none;
-      }
+        .detailVoteAverage {
+          display: none;
+        }
 
-      &:hover .releaseDateText {
-        display: block;
-        font-size: 14px;
-        position: absolute;
-        bottom: 15%;
-        left: 31%;
-        color: #ffffff;
-        margin-bottom: 0;
-      }
+        &:hover .detailVoteAverage {
+          display: block;
+          font-size: 16px;
+          position: absolute;
+          bottom: 15%;
+          left: 18%;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
 
-      .releaseDate {
-        display: none;
-      }
+        .releaseDateText {
+          display: none;
+        }
 
-      &:hover .releaseDate {
-        display: block;
-        font-size: 14px;
-        position: absolute;
-        bottom: 15%;
-        left: 57%;
-        color: #ffffff;
-        margin-bottom: 0;
-      }
+        &:hover .releaseDateText {
+          display: block;
+          font-size: 14px;
+          position: absolute;
+          bottom: 15%;
+          left: 31%;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
 
+        .releaseDate {
+          display: none;
+        }
 
-
-
-
-      .detailIcon {
-        display: none;
-      }
-
-      &:hover .detailIcon {
-        display: block;
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        color: #ffffff;
-      }
+        &:hover .releaseDate {
+          display: block;
+          font-size: 14px;
+          position: absolute;
+          bottom: 15%;
+          left: 57%;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
 
 
-      .soundBtn{
-        display: none;
-      }
+        .detailIcon {
+          display: none;
+        }
 
-      &:hover .soundBtn{
-        display: block;
-        position: absolute;
-        bottom: 10%;
-        left: 7%;
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-      }
+        &:hover .detailIcon {
+          display: block;
+          position: absolute;
+          bottom: 10%;
+          left: 50%;
+          color: #ffffff;
+        }
 
-      .plusBtn {
-        display: none;
-      }
+        .detailIcon:hover{
+          color:#E50914;
+        }
 
-      &:hover .plusBtn {
-        display: block;
-        position: absolute;
-        bottom: 10%;
-        left: 85%;
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-      }
+        .soundBtn {
+          display: none;
+        }
 
-      img {
-        height: auto;
-        cursor: pointer;
-        transition: all 0.2s ease-in;
+        &:hover .soundBtn {
+          display: block;
+          position: absolute;
+          bottom: 10%;
+          left: 7%;
+          color: #ffffff;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .plusBtn {
+          display: none;
+        }
+
+        &:hover .plusBtn {
+          display: block;
+          position: absolute;
+          bottom: 10%;
+          left: 85%;
+          color: #ffffff;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        img {
+          height: auto;
+          cursor: pointer;
+          transition: all 0.2s ease-in;
+        }
       }
     }
   }

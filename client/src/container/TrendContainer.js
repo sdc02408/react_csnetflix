@@ -28,7 +28,7 @@ const TrendContainer = (props) => {
   console.log(TrendData,"트렌드 무비 ")
 
   return (
-    <div className="sliders" >
+    <div className="sliderss" >
       <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>몰아보기 추천</p>
       <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}>
 

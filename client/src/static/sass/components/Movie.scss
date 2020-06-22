@@ -19,59 +19,10 @@
 .ant-modal-footer{
 display: none;}
 
-.modalLeft{
-  width: 60%;
-  background-color: red;
-  height: inherit;
-  background: linear-gradient(90deg, #000 50%, transparent);
-}
 
-.modalLeft:before{
-  background-image: linear-gradient(to right,#000,transparent);
-  position: absolute;
-  top:0;
-  left:100%;
-  width:275px;
-  content:'';
-}
 
-#modaltitle {
-  color: white;
-  font-size: 3.5em;
-  position: sticky;
-  top: 5%;
-  margin-bottom: 0;
-}
 
-.modalaverage{
-  color:#46d369;
-  font-size:17px;
-  font-weight: 600;
-  position: sticky;
-  top:20%;
 
-}
-
-.modalfirstdate{
-  color:white;
-  font-size:17px;
-  font-weight: 600;
-  position: sticky;
-  top:20%;
-  margin-left: 2em;
-}
-
-#modaloverview{
-  position: sticky;
-  top:30%;
-  color:#999999;
-  font-size: 19px;
-  width:70%;
-}
-
-.modalBtn{
-  top:60%;
-}
 .csslider {
   //margin: 2em 0;
   //height: 10rem;
@@ -160,10 +111,6 @@ display: none;}
           margin-bottom: 0;
         }
 
-
-
-
-
         .releaseDate {
           display: none;
         }
@@ -200,6 +147,10 @@ display: none;}
           bottom: 10%;
           left: 50%;
           color: #ffffff;
+        }
+
+        .detailIcon:hover{
+          color:#E50914;
         }
 
         .likeBtn {
@@ -247,3 +198,75 @@ display: none;}
     }
   }
 }
+
+
+.modalLeft {
+  width: 60%;
+  background-color: red;
+  height: inherit;
+  background: linear-gradient(90deg, #000 50%, transparent);
+
+  .modalLeft:before {
+    background-image: linear-gradient(to right, #000, transparent);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 275px;
+    content: '';
+  }
+  .modalInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    margin-left: 50px;
+  }
+
+  #modaltitle {
+    color: white;
+    font-size: 3.5em;
+    position: sticky;
+    top: 5%;
+    margin-bottom: 0;
+  }
+
+  .modalaverage{
+    color:#46d369;
+    font-size:17px;
+    font-weight: 600;
+    position: sticky;
+    top:20%;
+
+  }
+
+  .modalfirstdate{
+    color:white;
+    font-size:17px;
+    font-weight: 600;
+    position: sticky;
+    top:20%;
+    margin-left: 2em;
+  }
+
+
+  #modaloverview{
+    position: sticky;
+    top:30%;
+    color:#999999;
+    font-size: 19px;
+    width:70%;
+  }
+
+  .modalBtn{
+    top:60%;
+  }
+}
+
+
+
+
+
+
+
+
+

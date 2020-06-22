@@ -33,14 +33,11 @@ const Poster = (props) => {
         {props.props.first_air_date &&
         <p className="releaseDate">{props.props.first_air_date.substr(0,4)}</p>
         }
-
-
+        
         {props.props.release_date &&
         <p className="releaseDate">{props.props.release_date.substr(0,4)}</p>
         }
-
-
-        <p className="detailLan" >{props.props.original_language}</p>
+        
         <SoundFilled className="soundBtn"/>
         <HeartOutlined className="plusBtn"/>
         <DownOutlined className="detailIcon" onClick={showModal} style={{ fontSize: '20px' }}></DownOutlined>

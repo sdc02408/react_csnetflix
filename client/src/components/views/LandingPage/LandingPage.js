@@ -41,15 +41,7 @@ function LandingPage (props) {
       <Netflix />
       <TrendContainer />
       <TopRated />
-  
-        {/*{MiddleMovieImage &&*/}
-        {/*<MiddleSection*/}
-        {/*  image={`${IMAGE_BASE_URL}w1280${MiddleMovieImage.backdrop_path}`}*/}
-        
-        {/*  text={MiddleMovieImage.overview}*/}
-        {/*/>*/}
-        {/*}*/}
-  
+      
         {MiddleMovieImage &&
         <MiddleSection
           image={`${IMAGE_BASE_URL}w1280${MiddleMovieImage.backdrop_path}`}

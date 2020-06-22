@@ -89,6 +89,6 @@ useraSchema.statics.findByToken =function(token, cb) {
 }
 
 
-const Usera = mongoose.model('Usera', useraSchema)
+const Usernetflix = mongoose.model('Usernetflix', useraSchema)
 
-module.exports = {Usera}
+module.exports = {Usernetflix}

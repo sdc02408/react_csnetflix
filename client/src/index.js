@@ -14,11 +14,8 @@ import Reducer from './_reducers';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
-// const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
-const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
 
-
-const store = createStore(Reducer, composeEnhancer(applyMiddleware(thunk)));
 //
 // createStoreWithMiddleware(Reducer,
 //   window.__REDUX_DEVTOOLS_EXTENSION__ &&
@@ -27,7 +24,11 @@ const store = createStore(Reducer, composeEnhancer(applyMiddleware(thunk)));
 //리액트 컴포넌트에서 스토어를 사용할 수 있도록 Provider 로 감싸. 이 컴포넌트를 사용할 때는 store를 props로 전달.
 
 ReactDOM.render(//리덕스 연결
-  <Provider store={store}>
+  <Provider store={createStoreWithMiddleware(
+    Reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ &&
+    window.__REDUX_DEVTOOLS_EXTENSION__()
+  )}>
     <App />
   </Provider>,
   document.getElementById('root'));

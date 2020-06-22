@@ -1,11 +1,11 @@
-const {Usera} = require('../models/User')
+const {Usernetflix} = require('../models/User')
 let auth = (req,res,next) => {
 
   //인증처리를 하는곳
   //클라이언트 쿠키에서 토큰을 가져와
-  let token = req.cookies.x_auth;
+  let token = req.cookies.w_auth;
   //토큰을 복호화 해서 user를 찾아.
-  Usera.findByToken(token, (err,user) =>{
+  Usernetflix.findByToken(token, (err,user) =>{
     if(err) throw err;
     if(!user) return res.json({isAuth: false, error: true})
     

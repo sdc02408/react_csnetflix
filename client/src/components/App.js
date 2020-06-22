@@ -28,10 +28,10 @@ function App() {
         <NavBar />
         <div style={{paddingTop: '1px', minHeight: 'calc(100vh -80px'}}>
         <Switch>
-          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/" component={Auth(LandingPage,true)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
-          <Route exact path="/searchpage" component={SearchPage}/>
+          <Route exact path="/searchpage" component={Auth(SearchPage,true)}/>
         </Switch>
       </div>
     </Router>
