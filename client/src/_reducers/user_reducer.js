@@ -23,8 +23,13 @@ export default function(state = {}, action) {
         ...state,
         movies: action.data
       }
-break
-  
+      break
+    // case FAVORITE_PLUS:
+    //   return {
+    //     ...state,
+    //     plus: action.data
+    //   }
+    //   break
     default:
       return state
   }

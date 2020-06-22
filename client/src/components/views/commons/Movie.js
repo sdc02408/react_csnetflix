@@ -12,10 +12,11 @@ import {
   PlayCircleFilled,
 } from '@ant-design/icons'
 import { Popover, Button, Modal } from 'antd'
-import FavoriteBtn from './FavoriteBtn'
+import Favorite from '../../../container/Favorite'
 import '../../../static/sass/components/Movie.scss'
 import SetButton from './SetButton'
 import Star from '../../../static/star.png'
+import FavoriteBtn from './FavoriteBtn'
 
 
 const Movie = (props) => {
@@ -92,7 +93,7 @@ const Movie = (props) => {
               <FavoriteBtn
                 movieId={props.props.id}
                 movieTitle={props.props.name}
-                moviePost={props.props.backdrop_path}
+                moviePost={props.props.poster_path}
                 userFrom={localStorage.getItem('userId')}/>
          
             </div>

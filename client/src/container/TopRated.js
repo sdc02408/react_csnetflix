@@ -23,7 +23,7 @@ const TopRated = (props) => {
   }, [])
 
   const topRatedData = useSelector(state => state.toprated.movies,[]) || [];
-  console.log(topRatedData,"toprate")
+ 
   return (
     <div className="sliders" >
       <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>TOP20</p>

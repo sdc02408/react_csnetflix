@@ -17,6 +17,6 @@ const favoriteSchemaMovie = mongoose.Schema({
   }
 },{timestamps: true})
 
-const FavoriteMovie = mongoose.model('Favorite',favoriteSchemaMovie);
+const FavoriteMovie = mongoose.model('FavoriteMovie',favoriteSchemaMovie);
 
 module.exports = {FavoriteMovie}

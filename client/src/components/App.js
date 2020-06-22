@@ -13,8 +13,8 @@ import RegisterPage from './views/RegisterPage/RegisterPage'
 import SearchPage from './views/SearchPage/SearchPage'
 import Auth from '../hoc/auth'
 import NavBar from './views/NavBar/NavBar'
-import TrendContainer from '../container/TrendContainer'
-import Layout from '../container/Layout'
+import FavoritePage from './views/FavoritePage/FavoritePage'
+
 function App() {
   return (
     <Router>
@@ -32,6 +32,7 @@ function App() {
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
           <Route exact path="/searchpage" component={Auth(SearchPage,true)}/>
+          <Route exact path="/favorite" component={Auth(FavoritePage,true)}/>
         </Switch>
       </div>
     </Router>

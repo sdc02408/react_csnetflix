@@ -7,10 +7,9 @@ import {
   FETCH_TRENDING,
   FETCH_TOPRATED,
   FETCH_NETFLIX,
-
-
+  // FAVORITE_PLUS,
+  
 } from './types';
-
 
 //액션 생성 함수 만들기 ,  data는 파라미터. 파라미터는 액션 객체 안에 추가 필드로 들어간다.
 export const fetchTrendData = (data) => {
@@ -77,7 +76,6 @@ export function loginUser (dataToSubmit) {
   const request = axios.post('/api/users/login', dataToSubmit)
   .then(response =>response.data)
   // 서버에다가 request 날린다음 data로 받아.
-  
   return{
     // request를 리듀서에 넘겨주는거
   type: LOGIN_USER,
@@ -101,7 +99,6 @@ export function auth () {
   const request = axios.get('/api/users/auth')
   .then(response =>response.data)
   // 서버에다가 request 날린다음 data로 받아.
-  
   return{
     // request를 리듀서에 넘겨주는거
     type: AUTH_USER,
@@ -109,4 +106,12 @@ export function auth () {
   }
 }
 
-
+// export function favorite (dataToSubmit) {
+//   const request = axios.post('/api/favorite/addToFavorite',dataToSubmit)
+//   .then(response => response.data)
+//
+//   return {
+//     type: FAVORITE_PLUS,
+//     payload: request
+//   }
+// }
