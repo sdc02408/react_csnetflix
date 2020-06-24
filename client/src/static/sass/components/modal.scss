@@ -1,86 +1,61 @@
-//.modalContainer {
-//  z-index: 1000;
-//  width: 100%;
-//  height: 100vh;
-//  background: rgba(44, 44, 44, 0.733);
-//  position: fixed;
-//  top: 0;left: 0;
-//
-//  &.show {
-//    display: block;
-//  }
-//
-//  &.hide {
-//    display: none;
-//  }
-//
-//  .modal {
-//    position: fixed;
-//    bottom: 0%;
-//    width: 100vw;
-//    z-index: 1010;
-//    background: rgb(44, 44, 44);
-//    overflow: hidden;
-//
-//    img {
-//      width: 100%;
-//      height: auto;
-//      position: absolute;
-//      opacity: 0.6;
-//    }
-//
-//    .modal-content {
-//      padding: 5% 10%;
-//      width: 50%;
-//      height: 100%;
-//      display: flex;
-//      flex-direction: column;
-//      position: relative;
-//
-//
-//      h1 {
-//        margin-top: 5%;
-//        color: white;
-//      }
-//
-//      p {
-//        margin-top: 3%;
-//        font-weight: 300;
-//        text-transform: none;
-//
-//
-//      }
-//
-//      .btn {
-//        margin-top: 5%;
-//
-//        button {
-//          padding: 1.5% 4%;
-//          margin-right: 2%;
-//          border: none;
-//          border-radius: 3%;
-//
-//          color: rgb(212, 212, 212);
-//          border-radius: 5%;
-//          transition: all 0.1s ease-in;
-//          cursor: pointer;
-//
-//          &:hover {
-//            transform: scale(1.1);
-//            color: white;
-//          }
-//
-//
-//
-//          span {
-//            font-size: 12px;
-//            font-weight: 600;
-//            margin-left: 10px;
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//
+.modalLeft {
+  width: 60%;
+  background-color: red;
+  height: inherit;
+  background: linear-gradient(90deg, #000 50%, transparent);
+
+  .modalLeft:before {
+    background-image: linear-gradient(to right, #000, transparent);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 275px;
+    content: '';
+  }
+  .modalInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    margin-left: 50px;
+  }
+
+  #modaltitle {
+    color: white;
+    font-size: 3.5em;
+    position: sticky;
+    top: 5%;
+    margin-bottom: 0;
+  }
+
+  .modalaverage{
+    color:#46d369;
+    font-size:17px;
+    font-weight: 600;
+    position: sticky;
+    top:20%;
+
+  }
+
+  .modalfirstdate{
+    color:white;
+    font-size:17px;
+    font-weight: 600;
+    position: sticky;
+    top:20%;
+    margin-left: 2em;
+  }
+
+
+  #modaloverview{
+    position: sticky;
+    top:30%;
+    color:#999999;
+    font-size: 19px;
+    width:70%;
+  }
+
+  .modalBtn{
+    top:60%;
+  }
+}

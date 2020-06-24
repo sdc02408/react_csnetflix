@@ -4,6 +4,7 @@ import { Popover, Button, Modal } from 'antd'
 import '../../../static/sass/components/Poster.scss'
 import SetButton from './SetButton'
 import Star from '../../../static/star.png'
+import Modalpage from '../commons/Modal'
 
 const Poster = (props) => {
 
@@ -55,42 +56,18 @@ const Poster = (props) => {
           color: 'white', float: 'right', fontSize: '20px',
           position: 'absolute', right: '35px', zIndex: '200', top: '35px',
         }} onClick={() => closeModal()}/>
-
-        <div className="rigthmoal"
-             style={{
-               width: '100%', position: 'relative',
-               background: `url('https://image.tmdb.org/t/p/original/${props.props.backdrop_path}')`,
-               height: '500px',
-               backgroundSize: ' cover',
-             }}>
-
-          <div style={{
-            width: '60%',
-            backgroundColor: 'black',
-            height: 'inherit',
-            background: 'linear-gradient(90deg, #000 50%, transparent)',
-          }} className="modalLeft">
-            <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              height: '500px',
-              marginLeft: '50px',
-            }}>
-              <p id={'modaltitle'}>{props.props.title}</p>
-
-              <div className={'subinfo'}>
-                <span className={'modalaverage'}>평점 {props.props.vote_average}</span>
-                <span className={'modalfirstdate'}>개봉일 {props.props.first_air_date}</span>
-              </div>
-
-              <p id={'modaloverview'}>{props.props.overview}</p>
-
-         <SetButton />
-
-            </div>
-          </div>
-        </div>
+  
+        <Modalpage
+          backdrop_path={props.props.backdrop_path}
+          name={props.props.name}
+          title={props.props.title}
+          vote_average={props.props.vote_average}
+          first_air_date={props.props.first_air_date}
+          overview={props.props.overview}
+          id={props.props.id}
+          name={props.props.name}
+          poster_path={props.props.poster_path}
+        />
       </Modal>
     </>
   )

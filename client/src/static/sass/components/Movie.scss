@@ -2,7 +2,6 @@
   background-color: unset!important;
   box-shadow: none!important;
 }
-
 .ant-modal{
   width:100%!important;
 }
@@ -10,17 +9,12 @@
 .ant-modal-body{
   height: 70vh;
   display: flex;
-
 }
 .ant-modal-close{
   display: none;
 }
-
 .ant-modal-footer{
 display: none;}
-
-
-
 
 
 .csslider {
@@ -196,69 +190,6 @@ display: none;}
         }
       }
     }
-  }
-}
-
-
-.modalLeft {
-  width: 60%;
-  background-color: red;
-  height: inherit;
-  background: linear-gradient(90deg, #000 50%, transparent);
-
-  .modalLeft:before {
-    background-image: linear-gradient(to right, #000, transparent);
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 275px;
-    content: '';
-  }
-  .modalInfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 500px;
-    margin-left: 50px;
-  }
-
-  #modaltitle {
-    color: white;
-    font-size: 3.5em;
-    position: sticky;
-    top: 5%;
-    margin-bottom: 0;
-  }
-
-  .modalaverage{
-    color:#46d369;
-    font-size:17px;
-    font-weight: 600;
-    position: sticky;
-    top:20%;
-
-  }
-
-  .modalfirstdate{
-    color:white;
-    font-size:17px;
-    font-weight: 600;
-    position: sticky;
-    top:20%;
-    margin-left: 2em;
-  }
-
-
-  #modaloverview{
-    position: sticky;
-    top:30%;
-    color:#999999;
-    font-size: 19px;
-    width:70%;
-  }
-
-  .modalBtn{
-    top:60%;
   }
 }
 

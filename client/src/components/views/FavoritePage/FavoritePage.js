@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import { IMAGE_BASE_URL } from '../../Config'
-
-
+import {Col,Row} from 'antd'
 const FavoritePage = () => {
   
   const [Favorites,setFavorites] = useState([])
@@ -38,25 +37,16 @@ const FavoritePage = () => {
   //     }
   //   })
   // }
-  //
-
-console.log(Favorites.moviePost,"tlqk")
   
-  
-
   return (
-  <>
-    <div style={{width:'85%', margin: '3rem auto'}}>
-      <h2> Favorite Movies</h2>
-  
-      {Favorites && Favorites.map(favoritea => (
-        <img src={`${IMAGE_BASE_URL}w500${favoritea.moviePost}`} />
-        ))}
-        
-        
     
-    </div>
-        </>
+    <Row gutter={[24, 24]} style={{width:'95%', margin:'0 auto',position:'relative',top:'100px'}}>
+      {Favorites && Favorites.map(favoritea => (
+        <Col span={3}>
+          <img src= {`https://image.tmdb.org/t/p/original/${favoritea.moviePost}`} style={{width:'100%'}}/>
+        </Col>
+      ))}
+    </Row>
   )
 }
 

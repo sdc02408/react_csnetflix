@@ -17,6 +17,7 @@ import '../../../static/sass/components/Movie.scss'
 import SetButton from './SetButton'
 import Star from '../../../static/star.png'
 import FavoriteBtn from './FavoriteBtn'
+import Modalpage from './Modal'
 
 
 const Movie = (props) => {
@@ -55,6 +56,8 @@ const Movie = (props) => {
        
         <DownOutlined className="detailIcon" onClick={showModal} style={{ fontSize: '20px' }}></DownOutlined>
       </div>
+  
+      
       
       <Modal
         maskClosable={false}
@@ -69,37 +72,20 @@ const Movie = (props) => {
           position: 'absolute', right: '35px', zIndex: '200', top: '35px',
         }} className="closeBtn" onClick={() => closeModal()}/>
         
-        <div className="mainmodal"
-             style={{
-               width: '100%', position: 'relative',
-               background: `url('https://image.tmdb.org/t/p/original/${props.props.backdrop_path}')`,
-               height: '500px',
-               backgroundSize: ' cover',
-             }}>
-          
-          <div className="modalLeft">
-            <div className="modalInfo">
-              <p id={'modaltitle'}>{props.props.name}{props.props.title}</p>
-              
-              <div className={'subinfo'}>
-                <span className={'modalaverage'}>평점 {props.props.vote_average}</span>
-                <span className={'modalfirstdate'}>개봉일 {props.props.first_air_date}</span>
-              </div>
-              
-              <p id={'modaloverview'}>{props.props.overview}</p>
-              
-              <SetButton />
-              
-              <FavoriteBtn
-                movieId={props.props.id}
-                movieTitle={props.props.name}
-                moviePost={props.props.poster_path}
-                userFrom={localStorage.getItem('userId')}/>
-         
-            </div>
-          </div>
-        </div>
+      <Modalpage
+        backdrop_path={props.props.backdrop_path}
+        name={props.props.name}
+        title={props.props.title}
+        vote_average={props.props.vote_average}
+        first_air_date={props.props.first_air_date}
+        overview={props.props.overview}
+        id={props.props.id}
+        name={props.props.name}
+        poster_path={props.props.poster_path}
+      />
       </Modal>
+      
+      
     </>
   )
 }
