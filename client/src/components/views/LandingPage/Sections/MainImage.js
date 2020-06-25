@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button} from 'antd'
-import {CaretRightOutlined,InfoCircleOutlined } from '@ant-design/icons'
 import SetButton from '../../commons/SetButton'
+
 
 function MainImage (props) {
   return (
@@ -19,15 +18,13 @@ function MainImage (props) {
       position:'absolute',
       zIndex:'0'
     }} >
-
-
-
+    
 
     </div>
 
-      <div style={{position:'relative', maxWidth:'600px', top:'17rem', marginLeft:'60px',height:'90vh'}}>
-        <p style={{color:'white', fontSize:'70px', margin:'0 auto',textAlign:'left',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',}}>{props.title}</p>
-        <p style={{color:'white', fontSize:'1.2rem',
+      <div style={{position:'relative', maxWidth:'40%', top:'20rem', marginLeft:'60px',height:'90vh'}}>
+        <p style={{color:'white', fontSize:'9em', margin:'0 auto',textAlign:'left',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',}}>{props.title}</p>
+        <p style={{color:'white', fontSize:'1.4rem',
           fontWeight: 'normal',
           lineHeight: 'normal',
           width: '100%',

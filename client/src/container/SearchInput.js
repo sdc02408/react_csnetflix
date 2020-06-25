@@ -5,7 +5,7 @@ import { SearchOutlined } from '@ant-design/icons'
 import '../static/sass/components/Search.scss'
 import { Col, Input, Row } from 'antd'
 import { useHistory } from 'react-router-dom'
-
+import SearchPage from '../components/views/SearchPage/SearchPage'
 
 const SearchInput = () => {
   
@@ -14,46 +14,39 @@ const SearchInput = () => {
   const [search, setSearch] = useState('')
   const [lists, setLists] = useState(false)
   const [movieLists, setMovieLists] = useState([])
+
   
-
     const url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=kr&page=1&query=${search}`
-
   
   const fetch = async () => {
     const response = await axios.get(url)
     setMovieLists(response.data.results)
   }
-  
-  // const hi = () => {
-  //   let aa  = document.querySelector('.searchContainer')
-  //   aa.style.display="none"
-  // }
-  fetch()
+
+
   const onChange = (e) => {
     setSearch(e.target.value)
+    fetch(setMovieLists)
     return history.push('/searchpage')
   }
   
   const clickSearch = () => {
     setLists(!lists)
-    
   }
- 
+
   
   return (
-    <div className="searchContainer" style={{ padding: '10px 1px',}}>
+    <div className={"searchEle"} style={{ padding: '10px 1px'}} >
       
-      <div className="inputContainer">
-  
-        
+      <div className="inputEle" >
+        {lists &&
         <Input className="searchText" type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
-      
+        }
+        <a className="searchIcon" style={{ color: '#ffffff' }} onClick={clickSearch}><SearchOutlined/></a>
         
-        <a className="searchLogo" style={{ color: '#ffffff' }} onClick={clickSearch}><SearchOutlined/></a>
-      
       </div>
       
-      <div className={'searchMovie '} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%' }} >
+      <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%', }} >
         <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative' }}>
           
           {movieLists && movieLists.map(movie => (
@@ -61,9 +54,11 @@ const SearchInput = () => {
               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} style={{ width: '100%' }}/>
             </Col>
           ))}
-        
+          
         </Row>
       </div>
+      
+      
     </div>
   )
 }

@@ -10,9 +10,9 @@ import {
 import LandingPage from './views/LandingPage/LandingPage'
 import LoginPage from './views/LoginPage/LoginPage'
 import RegisterPage from './views/RegisterPage/RegisterPage'
-import SearchPage from '../container/SearchInput'
+// import SearchPage from '../container/SearchInput'
 import Auth from '../hoc/auth'
-
+import SearchPage from './views/SearchPage/SearchPage'
 import NavBar from './views/NavBar/NavBar'
 import FavoritePage from './views/FavoritePage/FavoritePage'
 
