@@ -7,7 +7,7 @@ import {
   FETCH_TRENDING,
   FETCH_TOPRATED,
   FETCH_NETFLIX,
-  // FAVORITE_PLUS,
+  FETCH_NEWMOVIE
   
 } from './types';
 
@@ -32,6 +32,28 @@ export const fetchTrending = () => {
       })
     }
 }
+
+export const fetchNewMovieData = (data) => {
+  return {
+    type:FETCH_NEWMOVIE,
+    data,
+  }
+}
+
+export const fetchNewMovie = () => {
+  return (dispatch) => {
+    return axios.get(`https://api.themoviedb.org/3/latest/all/week?api_key=${API_KEY}&language=ko`)
+    .then(response => {
+      dispatch(fetchNewMovieData(response.data))
+      
+    })
+    
+    .catch(error => {
+      throw(error);
+    })
+  }
+}
+
 
 export const fetchTopRatedData = (data) => {
   return {
@@ -106,12 +128,3 @@ export function auth () {
   }
 }
 
-// export function favorite (dataToSubmit) {
-//   const request = axios.post('/api/favorite/addToFavorite',dataToSubmit)
-//   .then(response => response.data)
-//
-//   return {
-//     type: FAVORITE_PLUS,
-//     payload: request
-//   }
-// }

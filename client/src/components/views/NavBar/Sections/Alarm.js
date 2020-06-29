@@ -5,6 +5,8 @@ import { Popover, Button } from 'antd';
 function Alarm () {
   
   
+  
+  
   const text = <span>Title</span>;
   const content = (
     <div>
@@ -17,9 +19,6 @@ function Alarm () {
   return(
     
     <>
-  
-     
-  
       
         <Popover placement="bottom" title={text} content={content} trigger="click">
           <a className="searchLogo" style={{color:'#ffffff',fontSize: '20px',fontWeight: '600'}} ><BellOutlined/></a>

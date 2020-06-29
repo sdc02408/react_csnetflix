@@ -5,7 +5,10 @@ import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
 import MainImage from './Sections/MainImage'
 import TopRated from '../../../container/TopRated'
 import TrendContainer from '../../../container/TrendContainer'
+
 import MiddleSection from './Sections/MiddleSection'
+import NewMovies from '../../../container/NewMovies'
+
 
 function LandingPage (props) {
   
@@ -51,6 +54,8 @@ function LandingPage (props) {
         }
   
         <TopRated />
+        <NewMovies />
+        
       </div>
   )
 }

@@ -3,22 +3,16 @@ import {
   DownOutlined,
   CloseOutlined,
   HeartOutlined,
-  CaretRightOutlined,
-  InfoCircleOutlined,
-  PlusCircleOutlined,
   LikeOutlined,
   DislikeOutlined,
-  PlayCircleOutlined,
   PlayCircleFilled,
 } from '@ant-design/icons'
-import { Popover, Button, Modal } from 'antd'
-import Favorite from '../../../container/Favorite'
-import '../../../static/sass/components/Movie.scss'
-import SetButton from './SetButton'
-import Star from '../../../static/star.png'
-import FavoriteBtn from './FavoriteBtn'
-import Modalpage from './Modal'
+import {Modal} from 'antd'
 
+import '../../../static/sass/components/Movie.scss'
+
+import Star from '../../../static/star.png'
+import Modalpage from './Modal'
 
 const Movie = (props) => {
   const [modal, setModal] = useState(false)

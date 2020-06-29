@@ -1,4 +1,4 @@
-import { LOGIN_USER, REGISTER_USER, AUTH_USER,FETCH_TRENDING,FETCH_NETFLIX} from '../_actions/types'
+import { LOGIN_USER, REGISTER_USER, AUTH_USER,FETCH_TRENDING,FETCH_NETFLIX,FETCH_NEWMOVIE} from '../_actions/types'
 
 //리듀서 ㅁ함수 만들기.
 export default function(state = {}, action) {
@@ -24,12 +24,12 @@ export default function(state = {}, action) {
         movies: action.data
       }
       break
-    // case FAVORITE_PLUS:
-    //   return {
-    //     ...state,
-    //     plus: action.data
-    //   }
-    //   break
+    case FETCH_NEWMOVIE:
+      return {
+        ...state,
+        newMovie: action.data
+      }
+      break
     default:
       return state
   }

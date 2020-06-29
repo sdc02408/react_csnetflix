@@ -1,30 +1,13 @@
-import React, { useState } from 'react'
-import { Modal } from 'antd'
+import React from 'react'
+
 import SetButton from './SetButton'
-import FavoriteBtn from './FavoriteBtn'
-import {
-  DownOutlined,
-  CloseOutlined,
-  HeartOutlined,
-  CaretRightOutlined,
-  InfoCircleOutlined,
-  PlusCircleOutlined,
-  LikeOutlined,
-  DislikeOutlined,
-  PlayCircleOutlined,
-  PlayCircleFilled,
-} from '@ant-design/icons'
+
 import '../../../static/sass/components/modal.scss'
 
 function Modalpage (props) {
   
-
-  
   return (
     <>
- 
-    
-
         <div className="mainmodal"
              style={{
                width: '100%', position: 'relative',
@@ -44,9 +27,7 @@ function Modalpage (props) {
 
               <p id={'modaloverview'}>{props.overview}</p>
 
-              <SetButton />
-
-              <FavoriteBtn
+              <SetButton
                 movieId={props.id}
                 movieTitle={props.name}
                 moviePost={props.poster_path}
