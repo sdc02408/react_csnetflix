@@ -42,12 +42,10 @@ export const fetchNewMovieData = (data) => {
 
 export const fetchNewMovie = () => {
   return (dispatch) => {
-    return axios.get(`https://api.themoviedb.org/3/latest/all/week?api_key=${API_KEY}&language=ko`)
+    return axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=ko`)
     .then(response => {
       dispatch(fetchNewMovieData(response.data))
-      
     })
-    
     .catch(error => {
       throw(error);
     })

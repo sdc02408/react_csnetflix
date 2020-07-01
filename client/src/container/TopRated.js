@@ -48,8 +48,8 @@ const TopRated = (props) => {
     dispatch(fetchTopRated())
   }, [])
 
-  const topRatedData = useSelector(state => state.toprated.movies,[]) || [];
- 
+  const topRatedData = useSelector(state => state.toprated.topmovies,[]) || [];
+
   return (
     <div className="sliders" >
       <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>TOP20</p>

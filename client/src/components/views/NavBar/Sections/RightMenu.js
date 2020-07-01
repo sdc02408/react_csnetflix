@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Menu,Avatar } from 'antd';
+import { Menu,Avatar,Badge  } from 'antd';
 import axios from 'axios';
 import {SearchOutlined,BellOutlined,UserOutlined} from '@ant-design/icons'
 import { USER_SERVER } from '../../../Config';
@@ -60,7 +60,7 @@ function RightMenu(props) {
           <Alarm />
         </Menu.Item>
         <Menu.Item key="avatar">
-          <a href="/"><Avatar shape="square" icon={<UserOutlined />} /></a>
+          <a href="/"><Avatar shape="square"  style={{ color: '#ffffff', backgroundColor: '#87d068' }}   icon={<UserOutlined />} /></a>
         </Menu.Item>
         <Menu.Item key="logout">
           <a onClick={logoutHandler}>로그아웃</a>

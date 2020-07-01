@@ -50,10 +50,11 @@ const NewMovies = (props) => {
   }, [])
   
   const newMovieData = useSelector(state => state.newmovie.newMovie, []) || []
-  console.log(newMovieData, "dfdf")
+
+  
   return (
     <div className="sliders" >
-      <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>dfsfdsdf</p>
+      <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>상영중인 영화</p>
       <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}>
         
         {newMovieData.results && newMovieData.results.map(movie => (

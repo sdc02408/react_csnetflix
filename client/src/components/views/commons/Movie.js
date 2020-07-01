@@ -8,9 +8,7 @@ import {
   PlayCircleFilled,
 } from '@ant-design/icons'
 import {Modal} from 'antd'
-
 import '../../../static/sass/components/Movie.scss'
-
 import Star from '../../../static/star.png'
 import Modalpage from './Modal'
 

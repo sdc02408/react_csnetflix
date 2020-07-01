@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button} from 'antd'
 import {CaretRightOutlined,InfoCircleOutlined } from '@ant-design/icons'
-import SetButton from '../../commons/SetButton'
+import MainPageBtn from './MainPageBtn'
 
 
 function MiddleSection (props) {
@@ -25,7 +25,7 @@ function MiddleSection (props) {
       <div style={{position:'absolute', Width:'40%', top:'30%', left:'50%'}}>
         <p style={{color:'white', fontSize:'70px', margin:'0 auto',textAlign:'left',textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',}}>{props.titles}</p>
   
-        <SetButton />
+        <MainPageBtn />
        
         <p style={{color:'white', fontSize:'1.2rem',
           fontWeight: 'normal',

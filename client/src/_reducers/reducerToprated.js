@@ -5,7 +5,7 @@ export default function (state = [], action) {
     case FETCH_TOPRATED:
       return {
         ...state,
-        movies: action.data,
+        topmovies: action.data,
       }
     default:
       return state;
