@@ -50,7 +50,7 @@ const Netflix = (props) => {
   }, [])
 
   const netflixData = useSelector(state => state.netflix.movies, []) || []
-  console.log(netflixData,"netflix")
+ 
   return (
     <div className="sliders" >
       <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>Netflix 인기 컨텐츠</p>

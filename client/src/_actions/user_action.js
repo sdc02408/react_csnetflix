@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {API_KEY,API_URL,IMAGE_BASE_URL} from '../components/Config'
+import {API_KEY} from '../components/Config'
 import {
   LOGIN_USER,
   REGISTER_USER,
@@ -8,7 +8,6 @@ import {
   FETCH_TOPRATED,
   FETCH_NETFLIX,
   FETCH_NEWMOVIE
-  
 } from './types';
 
 //액션 생성 함수 만들기 ,  data는 파라미터. 파라미터는 액션 객체 안에 추가 필드로 들어간다.

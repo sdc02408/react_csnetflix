@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 import user from './user_reducer';
 import trendingReducer from './user_reducer'
-import topratedReducer from './reducerToprated'
+import topratedReducer from './user_reducer'
 import netflixReducer from './user_reducer'
 import newmovieReducer from './user_reducer'
 // import favorite from './user_reducer'
@@ -14,9 +14,6 @@ const rootReducer = combineReducers({
   toprated: topratedReducer,
   netflix: netflixReducer,
   newmovie: newmovieReducer
-  // favorite: favorite,
- 
-//comment
 })
 
 export default rootReducer;

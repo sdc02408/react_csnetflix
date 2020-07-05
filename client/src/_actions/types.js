@@ -6,7 +6,3 @@ export const FETCH_TOPRATED = 'fetch_toprated';
 export const FETCH_NETFLIX = 'fetch_netflix';
 export const FETCH_NEWMOVIE = 'fetch_newmovie'
 
-// export const FAVORITE_PLUS = 'favorite_plus';
-
-
-//액션 타입 정의 하기 .

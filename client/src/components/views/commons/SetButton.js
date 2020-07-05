@@ -60,7 +60,6 @@ const SetButton = (props) =>{
       Axios.post('/api/favorite/addToFavorite',variables )
       .then(response => {
         if(response.data.success) {
-      
           setFavorited(!Favorited)
         } else{
           alert('FavoritePage 리스트에서 추가하는걸 실패했습니다.')

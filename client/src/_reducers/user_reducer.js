@@ -1,6 +1,5 @@
-import { LOGIN_USER, REGISTER_USER, AUTH_USER,FETCH_TRENDING,FETCH_NETFLIX,FETCH_NEWMOVIE} from '../_actions/types'
+import { LOGIN_USER, REGISTER_USER, AUTH_USER,FETCH_TRENDING,FETCH_NETFLIX,FETCH_NEWMOVIE,FETCH_TOPRATED} from '../_actions/types'
 
-//리듀서 ㅁ함수 만들기.
 export default function(state = {}, action) {
   switch (action.type) {
     case LOGIN_USER:
@@ -30,6 +29,11 @@ export default function(state = {}, action) {
         newMovie: action.data
       }
       break
+    case FETCH_TOPRATED:
+      return {
+        ...state,
+        topmovies: action.data,
+      }
     default:
       return state
   }
