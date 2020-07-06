@@ -6,6 +6,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../static/sass/components/CsSlider.scss'
+import {LeftOutlined ,RightOutlined  } from '@ant-design/icons'
 
 const Netflix = (props) => {
   const settings = {
@@ -41,6 +42,9 @@ const Netflix = (props) => {
       }
     ]
   }
+  
+
+  
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -54,7 +58,8 @@ const Netflix = (props) => {
   return (
     <div className="sliders" >
       <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>Netflix 인기 컨텐츠</p>
-      <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}>
+      <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}
+              >
 
         {netflixData.results && netflixData.results.map(movie => (
           <Movie props={movie} key={movie.id}/>
@@ -62,6 +67,7 @@ const Netflix = (props) => {
 
       </Slider>
     </div>
+    
   )
 }
 

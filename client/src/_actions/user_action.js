@@ -80,7 +80,7 @@ export const fetchNetFlixData = (data) => {
 
 export const fetchNetFlix =() => {
   return (dispatch) => {
-    return axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213&language=ko`)
+    return axios.get(`https://api.themoviedb.org/3/discover/tv?&api_key=${API_KEY}&with_networks=213&language=ko`)
     .then(response => {
       dispatch(fetchNetFlixData(response.data))
       

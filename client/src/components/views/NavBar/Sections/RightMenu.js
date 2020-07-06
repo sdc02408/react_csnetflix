@@ -60,7 +60,7 @@ function RightMenu(props) {
           <Alarm />
         </Menu.Item>
         <Menu.Item key="avatar">
-          <a href="/"><Avatar shape="square"  style={{ color: '#ffffff', backgroundColor: '#87d068' }}   icon={<UserOutlined />} /></a>
+          <a href="/"><Avatar shape="square"  style={{ color: '#ffffff', backgroundColor: '#cccccc' }}   icon={<UserOutlined />} /></a>
         </Menu.Item>
         <Menu.Item key="logout">
           <a onClick={logoutHandler}>로그아웃</a>

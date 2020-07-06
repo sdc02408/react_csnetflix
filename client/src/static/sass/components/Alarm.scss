@@ -1,0 +1,25 @@
+.ant-popover-inner {
+  width: 300px;
+  border-bottom: 1px solid rgba(255,255,255,.25)!important;
+  background-color: rgba(0,0,0,.85) !important;
+  .alarmBox {
+    display: flex;
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+    .alarmBoxTitleContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: center;
+      margin-left:5px;
+    }
+
+
+    .alarmBoxTitle {
+      margin-bottom: 0;
+      color: #cccccc;
+
+    }
+  }
+}
+

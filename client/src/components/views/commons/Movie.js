@@ -42,9 +42,9 @@ const Movie = (props) => {
         <p className="releaseDate">{props.props.release_date.substr(0, 4)}</p>
         }
        
-        <LikeOutlined className="likeBtn"/>
-        <DislikeOutlined className="dislikeBtn"/>
-        <HeartOutlined className="plusBtn"/>
+        {/*<LikeOutlined className="likeBtn"/>*/}
+        {/*<DislikeOutlined className="dislikeBtn"/>*/}
+        {/*<HeartOutlined className="plusBtn"/>*/}
        
         <DownOutlined className="detailIcon" onClick={showModal} style={{ fontSize: '20px' }}></DownOutlined>
       </div>

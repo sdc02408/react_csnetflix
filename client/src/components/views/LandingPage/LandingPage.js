@@ -25,7 +25,7 @@ function LandingPage (props) {
     .then(response => response.json())
     .then(response => {
       setMiddleMovieImage(response.results[1])
-      setMainMovieImage(response.results[3])
+      setMainMovieImage(response.results[0])
       console.log("main",response.results[1])
     })
   }

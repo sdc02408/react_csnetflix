@@ -1,8 +1,5 @@
-@import "abstracts/variables";
+
 @import "abstracts/function";
-//@import "abstracts/_slick.scss";
-//@import "abstracts/_slick-theme.scss";
-//
 
 @import "components/Landingpage";
 @import "components/CsSlider";
@@ -13,7 +10,3 @@
   margin: 0;
 }
 
-.App {
-  width: 100vw;
-  background: $color-background;
-}

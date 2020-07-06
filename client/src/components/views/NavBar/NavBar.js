@@ -3,7 +3,7 @@ import LeftMenu from './Sections/LeftMenu'
 import RightMenu from './Sections/RightMenu'
 import { Drawer, Button} from 'antd'
 import {BarsOutlined} from '@ant-design/icons'
-import './Sections/Navbar.css'
+import '../../../static/sass/components/Navbar.scss'
 
 function NavBar () {
   const [visible, setVisible] = useState(false)

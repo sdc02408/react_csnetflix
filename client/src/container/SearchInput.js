@@ -36,13 +36,13 @@ const SearchInput = () => {
 
   
   return (
-    <div className={"searchEle"} style={{ padding: '10px 1px'}} >
+    <div className={"searchEle"} style={{ padding: '7px 1px'}} >
       
       <div className="inputEle" >
         {lists &&
         <Input className="searchText" type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
         }
-        <a className="searchIcon" style={{ color: '#ffffff' }} onClick={clickSearch}><SearchOutlined/></a>
+        <a className="searchIcon" style={{ color: '#ffffff' }} onClick={clickSearch}><SearchOutlined style={{fontSize:'18px'}}/></a>
         
       </div>
       
