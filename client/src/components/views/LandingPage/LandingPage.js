@@ -16,7 +16,7 @@ function LandingPage (props) {
   const [MiddleMovieImage, setMiddleMovieImage] = useState(null)
   
   useEffect(() => {
-    const endpoint = `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213&language=ko`
+    const endpoint = `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213&language=ko&include_adult=false`
     fetchMovies(endpoint)
   }, [])
 
@@ -24,9 +24,9 @@ function LandingPage (props) {
     fetch(endpoint)
     .then(response => response.json())
     .then(response => {
-      setMiddleMovieImage(response.results[1])
-      setMainMovieImage(response.results[0])
-      console.log("main",response.results[1])
+      setMainMovieImage(response.results[5])
+      setMiddleMovieImage(response.results[9])
+      // console.log("main",response.results[1])
     })
   }
 

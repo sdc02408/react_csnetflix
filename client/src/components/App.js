@@ -20,11 +20,11 @@ function App() {
       <NavBar />
         <div style={{paddingTop: '1px', minHeight: 'calc(100vh -80px'}}>
         <Switch>
-          <Route exact path="/" component={Auth(LandingPage,true)} />
+          <Route exact path="/" component={Auth(LandingPage,null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
-          <Route exact path="/searchpage" component={Auth(SearchPage,true)}/>
-          <Route exact path="/favorite" component={Auth(FavoritePage,true)}/>
+          <Route exact path="/searchpage" component={Auth(SearchPage,null)}/>
+          <Route exact path="/favorite" component={Auth(FavoritePage,null)}/>
         </Switch>
       </div>
     </Router>

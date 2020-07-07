@@ -24,10 +24,10 @@ function MainImage (props) {
       
       </div>
       
-      <div style={{ position: 'relative', maxWidth: '40%', top: '17rem', marginLeft: '60px', height: '90vh' }}>
+      <div style={{ position: 'relative', maxWidth: '40%', top: '16rem', marginLeft: '60px', height: '90vh' }}>
         <p style={{
           color: 'white',
-          fontSize: '6em',
+          fontSize: '4.5em',
           margin: '0 auto',
           textAlign: 'left',
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',

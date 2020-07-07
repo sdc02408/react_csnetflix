@@ -40,7 +40,7 @@ const SearchInput = () => {
       
       <div className="inputEle" >
         {lists &&
-        <Input className="searchText" type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
+        <Input className="searchText"  style={{width:'90%'}} type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
         }
         <a className="searchIcon" style={{ color: '#ffffff' }} onClick={clickSearch}><SearchOutlined style={{fontSize:'18px'}}/></a>
         

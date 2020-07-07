@@ -35,7 +35,7 @@ function RightMenu(props) {
           <a href="/">키즈</a>
         </Menu.Item>
         <Menu.Item key="alaram">
-          <a href="/"><BellOutlined /></a>
+          <Alarm />
         </Menu.Item>
         <Menu.Item key="signin">
           <a href="/login">로그인</a>
