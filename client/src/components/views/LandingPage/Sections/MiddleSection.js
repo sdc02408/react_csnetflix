@@ -1,8 +1,5 @@
-import React from 'react';
-import { Button} from 'antd'
-import {CaretRightOutlined,InfoCircleOutlined } from '@ant-design/icons'
+import React from 'react'
 import MainPageBtn from './MainPageBtn'
-
 
 function MiddleSection (props) {
   return (

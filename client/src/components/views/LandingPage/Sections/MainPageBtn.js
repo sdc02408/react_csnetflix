@@ -1,7 +1,6 @@
-import React,{ useEffect, useState } from 'react'
-import { Button, Modal } from 'antd'
-import { CaretRightOutlined, InfoCircleOutlined,PlusOutlined,CheckOutlined  } from '@ant-design/icons'
-
+import React from 'react'
+import { Button } from 'antd'
+import { CaretRightOutlined, InfoCircleOutlined } from '@ant-design/icons'
 
 const MainPageBtn = (props) =>{
   

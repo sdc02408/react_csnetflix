@@ -5,8 +5,7 @@ import { SearchOutlined } from '@ant-design/icons'
 import '../static/sass/components/Search.scss'
 import { Col, Input, Row } from 'antd'
 import { useHistory } from 'react-router-dom'
-import SearchPage from '../components/views/SearchPage/SearchPage'
-
+import {Star} from '../static/star.png'
 const SearchInput = () => {
   
   let history = useHistory()
@@ -50,9 +49,12 @@ const SearchInput = () => {
         <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative' }}>
           
           {movieLists && movieLists.map(movie => (
+            movie.poster_path ?
             <Col span={3}>
+           
               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} style={{ width: '100%' }}/>
-            </Col>
+              
+            </Col> : null
           ))}
           
         </Row>

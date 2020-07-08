@@ -50,7 +50,7 @@ const NewMovies = (props) => {
   }, [])
   
   const newMovieData = useSelector(state => state.newmovie.newMovie, []) || []
-
+  console.log(newMovieData,"new")
   
   return (
     <div className="sliders" >
@@ -58,7 +58,8 @@ const NewMovies = (props) => {
       <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}>
         
         {newMovieData.results && newMovieData.results.map(movie => (
-          <Movie props={movie} key={movie.id}/>
+          movie.backdrop_path ?
+          <Movie props={movie} key={movie.id}/> : null
         ))}
       
       </Slider>

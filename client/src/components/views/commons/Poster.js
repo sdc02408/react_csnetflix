@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { SoundFilled, DownOutlined, CloseOutlined,HeartOutlined, CaretRightOutlined, InfoCircleOutlined,PlusCircleOutlined,PlayCircleFilled ,PlayCircleOutlined } from '@ant-design/icons'
-import { Popover, Button, Modal } from 'antd'
+import { CloseOutlined, DownOutlined, HeartOutlined, PlayCircleFilled, SoundFilled } from '@ant-design/icons'
+import { Modal } from 'antd'
 import '../../../static/sass/components/Poster.scss'
-import SetButton from './SetButton'
 import Star from '../../../static/star.png'
 import Modalpage from '../commons/Modal'
 
