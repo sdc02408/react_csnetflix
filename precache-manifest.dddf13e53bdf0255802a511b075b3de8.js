@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7632af8618743a6358297056bd14aab",
+    "revision": "0b3325f715cff1cd4cf203845029f90f",
     "url": "/react_csnetflix/index.html"
   },
   {
-    "revision": "3f63e5aa43ad50660d30",
+    "revision": "3bce5a8a8bf271ef1516",
     "url": "/react_csnetflix/static/css/2.689b7e3c.chunk.css"
   },
   {
-    "revision": "463309e90283d2dc95b7",
+    "revision": "6841ece905ba6269a8fb",
     "url": "/react_csnetflix/static/css/main.6479ea27.chunk.css"
   },
   {
-    "revision": "3f63e5aa43ad50660d30",
-    "url": "/react_csnetflix/static/js/2.4271eee7.chunk.js"
+    "revision": "3bce5a8a8bf271ef1516",
+    "url": "/react_csnetflix/static/js/2.4400faf8.chunk.js"
   },
   {
     "revision": "b3339fb73e1e6b42b25ee43fa12a6f40",
-    "url": "/react_csnetflix/static/js/2.4271eee7.chunk.js.LICENSE.txt"
+    "url": "/react_csnetflix/static/js/2.4400faf8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "463309e90283d2dc95b7",
-    "url": "/react_csnetflix/static/js/main.4b277df4.chunk.js"
+    "revision": "6841ece905ba6269a8fb",
+    "url": "/react_csnetflix/static/js/main.2dfecd80.chunk.js"
   },
   {
     "revision": "563f4ae5ed8cfaba3dfd",
