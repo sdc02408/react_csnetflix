@@ -51,7 +51,7 @@ const TrendContainer = (props) => {
 
         //결과                   // 상태 선택함수
   const TrendData = useSelector(state => state.trending.trending, []) || [];
-
+  console.log(TrendData,"trendate")
 
   return (
     <div className="sliderss" >
@@ -59,7 +59,11 @@ const TrendContainer = (props) => {
       <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}>
 
         {TrendData.results && TrendData.results.map(movie => (
+        
+          movie.overview ?
           <Poster props={movie} key={movie.id}/>
+          :
+            null
         ))}
 
       </Slider>
