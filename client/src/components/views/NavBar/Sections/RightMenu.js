@@ -31,9 +31,6 @@ function RightMenu(props) {
           <SearchInput />
           
         </Menu.Item>
-        <Menu.Item key="kids">
-          <a href="/">키즈</a>
-        </Menu.Item>
         <Menu.Item key="alaram">
           <Alarm />
         </Menu.Item>
@@ -52,9 +49,6 @@ function RightMenu(props) {
    
             <SearchInput />
       
-        </Menu.Item>
-        <Menu.Item key="kids">
-          <a href="/">키즈</a>
         </Menu.Item>
         <Menu.Item key="alarm">
           <Alarm />

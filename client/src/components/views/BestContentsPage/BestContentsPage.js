@@ -25,14 +25,21 @@ function BestContents () {
       // console.log("main",response.results[1])
     })
   }
-  console.log(MainMovieImage,"mainmovie")
+  console.log(MainMovieImage, 'mainmovie')
   
-  
-  return(
-    <div style={{width:'100%', margin:'0'}}>
-    
-      <h1  style={{position:'absolute', zIndex:'199', paddingLeft:'4%', top:'100px',color:'white'}}>영화</h1>
+  return (
+    <div style={{ width: '100%', margin: '0' }}>
       
+      <div style={{ width: '95%', margin: '0 auto' }}>
+        <p style={{
+          position: 'absolute',
+          zIndex: '4',
+          top: '100px',
+          color: 'white',
+          fontSize: '2em',
+          fontWeight: '600',
+        }}>영화</p>
+      </div>
       {MainMovieImage &&
       <MainImage
         image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
@@ -42,13 +49,13 @@ function BestContents () {
       }
       
       
-      <NewMovies />
+      <NewMovies/>
       
-      <TrendContainer />
-      <TopRated />
-      <Netflix />
-     
-  
+      <TrendContainer/>
+      <TopRated/>
+      <Netflix/>
+    
+    
     </div>
   )
 }
