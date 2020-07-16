@@ -1,7 +1,5 @@
 import React,{useState,useEffect} from 'react';
-// import Layout from '../../../container/Layout'
 import Netflix from '../../../container/Netflix'
-// import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
 import MainImage from './Sections/MainImage'
 import TopRated from '../../../container/TopRated'
 import TrendContainer from '../../../container/TrendContainer'

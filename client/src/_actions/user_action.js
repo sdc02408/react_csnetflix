@@ -1,5 +1,4 @@
 import axios from 'axios';
-import {API_KEY} from '../components/Config'
 import {
   LOGIN_USER,
   REGISTER_USER,
@@ -9,6 +8,9 @@ import {
   FETCH_NETFLIX,
   FETCH_NEWMOVIE
 } from './types';
+import dotenv from 'dotenv'
+dotenv.config()
+const apikey = process.env.REACT_APP_API_KEYL
 
 //액션 생성 함수 만들기 ,  data는 파라미터. 파라미터는 액션 객체 안에 추가 필드로 들어간다.
 export const fetchTrendData = (data) => {
@@ -20,7 +22,7 @@ export const fetchTrendData = (data) => {
 
 export const fetchTrending = () => {
     return (dispatch) => {
-      return axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=ko`)
+      return axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${apikey}&language=ko`)
       .then(response => {
         dispatch(fetchTrendData(response.data))
         
@@ -41,7 +43,7 @@ export const fetchNewMovieData = (data) => {
 
 export const fetchNewMovie = () => {
   return (dispatch) => {
-    return axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=ko`)
+    return axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apikey}&language=ko`)
     .then(response => {
       dispatch(fetchNewMovieData(response.data))
     })
@@ -61,7 +63,7 @@ export const fetchTopRatedData = (data) => {
 
 export const fetchTopRated = () => {
   return (dispatch) => {
-    return axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=ko`)
+    return axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apikey}&language=ko`)
     .then(response => {
       dispatch(fetchTopRatedData(response.data))
     })
@@ -80,7 +82,7 @@ export const fetchNetFlixData = (data) => {
 
 export const fetchNetFlix =() => {
   return (dispatch) => {
-    return axios.get(`https://api.themoviedb.org/3/discover/tv?&api_key=${API_KEY}&with_networks=213&language=ko`)
+    return axios.get(`https://api.themoviedb.org/3/discover/tv?&api_key=${apikey}&with_networks=213&language=ko`)
     .then(response => {
       dispatch(fetchNetFlixData(response.data))
       

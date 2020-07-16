@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { fetchNetFlix } from '../_actions/user_action'
 import { useDispatch, useSelector } from 'react-redux'
 import Movie from '../components/views/commons/Movie'
@@ -6,7 +6,6 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../static/sass/components/CsSlider.scss'
-import {LeftOutlined ,RightOutlined  } from '@ant-design/icons'
 
 const Netflix = (props) => {
   const settings = {

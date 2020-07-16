@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import MainImage from '../LandingPage/Sections/MainImage'
-import { API_KEY, IMAGE_BASE_URL } from '../../Config'
 import Netflix from '../../../container/Netflix'
 import TrendContainer from '../../../container/TrendContainer'
 import TopRated from '../../../container/TopRated'
-
 import NewMovies from '../../../container/NewMovies'
+import dotenv from 'dotenv'
+
+dotenv.config()
+const apikey = process.env.REACT_APP_API_KEYL
 
 function BestContents () {
   
   const [MainMovieImage, setMainMovieImage] = useState(null)
   
   useEffect(() => {
-    const endpoint = `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}&with_networks=213&language=ko&include_adult=false`
+    const endpoint = `https://api.themoviedb.org/3/trending/all/day?api_key=${apikey}&with_networks=213&language=ko&include_adult=false`
     fetchbestMovies(endpoint)
   }, [])
   
@@ -42,7 +44,7 @@ function BestContents () {
       </div>
       {MainMovieImage &&
       <MainImage
-        image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
+        image={`'http://image.tmdb.org/t/p/'w1280${MainMovieImage.backdrop_path}`}
         title={MainMovieImage.title}
         text={MainMovieImage.overview}
       />

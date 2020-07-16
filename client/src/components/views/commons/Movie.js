@@ -1,13 +1,6 @@
 import React, { useState } from 'react'
-import {
-  DownOutlined,
-  CloseOutlined,
-  HeartOutlined,
-  LikeOutlined,
-  DislikeOutlined,
-  PlayCircleFilled,
-} from '@ant-design/icons'
-import {Modal} from 'antd'
+import { CloseOutlined, DownOutlined, PlayCircleFilled } from '@ant-design/icons'
+import { Modal } from 'antd'
 import '../../../static/sass/components/Movie.scss'
 import Star from '../../../static/star.png'
 import Modalpage from './Modal'

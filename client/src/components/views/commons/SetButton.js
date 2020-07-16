@@ -1,7 +1,8 @@
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from 'antd'
-import { CaretRightOutlined, InfoCircleOutlined,PlusOutlined,CheckOutlined  } from '@ant-design/icons'
+import { CaretRightOutlined, CheckOutlined, PlusOutlined } from '@ant-design/icons'
 import Axios from 'axios'
+
 const SetButton = (props) =>{
   
   // movie에서 받아온 정보들

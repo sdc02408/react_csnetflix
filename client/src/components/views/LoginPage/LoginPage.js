@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
-import Axios from 'axios'
-import {useDispatch} from 'react-redux'
-import {loginUser} from '../../../_actions/user_action';
-import {withRouter } from 'react-router-dom';
-import {Formik} from 'formik'
-import * as Yup from 'yup';
-import {Form,Input,Button, Checkbox, Typography} from 'antd'
-import {UserOutlined, LockOutlined} from '@ant-design/icons';
+import { useDispatch } from 'react-redux'
+import { loginUser } from '../../../_actions/user_action'
+import { withRouter } from 'react-router-dom'
+import { Formik } from 'formik'
+import * as Yup from 'yup'
+import { Button, Form, Input, Typography } from 'antd'
+import { LockOutlined, UserOutlined } from '@ant-design/icons'
 import './Sections/LoginPage.css'
 import '../../../index.css'
-
 
 const { Title } = Typography;
 

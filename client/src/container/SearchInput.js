@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import { API_KEY, API_URL, IMAGE_BASE_URL } from '../components/Config'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { SearchOutlined } from '@ant-design/icons'
 import '../static/sass/components/Search.scss'
 import { Col, Input, Row } from 'antd'
 import { useHistory } from 'react-router-dom'
-import {Star} from '../static/star.png'
+import dotenv from 'dotenv'
+
+dotenv.config()
+const apikey = process.env.REACT_APP_API_KEYL
+
 const SearchInput = () => {
 
   let history = useHistory()
@@ -15,7 +18,7 @@ const SearchInput = () => {
   const [movieLists, setMovieLists] = useState([])
 
 
-    const url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=kr&page=1&query=${search}`
+    const url = `https://api.themoviedb.org/3/search/multi?api_key=${apikey}&language=kr&page=1&query=${search}`
 
   const fetch = async () => {
     const response = await axios.get(url)
