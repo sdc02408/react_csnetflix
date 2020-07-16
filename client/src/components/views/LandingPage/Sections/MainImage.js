@@ -1,6 +1,6 @@
 import React from 'react'
 import MainPageBtn from './MainPageBtn'
-
+import '../../../../static/sass/components/LandingpageText.scss'
 function MainImage (props) {
   
   return (
@@ -19,35 +19,19 @@ function MainImage (props) {
         zIndex: '0',
       }}>
       
-      
       </div>
       
       
       <div style={{width:'95%', margin:'0 auto' }}>
-      <div  style={{ position: 'relative', maxWidth: '40%', top: '16rem', height: '90vh'}}>
-        <p style={{
-          color: 'white',
-          fontSize: '4.5em',
-          margin: '0 auto',
-          textAlign: 'left',
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',
-        }}>{props.title}</p>
-        <p style={{
-          color: 'white', fontSize: '1.4rem',
-          fontWeight: 'normal',
-          lineHeight: 'normal',
-          width: '100%',
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.45)',
-          marginTop: '.1vw',
-        }}>{props.text}</p>
+      <div className="MainTextContainer">
+        <p className="MainTextTitle" >{props.title}</p>
+        <p className="MainTextContent">{props.text}</p>
   
   
    <MainPageBtn />
       
       </div>
       </div>
-  
-
       
     </>
   )

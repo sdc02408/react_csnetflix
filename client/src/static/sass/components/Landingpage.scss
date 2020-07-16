@@ -1,66 +1,66 @@
-.layout {
-  width: 90%;
-  margin: auto;
-
-  p {
-    color: white;
-    font-size: 1em;
-    font-weight: 700;
-    text-transform: uppercase;
-
-  }
-}
-
-.movieContainer {
-  margin: 2em 0;
-  height: 10rem;
-  padding: 15px;
-  align-items: center;
-  position: static;
-  display: flex;
-
-  &:hover .movie {
-    opacity: .3;
-    transform: translateX(-25%);
-  }
-
-
-  .movie {
-
-    margin: 5px;
-    transition: all 0.2s ease-in;
-    display: inline-block;
-
-
-    &:hover {
-      opacity: 1;
-      z-index: 1;
-      transform: scale(1.5) !important;
-    }
-
-    &:hover ~ .movie{
-      transform: translateX(25%);
-    }
-
-
-    img {
-      height: 8em;
-      cursor: pointer;
-      transition: all 0.2s ease-in;
-
-
-      &:hover {
-        height: 11em;
-      }
-    }
-
-
-  }
-
-  &:hover .netflixMovie {
-    opacity: .3;
-  }
-
-}
-
-
+//.layout {
+//  width: 90%;
+//  margin: auto;
+//
+//  p {
+//    color: white;
+//    font-size: 1em;
+//    font-weight: 700;
+//    text-transform: uppercase;
+//
+//  }
+//}
+//
+//.movieContainer {
+//  margin: 2em 0;
+//  height: 10rem;
+//  padding: 15px;
+//  align-items: center;
+//  position: static;
+//  display: flex;
+//
+//  &:hover .movie {
+//    opacity: .3;
+//    transform: translateX(-25%);
+//  }
+//
+//
+//  .movie {
+//
+//    margin: 5px;
+//    transition: all 0.2s ease-in;
+//    display: inline-block;
+//
+//
+//    &:hover {
+//      opacity: 1;
+//      z-index: 1;
+//      transform: scale(1.5) !important;
+//    }
+//
+//    &:hover ~ .movie{
+//      transform: translateX(25%);
+//    }
+//
+//
+//    img {
+//      height: 8em;
+//      cursor: pointer;
+//      transition: all 0.2s ease-in;
+//
+//
+//      &:hover {
+//        height: 11em;
+//      }
+//    }
+//
+//
+//  }
+//
+//  &:hover .netflixMovie {
+//    opacity: .3;
+//  }
+//
+//}
+//
+//

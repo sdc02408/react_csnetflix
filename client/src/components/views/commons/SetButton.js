@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button } from 'antd'
 import { CaretRightOutlined, CheckOutlined, PlusOutlined } from '@ant-design/icons'
 import Axios from 'axios'
+import '../../../static/sass/components/SetButton.scss'
 
 const SetButton = (props) =>{
   
@@ -72,13 +73,12 @@ const SetButton = (props) =>{
   return (
     <>
   
-      <div style={{display:'flex'}}>
-        <Button size="large" style={{color:'#181818',borderRadius:'0.3rem', paddingLeft:'calc(3.6rem / 2)', paddingRight:'calc(3.6rem / 2)', fontWeight:'bold',marginRight:'1rem' }}>
+      <div className="setBtn">
+        
+        <Button className="playBtn" size="large" >
           <CaretRightOutlined style={{fontSize:'20px',color:'#181818', fontWeight:'bold'}} />
           재생</Button>
-        <Button size="large" onClick={onClickFavorite}
-                style={{borderRadius:'0.3rem', paddingLeft:'calc(3.6rem / 2)', paddingRight:'calc(3.6rem / 2)',
-                  fontWeight:'bold',marginRight:'1rem',backgroundColor:'rgba(133,133,133,0.6)', color:'white',border:'unset'}}>
+        <Button size="large" className="detailBtn" onClick={onClickFavorite}>
      
           {Favorited ? <CheckOutlined style={{fontSize:'20px'}} /> : <PlusOutlined  style={{fontSize:'20px'}} />}내가 찜한 콘텐츠</Button>
   
