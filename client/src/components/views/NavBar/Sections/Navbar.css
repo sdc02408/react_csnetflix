@@ -34,23 +34,23 @@
 .menu__logo a {
   display: inline-block;
   font-size: 30px;
-  padding: 10px 20px;
+  /*padding: 10px 20px;*/
   color:#E50914;
   font-weight: bold;
 
 }
 
 .menu__container .ant-menu-item {
-  padding: 0px 5px;
+  /*padding: 0px 5px;*/
 }
 
 .menu__container .ant-menu-submenu-title {
-  padding: 10px 20px;
+  /*padding: 10px 20px;*/
 }
 
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
-  padding: 10px 15px!important;
+  /*padding: 10px 15px!important;*/
 }
 
 .menu__container .ant-menu-horizontal {
@@ -59,13 +59,13 @@
 
 .menu__container .menu_left {
   float: left;
-  padding:10px
+  /*padding:10px*/
 
 }
 
 .menu__container .menu_right {
   float: right;
-  padding: 10px;
+  /*padding: 10px;*/
 }
 
 .menu__mobile-button {
