@@ -26,6 +26,18 @@ app.use('/api/users', require('./routes/users'));
 
 app.use('/api/favorite', require('./routes/favorite'));
 
+if(process.env.NODE_ENV ==="production"){
+  
+  //js,css 파일 읽어
+  app.use(express.static("client/build"));
+  
+  
+  //index.html읽어
+  app.get("*", (req,res) => {
+    res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"))
+  })
+}
+
 
 const port = 9000
 app.listen(port, () =>  console.log(`example app listening on port ${port}!`))
