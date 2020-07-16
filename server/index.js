@@ -26,16 +26,15 @@ app.use('/api/users', require('./routes/users'));
 
 app.use('/api/favorite', require('./routes/favorite'));
 
-if(process.env.NODE_ENV ==="production"){
+if (process.env.NODE_ENV === "production") {
   
-  //js,css 파일 읽어
+  // All the javascript and css files
   app.use(express.static("client/build"));
   
-  
-  //index.html읽어
-  app.get("*", (req,res) => {
-    res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"))
-  })
+  // index.html
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+  });
 }
 
 
