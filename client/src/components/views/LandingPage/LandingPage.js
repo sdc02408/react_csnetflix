@@ -1,22 +1,24 @@
 import React,{useState,useEffect} from 'react';
 // import Layout from '../../../container/Layout'
 import Netflix from '../../../container/Netflix'
-import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
+// import {API_KEY,API_URL,IMAGE_BASE_URL} from '../../Config'
 import MainImage from './Sections/MainImage'
 import TopRated from '../../../container/TopRated'
 import TrendContainer from '../../../container/TrendContainer'
-
+import dotenv from 'dotenv'
 import MiddleSection from './Sections/MiddleSection'
 import NewMovies from '../../../container/NewMovies'
+dotenv.config()
 
 
 function LandingPage (props) {
-  
+  const apikey = process.env.REACT_APP_API_KEYL
+ 
   const [MainMovieImage, setMainMovieImage] = useState(null)
   const [MiddleMovieImage, setMiddleMovieImage] = useState(null)
   
   useEffect(() => {
-    const endpoint = `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213&language=ko&include_adult=false`
+    const endpoint = `https://api.themoviedb.org/3/discover/tv?api_key=${apikey}&with_networks=213&language=ko&include_adult=false`
     fetchMovies(endpoint)
   }, [])
 
@@ -35,7 +37,7 @@ function LandingPage (props) {
 
         {MainMovieImage &&
         <MainImage
-          image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
+          image={`http://image.tmdb.org/t/p/w1280${MainMovieImage.backdrop_path}`}
           title={MainMovieImage.name}
           text={MainMovieImage.overview}
         />
@@ -47,7 +49,7 @@ function LandingPage (props) {
       
         {MiddleMovieImage &&
         <MiddleSection
-          image={`${IMAGE_BASE_URL}w1280${MiddleMovieImage.backdrop_path}`}
+          image={`http://image.tmdb.org/t/p/w1280${MiddleMovieImage.backdrop_path}`}
           titles={MiddleMovieImage.name}
           texts={MiddleMovieImage.overview}
         />
