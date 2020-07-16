@@ -29,7 +29,8 @@ const SearchInput = () => {
     return history.push('/searchpage')
   }
 
-  const clickSearch = () => {
+  const clickSearch = (e) => {
+    e.preventDefault()
     setLists(!lists)
   }
 
@@ -37,20 +38,21 @@ const SearchInput = () => {
   return (
     <div className={"searchEle"} >
 
-      <div className="inputEle"  style={{padding:'7px 1px'}}>
+      <div className="inputEle" >
         {lists &&
-        <Input className="searchText"  style={{width:'80%'}} type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
+        <Input className="searchText" style={{width:'80%'}}  type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
         }
-        <a className="searchIcon" style={{ color: '#ffffff' }} onClick={clickSearch}><SearchOutlined style={{fontSize:'18px'}}/></a>
-
+        
+        <span className="searchIcon" style={{ color: '#ffffff',padding:'10px 15px' }} onClick={clickSearch}><SearchOutlined style={{fontSize:'18px'}}/></span>
+     
       </div>
 
       <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%', }} >
         <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative' }}>
 
-          {movieLists && movieLists.map((movie,index) => (
+          {movieLists && movieLists.map(movie => (
             movie.poster_path ?
-            <Col span={3} key={movie.index}>
+            <Col span={3}>
 
               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} style={{ width: '100%' }}/>
 

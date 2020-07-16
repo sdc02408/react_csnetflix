@@ -26,7 +26,7 @@
 }
 
 .menu__logo {
-  width: 100px;
+  width: 150px;
   float: left;
 
 }
@@ -50,7 +50,7 @@
 
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
-  padding: 10px 15px;
+  padding: 10px 15px!important;
 }
 
 .menu__container .ant-menu-horizontal {
@@ -59,13 +59,13 @@
 
 .menu__container .menu_left {
   float: left;
-  margin-left: 40px;
+  padding:10px
 
 }
 
 .menu__container .menu_right {
   float: right;
-  padding:7px 1px!important;
+  padding: 10px;
 }
 
 .menu__mobile-button {
