@@ -7,16 +7,16 @@ import { Col, Input, Row } from 'antd'
 import { useHistory } from 'react-router-dom'
 import {Star} from '../static/star.png'
 const SearchInput = () => {
-  
+
   let history = useHistory()
-  
+
   const [search, setSearch] = useState('')
   const [lists, setLists] = useState(false)
   const [movieLists, setMovieLists] = useState([])
 
-  
+
     const url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=kr&page=1&query=${search}`
-  
+
   const fetch = async () => {
     const response = await axios.get(url)
     setMovieLists(response.data.results)
@@ -28,39 +28,39 @@ const SearchInput = () => {
     fetch(setMovieLists)
     return history.push('/searchpage')
   }
-  
+
   const clickSearch = () => {
     setLists(!lists)
   }
 
-  
+
   return (
     <div className={"searchEle"} >
-      
-      <div className="inputEle" >
+
+      <div className="inputEle"  style={{padding:'7px 1px'}}>
         {lists &&
         <Input className="searchText"  style={{width:'80%'}} type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
         }
         <a className="searchIcon" style={{ color: '#ffffff' }} onClick={clickSearch}><SearchOutlined style={{fontSize:'18px'}}/></a>
-        
+
       </div>
-      
+
       <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%', }} >
         <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative' }}>
-          
-          {movieLists && movieLists.map(movie => (
+
+          {movieLists && movieLists.map((movie,index) => (
             movie.poster_path ?
-            <Col span={3}>
-           
+            <Col span={3} key={movie.index}>
+
               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} style={{ width: '100%' }}/>
-              
+
             </Col> : null
           ))}
-          
+
         </Row>
       </div>
-      
-      
+
+
     </div>
   )
 }
