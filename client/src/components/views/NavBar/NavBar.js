@@ -27,7 +27,7 @@ function NavBar () {
 
   window.addEventListener('scroll', handleScroll);
   return (
-    <nav className={"menu " + (scrolling ? "black" : "" )} style={{ position: 'fixed', zIndex: 5, width: '100%', margin:'10px auto' }} >
+    <nav className={"menu " + (scrolling ? "black" : "" )} style={{ position: 'fixed', zIndex: 5, width: '100%', margin:'0px auto',paddingBottom:'10px', paddingTop:'10px'}} >
       <div className="menu__logo">
         <a href="/">NETFLIX</a>
       </div>
