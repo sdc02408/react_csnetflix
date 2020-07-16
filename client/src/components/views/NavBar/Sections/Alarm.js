@@ -15,7 +15,6 @@ function Alarm () {
     
   }, [])
   const newMovieData = useSelector(state => state.newmovie.newMovie, []) || []
-  console.log(  newMovieData,'newmobiedate')
   
   const Content = (
     <div >

@@ -3,12 +3,15 @@ const app = express();
 
 const {Usernetflix} = require('./models/User');
 const bodyParser = require("body-parser");
-const config = require('./config/key')
+// const config = require('./config/key')
 const cookieParser = require('cookie-parser');
 const {auth} = require('./middleware/auth');
+var dotenv = require('dotenv');
+dotenv.config()
 
+const dburl = process.env.DB_URL_LOCAL
 const mongoose = require('mongoose')
-mongoose.connect(config.mongoURI,{
+mongoose.connect(dburl,{
   userNewUrlParser:true, useUnifiedTopology: true, userCreateIndex: true, userFindAndModify: false
 }).then(() => console.log('mongodb connected ....'))
 .catch(err => console.log(err))

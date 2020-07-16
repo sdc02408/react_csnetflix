@@ -59,7 +59,11 @@ const TrendContainer = (props) => {
       <Slider {...settings} className="csslider" style={{display:'flex',alignItems:'center'}}>
 
         {TrendData.results && TrendData.results.map(movie => (
+        
+          movie.overview ?
           <Poster props={movie} key={movie.id}/>
+          :
+            null
         ))}
 
       </Slider>

@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import MainPageBtn from './MainPageBtn'
-import { Button, Modal } from 'antd'
-import { CaretRightOutlined, InfoCircleOutlined } from '@ant-design/icons'
 
 function MainImage (props) {
   
@@ -24,7 +22,9 @@ function MainImage (props) {
       
       </div>
       
-      <div style={{ position: 'relative', maxWidth: '40%', top: '16rem', marginLeft: '60px', height: '90vh' }}>
+      
+      <div style={{width:'95%', margin:'0 auto' }}>
+      <div  style={{ position: 'relative', maxWidth: '40%', top: '16rem', height: '90vh'}}>
         <p style={{
           color: 'white',
           fontSize: '4.5em',
@@ -45,7 +45,7 @@ function MainImage (props) {
    <MainPageBtn />
       
       </div>
-  
+      </div>
   
 
       

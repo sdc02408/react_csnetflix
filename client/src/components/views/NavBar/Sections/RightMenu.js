@@ -7,6 +7,7 @@ import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import SearchInput from '../../../../container/SearchInput'
+import './Navbar.css'
 import Alarm from '../../NavBar/Sections/Alarm'
 
 function RightMenu(props) {
@@ -31,9 +32,6 @@ function RightMenu(props) {
           <SearchInput />
           
         </Menu.Item>
-        <Menu.Item key="kids">
-          <a href="/">키즈</a>
-        </Menu.Item>
         <Menu.Item key="alaram">
           <Alarm />
         </Menu.Item>
@@ -52,9 +50,6 @@ function RightMenu(props) {
    
             <SearchInput />
       
-        </Menu.Item>
-        <Menu.Item key="kids">
-          <a href="/">키즈</a>
         </Menu.Item>
         <Menu.Item key="alarm">
           <Alarm />
