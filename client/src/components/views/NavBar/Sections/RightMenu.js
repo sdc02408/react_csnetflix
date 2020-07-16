@@ -1,11 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import { Menu,Avatar,Badge  } from 'antd';
-import axios from 'axios';
-import {SearchOutlined,BellOutlined,UserOutlined} from '@ant-design/icons'
-import { USER_SERVER } from '../../../Config';
-import { withRouter } from 'react-router-dom';
-import { useSelector } from "react-redux";
+import React from 'react'
+import { Avatar, Menu } from 'antd'
+import axios from 'axios'
+import { UserOutlined } from '@ant-design/icons'
+import { withRouter } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import SearchInput from '../../../../container/SearchInput'
 import './Navbar.css'
 import Alarm from '../../NavBar/Sections/Alarm'

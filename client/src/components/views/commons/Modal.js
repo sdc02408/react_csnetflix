@@ -1,7 +1,5 @@
 import React from 'react'
-
 import SetButton from './SetButton'
-
 import '../../../static/sass/components/modal.scss'
 
 function Modalpage (props) {
