@@ -37,6 +37,5 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-
-const port = 9000
+var port = process.env.PORT || 9000
 app.listen(port, () =>  console.log(`example app listening on port ${port}!`))
