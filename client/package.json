@@ -15,7 +15,6 @@
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
     "formik": "^2.1.4",
-    "http-proxy-middleware": "^1.0.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -50,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^1.0.5"
   }
 }
