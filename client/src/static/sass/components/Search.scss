@@ -1,6 +1,22 @@
+@import '../abstracts/function';
+
+
 .searchText{
   margin-right: 0px;
   width:76%;
   animation-direction: normal;
   animation-timing-function: ease-in-out;
+}
+
+#aaa{
+  width: 100%!important;
+  position: fixed!important;
+  top: 100px!important;
+  left: 0px!important;
+
+  //@include responsive(phone) {
+  //  height:100%;
+  //  overflow-y:scroll;
+  //}
+
 }

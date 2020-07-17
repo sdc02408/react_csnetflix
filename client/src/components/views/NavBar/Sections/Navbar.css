@@ -216,7 +216,8 @@
   .avatorNav,
   .logoutNav,
   .loginNav,
-  .signupNav{
+  .signupNav,
+  .alarmNav{
     display: none;
   }
 

@@ -1,3 +1,5 @@
+@import '../abstracts/function';
+
 .ant-popover-inner {
   width: 300px;
   border-bottom: 1px solid rgba(255,255,255,.25)!important;
@@ -23,3 +25,9 @@
   }
 }
 
+.searchLogo{
+
+  @include responsive(phone) {
+      display: none;
+  }
+}

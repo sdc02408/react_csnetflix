@@ -23,11 +23,12 @@ function BestContents () {
     .then(response => response.json())
     .then(response => {
       setMainMovieImage(response.results[0])
+      
       // setMiddleMovieImage(response.results[9])
-      // console.log("main",response.results[1])
+      console.log("maidfdfdfn",response.results[3])
     })
   }
-  console.log(MainMovieImage, 'mainmovie')
+
   
   return (
     <div style={{ width: '100%', margin: '0' }}>
@@ -44,7 +45,7 @@ function BestContents () {
       </div>
       {MainMovieImage &&
       <MainImage
-        image={`'http://image.tmdb.org/t/p/'w1280${MainMovieImage.backdrop_path}`}
+        image={`https://image.tmdb.org/t/p/w1280${MainMovieImage.backdrop_path}`}
         title={MainMovieImage.title}
         text={MainMovieImage.overview}
       />

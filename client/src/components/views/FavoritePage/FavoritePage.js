@@ -45,8 +45,8 @@ const FavoritePage = () => {
     <Row gutter={[24, 24]} style={{width:'95%', margin:'0 auto',position:'relative',top:'100px'}}>
 
       
-      {Favorites && Favorites.map(favoritea => (
-        <Col  lg={3}  md={6} sm={24} xs={24}>
+      {Favorites && Favorites.map((favoritea,index) => (
+        <Col key={index} lg={3}  md={6} sm={24} xs={24}>
           <img src= {`https://image.tmdb.org/t/p/original/${favoritea.moviePost}`} style={{width:'100%'}}/>
         </Col>
       ))}

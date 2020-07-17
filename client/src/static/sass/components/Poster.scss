@@ -1,3 +1,5 @@
+@import '../abstracts/function';
+
 .ant-modal-content{
   background-color: unset!important;
   box-shadow: none!important;
@@ -76,8 +78,12 @@
 
 .sliderss {
 
-  width: 90%;
+  width: 95%;
   margin: -50px auto;
+
+  @include responsive(phone) {
+    width: 85%;
+  }
 
   .slick-list {
     padding: 40px 0;
