@@ -1,6 +1,7 @@
 import React from 'react'
 import MainPageBtn from './MainPageBtn'
 import '../../../../static/sass/components/LandingpageText.scss'
+import '../../../../static/sass/components/SetButton.scss'
 
 function MiddleSection (props) {
   return (
@@ -24,10 +25,10 @@ function MiddleSection (props) {
           </div>
           
           
-          <div className="MiddelTextContainer" >
+          <div className="MiddleTextContainer" >
             <p className="MiddleTextTitle">{props.titles}</p>
             
-            <MainPageBtn  />
+            <MainPageBtn />
             
             <p className="MiddleTextContent" >{props.texts}</p>
           </div>

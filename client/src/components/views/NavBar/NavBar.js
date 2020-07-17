@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import LeftMenu from './Sections/LeftMenu'
 import RightMenu from './Sections/RightMenu'
 import { Drawer, Button} from 'antd'
-import {BarsOutlined} from '@ant-design/icons'
+import {CaretDownOutlined } from '@ant-design/icons'
 import './Sections/Navbar.css'
 
 function NavBar () {
@@ -32,30 +32,35 @@ function NavBar () {
         <a href="/">NETFLIX</a>
       </div>
       <div className="menu__container">
+        
         <div className="menu_left">
           <LeftMenu mode="horizontal"/>
         </div>
+        
         <div className="menu_right">
           <RightMenu mode="horizontal"/>
         </div>
+        
         <Button
           className="menu__mobile-button"
-          type="primary"
           onClick={showDrawer}
         >
-          <BarsOutlined type="align-right"/>
+          메뉴<CaretDownOutlined />
         </Button>
+        
         <Drawer
-          title="Logo"
+          title="NETFLIX"
           placement="right"
           className="menu_drawer"
           closable={false}
           onClose={onClose}
           visible={visible}
         >
-          {/*<LeftMenu mode="inline"/>*/}
-          <RightMenu mode="inline"/>
+          
+          <LeftMenu mode="inline"/>
+
         </Drawer>
+        {/*<RightMenu  mode="horizontal"/>*/}
       </div>
     </nav>
   )

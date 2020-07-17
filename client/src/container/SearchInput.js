@@ -55,7 +55,7 @@ const SearchInput = () => {
 
           {movieLists && movieLists.map(movie => (
             movie.poster_path ?
-            <Col span={3}>
+              <Col  lg={3}  md={6} sm={24} xs={24}>
 
               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} style={{ width: '100%' }}/>
 

@@ -1,13 +1,7 @@
 @import '../abstracts/function';
 
-.setBtn{
-
+.setBtn {
   display: flex;
-
-  @include responsive(phone) {
-    display: none
-  }
-
 
   .playBtn {
     color: #181818;
@@ -16,6 +10,7 @@
     padding-right: calc(3.6rem / 2);
     font-weight: bold;
     margin-right: 1rem;
+
   }
 
   .detailBtn {
@@ -24,8 +19,39 @@
     padding-right: calc(3.6rem / 2);
     font-weight: bold;
     margin-right: 1rem;
-    background-color: rgba(133,133,133,0.6);
+    background-color: rgba(133, 133, 133, 0.6);
     color: white;
     border: unset;
   }
+}
+
+.MainPageBtnContainer {
+  display: flex;
+
+  @include responsive(phone) {
+    display: none !important;
+  }
+
+  .MainPageBtnPlay {
+    color: #181818;
+    border-radius: 0.3rem;
+    padding-left: calc(3.6rem / 2);
+    padding-right: calc(3.6rem / 2);
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+
+  .MainPageBtnDetail {
+    border-radius: 0.3rem;
+    padding-left: calc(3.6rem / 2);
+    padding-right: calc(3.6rem / 2);
+    font-weight: bold;
+    margin-right: 1rem;
+    background-color: rgba(133, 133, 133, 0.6);
+    color: white;
+    border: unset;
+
+  }
+
+
 }

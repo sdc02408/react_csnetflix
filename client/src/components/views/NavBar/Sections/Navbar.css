@@ -55,6 +55,7 @@
 
 .menu__container .ant-menu-horizontal {
   border-bottom: none;
+  text-align: end;
 }
 
 .menu__container .menu_left {
@@ -69,21 +70,36 @@
 }
 
 .menu__mobile-button {
-  float: right;
+  float: left;
   height: 32px;
   padding: 6px;
-  margin-top: 8px;
+  margin-top: 18px;
   display: none !important; /* use of important to overwrite ant-btn */
-  background: #E50914;
+  background: none;
+  color: white;
+  border:none;
+}
+
+.menu_drawer .ant-drawer-title{
+  color:#E50914!important;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #141414;
 }
 
 .menu_drawer .ant-drawer-body {
   padding: 0 !important;
+  background-color: #141414;
 }
 
 /* align header of Drawer with header of page */
 .menu_drawer .ant-drawer-header {
   padding: 14px 24px !important;
+  background-color: #141414;
+  border:none
+}
+.ant-menu-item a{
+  color:white!important;
 }
 
 @media (max-width: 1024px) {
@@ -97,6 +113,27 @@
   .menu__container .ant-menu-item a, .menu__container .ant-menu-submenu-title a{
     padding:10px 5px ;
   }
+
+  .menu__mobile-button {
+    display: inline-block !important;
+  }
+  .menu_left{
+    display: none;
+  }
+  .menu_right{
+    display: block;
+  }
+  .menu__container .menu_right{
+    float:none;
+  }
+
+  .menu__container .ant-menu-horizontal{
+    float:right;
+    display: block;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width:60%!important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -108,9 +145,11 @@
     display: inline-block !important;
   }
 
-  .menu_left,
-  .menu_right {
+  .menu_left{
     display: none;
+  }
+  .menu_right{
+    display: block;
   }
 
   .menu__logo a {
@@ -122,8 +161,32 @@
     padding: 1px 20px;
   }
 
+  .searchIcon{
+    padding:0px!important;
+  }
+  .searchEle::selection{
+    background-color: red;
+  }
+
+  .ant-menu-item .ant-menu-item-selected{
+    background-color: red!important;
+  }
+
   .menu__logo a {
     padding: 10px 20px;
+  }
+
+  .menu__container .menu_right{
+    float:none;
+  }
+
+
+  .menu__container .ant-menu-horizontal{
+    float:right;
+    display: block;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width:60%!important;
   }
 }
 .ant-menu-horizontal > .ant-menu-item:hover,
