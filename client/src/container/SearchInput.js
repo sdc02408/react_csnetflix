@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { SearchOutlined } from '@ant-design/icons'
 import '../static/sass/components/Search.scss'
@@ -17,18 +17,30 @@ const SearchInput = () => {
   const [lists, setLists] = useState(false)
   const [movieLists, setMovieLists] = useState([])
 
-
-    const url = `https://api.themoviedb.org/3/search/multi?api_key=${apikey}&language=kr&query=${search}`
-
-  const fetch = async () => {
-    const response = await axios.get(url)
-    setMovieLists(response.data.results)
+  useEffect(() => {
+    const urls = `https://api.themoviedb.org/3/search/multi?api_key=${apikey}&query=${search}`
+    fetchapi(urls)
+  },[search])
+  
+  const fetchapi = (urls) => {
+    fetch(urls)
+    .then(response => response.json())
+    .then(response => {
+      setMovieLists(response.results)
+    }).catch(err => {
+      console.log("Error Reading data " + err);
+    });
   }
+  
+  // const fetch = async () => {
+  //   const response = await axios.get(url)
+  //   setMovieLists(response.data.results)
+  // }
 
 
   const onChange = (e) => {
     setSearch(e.target.value)
-    fetch(setMovieLists)
+    fetchapi(setMovieLists)
     return history.push('/searchpage')
   }
 
@@ -50,10 +62,8 @@ const SearchInput = () => {
      
       </div>
 
-      <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%', height:'100vh',  overflowY:'scroll',
-        overflowX:'hidden' }} >
-        <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative', overflowY:'scroll',
-          overflowX:'hidden' }}>
+      <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%', height:'100vh'}} >
+        <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative'}}>
 
           {movieLists && movieLists.map((movie,index) => (
             movie.poster_path ?
