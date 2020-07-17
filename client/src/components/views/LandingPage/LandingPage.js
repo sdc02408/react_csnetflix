@@ -35,7 +35,7 @@ function LandingPage (props) {
 
         {MainMovieImage &&
         <MainImage
-          image={`http://image.tmdb.org/t/p/w1280${MainMovieImage.backdrop_path}`}
+          image={`https://image.tmdb.org/t/p/w1280${MainMovieImage.backdrop_path}`}
           title={MainMovieImage.name}
           text={MainMovieImage.overview}
         />
@@ -47,7 +47,7 @@ function LandingPage (props) {
       
         {MiddleMovieImage &&
         <MiddleSection
-          image={`http://image.tmdb.org/t/p/w1280${MiddleMovieImage.backdrop_path}`}
+          image={`https://image.tmdb.org/t/p/w1280${MiddleMovieImage.backdrop_path}`}
           titles={MiddleMovieImage.name}
           texts={MiddleMovieImage.overview}
         />

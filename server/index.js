@@ -9,7 +9,7 @@ const {auth} = require('./middleware/auth');
 var dotenv = require('dotenv');
 dotenv.config()
 
-const dburl = process.env.DB_URL_LOCAL
+const dburl = process.env.DB_URL_PRODUCTION
 const mongoose = require('mongoose')
 mongoose.connect(dburl,{
   userNewUrlParser:true, useUnifiedTopology: true, userCreateIndex: true, userFindAndModify: false
