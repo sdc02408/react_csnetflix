@@ -5,19 +5,11 @@ import '../../../../static/sass/components/SetButton.scss'
 
 function MiddleSection (props) {
   return (
-    <div className="bibi">
-      <div style={{
+   
+      <div className="MiddleContainer" style={{
         background: `linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
         url('${props.image}'), #1c1c1c`,
-        height: '80vh',
-        backgroundSize: '100%, cover',
-        backgroundPosition: 'center, center',
-        width: '100%',
-        position: 'relative',
-        margin: '35px 0',
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'space-evenly'
+       
       }}>
         
           <div className="MiddleImage" >
@@ -35,7 +27,7 @@ function MiddleSection (props) {
       
       </div>
     
-    </div>
+
   
   )
 }

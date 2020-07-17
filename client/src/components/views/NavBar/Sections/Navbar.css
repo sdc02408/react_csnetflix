@@ -73,7 +73,7 @@
   float: left;
   height: 32px;
   padding: 6px;
-  margin-top: 18px;
+  margin-top: 10px;
   display: none !important; /* use of important to overwrite ant-btn */
   background: none;
   color: white;
@@ -101,6 +101,16 @@
 .ant-menu-item a{
   color:white!important;
 }
+.ant-btn:active{
+  background-color: #E50914!important;
+  color:white;
+}
+
+.ant-btn:hover{
+  background-color: #E50914!important;
+  color:white;
+}
+
 
 @media (max-width: 1024px) {
   .menu__logo a {
@@ -152,13 +162,19 @@
     display: block;
   }
 
+  .menu__logo{
+    width:80px;
+  }
+
   .menu__logo a {
     margin-left: -20px;
+    font-size: 18px;
+
   }
 
   .menu__container .ant-menu-item,
   .menu__container .ant-menu-submenu-title {
-    padding: 1px 20px;
+    padding: 1px 0px;
   }
 
   .searchIcon{
@@ -184,8 +200,8 @@
   .menu__container .ant-menu-horizontal{
     float:right;
     display: block;
-    padding-top:10px;
-    padding-bottom: 10px;
+    padding-top:0px;
+    padding-bottom: 0px;
     width:60%!important;
   }
 }

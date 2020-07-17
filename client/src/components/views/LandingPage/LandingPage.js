@@ -16,7 +16,7 @@ function LandingPage (props) {
   const [MiddleMovieImage, setMiddleMovieImage] = useState(null)
   
   useEffect(() => {
-    const endpoint = `https://api.themoviedb.org/3/discover/tv?api_key=${apikey}&with_networks=213&language=ko&include_adult=false`
+    const endpoint = `https://api.themoviedb.org/3/discover/tv?api_key=${apikey}&with_networks=213&language=ko`
     fetchMovies(endpoint)
   }, [])
 

@@ -18,7 +18,7 @@ const SearchInput = () => {
   const [movieLists, setMovieLists] = useState([])
 
 
-    const url = `https://api.themoviedb.org/3/search/multi?api_key=${apikey}&language=kr&page=1&query=${search}`
+    const url = `https://api.themoviedb.org/3/search/multi?api_key=${apikey}&language=kr&query=${search}`
 
   const fetch = async () => {
     const response = await axios.get(url)
@@ -50,12 +50,14 @@ const SearchInput = () => {
      
       </div>
 
-      <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%', }} >
-        <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative' }}>
+      <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%', height:'100vh',  overflowY:'scroll',
+        overflowX:'hidden' }} >
+        <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative', overflowY:'scroll',
+          overflowX:'hidden' }}>
 
-          {movieLists && movieLists.map(movie => (
+          {movieLists && movieLists.map((movie,index) => (
             movie.poster_path ?
-              <Col  lg={3}  md={6} sm={24} xs={24}>
+              <Col key={index} lg={3}  md={6} sm={24} xs={24}>
 
               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} style={{ width: '100%' }}/>
 

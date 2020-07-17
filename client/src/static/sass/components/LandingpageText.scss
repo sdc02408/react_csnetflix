@@ -43,12 +43,29 @@
       text-overflow: ellipsis;
       line-height: 1.5;
     }
-
-
   }
 }
 
 
+
+.MiddleContainer {
+
+  height: 80vh!important;
+  background-size: 100%, cover!important;
+  background-position: center, center!important;
+  width: 100%!important;
+  position: relative!important;
+  margin: 35px 0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-evenly!important;
+
+
+  @include responsive(phone) {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 60vh;
+  }
 
 
   .MiddleImage {
@@ -56,8 +73,8 @@
     width: 53%;
 
     @include responsive(phone) {
-      width: 100%;
-      max-width: 100%;
+      width: 90%;
+      max-width: 90%;
     }
   }
 
@@ -66,10 +83,9 @@
     width: 30%;
 
     @include responsive(phone) {
-      width: 30%;
-      max-width: 30%;
+      top: 20px;
+      width:100%;
     }
-
 
 
     .MiddleTextTitle {
@@ -87,7 +103,10 @@
         font-size: 30px;
       }
       @include responsive(phone) {
-        font-size: 20px;
+        font-size: 34px;
+        display: block;
+        text-align: center;
+        margin:0px
       }
     }
 
@@ -109,7 +128,11 @@
         text-overflow: ellipsis;
         line-height: 1.5;
       }
+      @include responsive(phone) {
+       display: none;
+      }
 
     }
   }
 
+}

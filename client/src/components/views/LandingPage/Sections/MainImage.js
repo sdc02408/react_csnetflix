@@ -22,7 +22,7 @@ function MainImage (props) {
       </div>
       
       
-      <div style={{width:'95%', margin:'0 auto' }}>
+      <div style={{width:'90%', margin:'0 auto' }}>
       <div className="MainTextContainer">
         <p className="MainTextTitle" >{props.title}</p>
         <p className="MainTextContent">{props.text}</p>
