@@ -60,7 +60,9 @@ function NavBar () {
           <LeftMenu mode="inline"/>
 
         </Drawer>
+  
         {/*<RightMenu  mode="horizontal"/>*/}
+        
       </div>
     </nav>
   )

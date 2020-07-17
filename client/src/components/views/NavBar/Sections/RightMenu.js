@@ -35,10 +35,10 @@ function RightMenu(props) {
           <Alarm />
         </Menu.Item>
         <Menu.Item key="signin">
-          <a href="/login">로그인</a>
+          <a className="loginNav" href="/login">로그인</a>
         </Menu.Item>
         <Menu.Item key="signup">
-          <a href="/register">회원가입</a>
+          <a className="signupNav" href="/register">회원가입</a>
         </Menu.Item>
       </Menu>
     )
@@ -54,10 +54,10 @@ function RightMenu(props) {
           <Alarm />
         </Menu.Item>
         <Menu.Item key="avatar">
-          <a href="/"><Avatar shape="square"  style={{ color: '#ffffff', backgroundColor: '#cccccc' }}   icon={<UserOutlined />} /></a>
+          <a className="avatorNav" href="/"><Avatar shape="square"  style={{ color: '#ffffff', backgroundColor: '#cccccc' }}   icon={<UserOutlined />} /></a>
         </Menu.Item>
         <Menu.Item key="logout">
-          <a onClick={logoutHandler}>로그아웃</a>
+          <a className="logoutNav" onClick={logoutHandler}>로그아웃</a>
         </Menu.Item>
       </Menu>
     )

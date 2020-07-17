@@ -51,7 +51,7 @@ const SearchInput = () => {
 
 
   return (
-    <div className={"searchEle"} >
+    <div className="searchEle" >
 
       <div className="inputEle" >
         {lists &&
@@ -62,7 +62,7 @@ const SearchInput = () => {
      
       </div>
 
-      <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%'}} >
+      <div className={'searchMovie' + (lists ? "show" : "")} style={{ width: '100%', position: 'fixed', top: '100px', left: '0%',height:'100vh', overflow:'auto'}} >
         <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative'}}>
 
           {movieLists && movieLists.map((movie,index) => (

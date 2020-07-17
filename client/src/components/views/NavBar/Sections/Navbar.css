@@ -144,12 +144,14 @@
     padding-bottom: 10px;
     width:60%!important;
   }
+
 }
 
 @media (max-width: 767px) {
 
   .menu{
     width:100%;
+    padding:0 3px!important;
   }
   .menu__mobile-button {
     display: inline-block !important;
@@ -158,8 +160,13 @@
   .menu_left{
     display: none;
   }
+
   .menu_right{
     display: block;
+  }
+
+  .searchEle{
+    display: block!important;
   }
 
   .menu__logo{
@@ -204,7 +211,23 @@
     padding-bottom: 0px;
     width:60%!important;
   }
+
+
+  .avatorNav,
+  .logoutNav,
+  .loginNav,
+  .signupNav{
+    display: none;
+  }
+
+  .ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow{
+    left:90%!important;
+  }
 }
+
+
+
+
 .ant-menu-horizontal > .ant-menu-item:hover,
 .ant-menu-horizontal > .ant-menu-submenu:hover,
 .ant-menu-horizontal > .ant-menu-item-active,
