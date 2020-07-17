@@ -1,6 +1,6 @@
 const express =  require('express')
 const app = express();
-
+const path = require('path');
 const {Usernetflix} = require('./models/User');
 const bodyParser = require("body-parser");
 // const config = require('./config/key')
