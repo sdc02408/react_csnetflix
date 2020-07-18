@@ -1,3 +1,6 @@
+@import '../abstracts/function';
+
+
 .ant-modal-content{
   background-color: unset!important;
   box-shadow: none!important;
@@ -27,14 +30,28 @@ display: none;}
     &:hover .movie {
       transform: translateX(-25%);
       transition: all 0.2s ease-in;
+
+      @include responsive(phone) {
+        transform: none;
+        transition: none;
+      }
     }
+
+
 
     .slick-slide {
 
       &:hover ~ .slick-slide {
         transform: translateX(50%);
         transition: all 0.2s ease-in;
+
+        @include responsive(phone) {
+          transform: none;
+          transition: none;
+        }
       }
+
+
 
       .movie {
         position: relative;
@@ -43,7 +60,14 @@ display: none;}
           transform: scale(1.6);
           z-index: 100;
           transition: all 0.2s ease-in;
+
+          @include responsive(phone) {
+            transform: none;
+            transition: none;
+          }
         }
+
+
 
         .detailTitle {
           display: none;
@@ -62,7 +86,8 @@ display: none;}
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          width:90%
+          width:90%;
+
         }
 
         .voteStart{
@@ -75,7 +100,10 @@ display: none;}
           bottom: 23%;
           left: 7%;
           width:8px;
+
         }
+
+
 
         .detailVoteAverage {
           display: none;
@@ -91,6 +119,7 @@ display: none;}
           margin-bottom: 0;
         }
 
+
         .releaseDateText {
           display: none;
         }
@@ -105,6 +134,7 @@ display: none;}
           margin-bottom: 0;
         }
 
+
         .releaseDate {
           display: none;
         }
@@ -118,6 +148,8 @@ display: none;}
           color: #ffffff;
           margin-bottom: 0;
         }
+
+
 
         .playBtn {
           display: none;

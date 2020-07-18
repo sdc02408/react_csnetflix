@@ -91,6 +91,11 @@
     &:hover .postermovie {
       transform: translateX(-10%);
       transition: all 0.2s ease-in;
+
+      @include responsive(phone) {
+        transform: none;
+        transition: none;
+      }
     }
 
     .slick-slide {
@@ -98,6 +103,11 @@
       &:hover ~ .slick-slide {
         transform: translateX(20%);
         transition: all 0.2s ease-in;
+
+        @include responsive(phone) {
+          transform: none;
+          transition: none;
+        }
       }
 
       .postermovie {
@@ -107,6 +117,11 @@
           transform: scale(1.2)!important;
           z-index: 100;
           transition: all 0.2s ease-in;
+
+          @include responsive(phone) {
+            transform: none!important;
+            transition: none!important;
+          }
         }
 
         .playBtn {
