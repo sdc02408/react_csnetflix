@@ -14,31 +14,13 @@ const FavoritePage = () => {
     .then(response => {
       if(response.data.success){
         setFavorites(response.data.favorites)
-         console.log(response.data.favorites,"xcxcxc")
       } else {
         alert(' 영화 정보를 가져오는데 실패')
       }
     })
   }
   
-  // const onClickDelete = (movieId, userFrom) => {
-  //   const variables = {
-  //     movieId,
-  //     userFrom
-  //   }
-  //
-  //   Axios.post('/api/favorite/removeFromFavorite', variables)
-  //   .then(response => {
-  //     if(response.data.success){
-  //       fetchFavoredMovie()
-  //     } else{
-  //       alert('리스트에서 지우는것 실패')
-  //     }
-  //   })
-  // }
-  
   return (
-    
     
     <>
       <h2 style={{color:'white',position:'relative',margin:'0 auto', top:'100px',width:'95%',paddingLeft:'12px'}}>내가 찜한 콘텐츠</h2>

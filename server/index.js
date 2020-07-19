@@ -28,7 +28,7 @@ app.use('/api/favorite', require('./routes/favorite'));
 
 if (process.env.NODE_ENV === "production") {
   
-  // All the javascript and css files
+  // javascript and css files
   app.use(express.static("client/build"));
   
   // index.html
@@ -38,4 +38,4 @@ if (process.env.NODE_ENV === "production") {
 }
 
 var port = process.env.PORT || 9000
-app.listen(port, () =>  console.log(`example app listening on port ${port}!`))
+app.listen(port, () =>  console.log(`port ${port}!`))

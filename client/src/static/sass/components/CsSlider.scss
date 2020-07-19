@@ -21,6 +21,8 @@
 
   @include responsive(phone) {
     width: 85%;
+    position:relative;
+    z-index: 997!important;
   }
   .slideIcon{
     color:white;

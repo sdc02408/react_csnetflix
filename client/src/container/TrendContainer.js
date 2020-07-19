@@ -51,7 +51,6 @@ const TrendContainer = (props) => {
 
         //결과                   // 상태 선택함수
   const TrendData = useSelector(state => state.trending.trending, []) || [];
-  console.log(TrendData,"terfensdf")
 
   return (
     <div className="sliderss" >

@@ -8,15 +8,33 @@
   animation-timing-function: ease-in-out;
 }
 
-#aaa{
+#searchContainer{
   width: 100%!important;
+  max-width: 100%!important;
   position: fixed!important;
   top: 100px!important;
   left: 0px!important;
 
-  //@include responsive(phone) {
-  //  height:100%;
-  //  overflow-y:scroll;
-  //}
+  @include responsive(phone) {
+    overflow-y: scroll!important;
+    height: 100vh;
+    z-index: 1!important;
+  }
+
+  .searchContainerScroll{
+
+    width: 100%;
+    margin: 0 auto!important;
+    position: absolute;
+
+  }
+
+  @include responsive(phone) {
+    zIndex:1;
+    overflow-y:scroll;
+    height:100vh;
+    width: 100%!important;
+    margin: 0 auto!important;
+  }
 
 }

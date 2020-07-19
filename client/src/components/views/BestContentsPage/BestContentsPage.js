@@ -23,12 +23,8 @@ function BestContents () {
     .then(response => response.json())
     .then(response => {
       setMainMovieImage(response.results[0])
-      
-      // setMiddleMovieImage(response.results[9])
-      console.log("maidfdfdfn",response.results[3])
     })
   }
-
   
   return (
     <div style={{ width: '100%', margin: '0' }}>

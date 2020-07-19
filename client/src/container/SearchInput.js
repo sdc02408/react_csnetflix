@@ -16,7 +16,7 @@ const SearchInput = () => {
   const [search, setSearch] = useState('')
   const [lists, setLists] = useState(false)
   const [movieLists, setMovieLists] = useState([])
-
+  
   useEffect(() => {
     const urls = `https://api.themoviedb.org/3/search/multi?api_key=${apikey}&query=${search}`
     fetchapi(urls)
@@ -28,15 +28,9 @@ const SearchInput = () => {
     .then(response => {
       setMovieLists(response.results)
     }).catch(err => {
-      console.log("Error Reading data " + err);
+      console.log("Error" + err);
     });
   }
-  
-  // const fetch = async () => {
-  //   const response = await axios.get(url)
-  //   setMovieLists(response.data.results)
-  // }
-
 
   const onChange = (e) => {
     setSearch(e.target.value)
@@ -44,10 +38,12 @@ const SearchInput = () => {
     return history.push('/searchpage')
   }
 
-  const clickSearch = (e) => {
-    e.preventDefault()
+  const clickSearch = () => {
+
     setLists(!lists)
   }
+  
+
 
 
   return (
@@ -55,19 +51,21 @@ const SearchInput = () => {
 
       <div className="inputEle" >
         {lists &&
-        <Input className="searchText" style={{width:'80%'}}  type="text" value={search} onChange={onChange} placeholder="제목을 입력하세요"/>
+        <Input className="searchText" style={{width:'80%'}}  type="text" value={search} onChange={onChange} placeholder="영어제목을 입력하세요"/>
         }
         
         <span className="searchIcon" style={{ color: '#ffffff',padding:'10px 15px' }} onClick={clickSearch}><SearchOutlined style={{fontSize:'18px'}}/></span>
      
       </div>
 
-      <div id="aaa" className={'searchMovie' + (lists ? "show" : "")}  >
-        <Row gutter={[24, 24]} style={{ width: '95%', margin: '0 auto', position: 'relative'}}>
+      <div id="searchContainer"   >
+        {/*className={'searchMovie' + (lists ? "show" : "")}*/}
+
+        <Row gutter={[24, 24]} className="searchContainerScroll">
 
           {movieLists && movieLists.map((movie,index) => (
             movie.poster_path ?
-              <Col key={index} lg={3}  md={6} sm={24} xs={24}>
+              <Col key={index} lg={3}  md={6} sm={12} xs={12}>
 
               <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} style={{ width: '100%' }}/>
 
@@ -75,8 +73,9 @@ const SearchInput = () => {
           ))}
 
         </Row>
-      </div>
-
+    
+    </div>
+    
 
     </div>
   )
