@@ -124,13 +124,8 @@ display: none;}
         }
 
         &:hover .releaseDateText {
-          display: block;
-          font-size: 10px;
-          position: absolute;
-          bottom: 20%;
-          left: 19%;
-          color: #ffffff;
-          margin-bottom: 0;
+          display: none;
+
         }
 
 
@@ -139,16 +134,8 @@ display: none;}
         }
 
         &:hover .releaseDate {
-          display: block;
-          font-size: 10px;
-          position: absolute;
-          bottom: 20%;
-          left: 37%;
-          color: #ffffff;
-          margin-bottom: 0;
+         display: none;
         }
-
-
 
         .playBtn {
           display: none;
@@ -157,7 +144,7 @@ display: none;}
         &:hover .playBtn {
           display: block;
           position: absolute;
-          bottom: 47%;
+          bottom: 57%;
           left: 7%;
           color: #ffffff;
         }

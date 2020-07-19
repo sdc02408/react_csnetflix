@@ -43,9 +43,6 @@ const SearchInput = () => {
     setLists(!lists)
   }
   
-
-
-
   return (
     <div className="searchEle" >
 
