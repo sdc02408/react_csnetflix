@@ -20,7 +20,7 @@ function Modalpage (props) {
 
               <div className={'subinfo'}>
                 <span className={'modalaverage'}>평점 {props.vote_average}</span>
-                <span className={'modalfirstdate'}>개봉일 {props.first_air_date}</span>
+                <span className={'modalfirstdate'}>개봉일{props.release_date} {props.first_air_date}</span>
               </div>
 
               <p id={'modaloverview'}>{props.overview}</p>

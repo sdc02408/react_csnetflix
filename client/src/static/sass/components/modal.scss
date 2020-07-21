@@ -11,6 +11,7 @@
 
   @include responsive(phone) {
     width:100%!important;
+    background: linear-gradient(90deg, #000 20%, transparent)!important;
   }
 
 

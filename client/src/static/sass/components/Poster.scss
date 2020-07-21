@@ -181,7 +181,7 @@
           font-size: 16px;
           position: absolute;
           bottom: 21%;
-          left: 18%;
+          left: 19%;
           color: #ffffff;
           margin-bottom: 0;
         }
@@ -191,7 +191,16 @@
         }
 
         &:hover .releaseDateText {
-          display: none;
+          display: block;
+          font-size: 14px;
+          position: absolute;
+          bottom: 21%;
+          left: 30%;
+          color: #ffffff;
+          margin-bottom: 0;
+          @include responsive(phone) {
+            display: none;
+          }
         }
 
         .releaseDate {
@@ -199,7 +208,25 @@
         }
 
         &:hover .releaseDate {
-          display:none;
+          display: block;
+          font-size: 14px;
+          position: absolute;
+          bottom: 21%;
+          left: 58%;
+          color: #ffffff;
+          margin-bottom: 0;
+
+          @include responsive(desktop) {
+            left: 56%!important;
+          }
+
+          @include responsive(tab) {
+            left: 51%!important;
+          }
+
+          @include responsive(phone) {
+            display: none;
+          }
         }
 
         .detailIcon {
@@ -210,7 +237,7 @@
           display: block;
           position: absolute;
           bottom: 10%;
-          left: 50%;
+          left: 45%;
           color: #ffffff;
         }
 

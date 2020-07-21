@@ -28,7 +28,7 @@ const FavoritePage = () => {
 
       
       {Favorites && Favorites.map((favoritea,index) => (
-        <Col key={index} lg={3}  md={6} sm={24} xs={24}>
+        <Col key={index} lg={3}  md={6} sm={12} xs={12}>
           <img src= {`https://image.tmdb.org/t/p/original/${favoritea.moviePost}`} style={{width:'100%'}}/>
         </Col>
       ))}

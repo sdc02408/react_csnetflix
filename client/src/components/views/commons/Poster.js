@@ -62,6 +62,7 @@ const Poster = (props) => {
           title={props.props.title}
           vote_average={props.props.vote_average}
           first_air_date={props.props.first_air_date}
+          release_date={props.props.release_date}
           overview={props.props.overview}
           id={props.props.id}
           name={props.props.name}

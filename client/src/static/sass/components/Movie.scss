@@ -68,7 +68,6 @@ display: none;}
         }
 
 
-
         .detailTitle {
           display: none;
         }
@@ -86,10 +85,10 @@ display: none;}
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          width:90%;
+          width: 90%;
         }
 
-        .voteStart{
+        .voteStart {
           display: none;
         }
 
@@ -98,10 +97,8 @@ display: none;}
           position: absolute;
           bottom: 23%;
           left: 7%;
-          width:8px;
-
+          width: 8px;
         }
-
 
 
         .detailVoteAverage {
@@ -118,14 +115,22 @@ display: none;}
           margin-bottom: 0;
         }
 
-
         .releaseDateText {
           display: none;
         }
 
         &:hover .releaseDateText {
-          display: none;
+          display: block;
+          font-size: 10px;
+          position: absolute;
+          bottom: 20%;
+          left: 19%;
+          color: #ffffff;
+          margin-bottom: 0;
 
+          @include responsive(phone) {
+            display: none;
+          }
         }
 
 
@@ -134,7 +139,26 @@ display: none;}
         }
 
         &:hover .releaseDate {
-         display: none;
+          display: block;
+          font-size: 10px;
+          position: absolute;
+          bottom: 20%;
+          left: 36%;
+          color: #ffffff;
+          margin-bottom: 0;
+
+
+          @include responsive(desktop) {
+            left: 40%!important;
+          }
+
+          @include responsive(tab) {
+            left: 35%!important;
+          }
+
+          @include responsive(phone) {
+            display: none;
+          }
         }
 
         .playBtn {
@@ -144,7 +168,7 @@ display: none;}
         &:hover .playBtn {
           display: block;
           position: absolute;
-          bottom: 57%;
+          bottom: 58%;
           left: 7%;
           color: #ffffff;
         }
@@ -157,7 +181,7 @@ display: none;}
           display: block;
           position: absolute;
           bottom: 10%;
-          left: 50%;
+          left: 45%;
           color: #ffffff;
         }
 

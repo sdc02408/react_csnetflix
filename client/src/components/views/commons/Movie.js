@@ -27,6 +27,7 @@ const Movie = (props) => {
         <p className="detailTitle">{props.props.name}{props.props.title}</p>
         <img src={Star} className="voteStart"/>
         <p className="detailVoteAverage">{props.props.vote_average}</p>
+       
         <p className="releaseDateText">개봉연도</p>
         {props.props.first_air_date &&
         <p className="releaseDate">{props.props.first_air_date.substr(0, 4)}</p>
