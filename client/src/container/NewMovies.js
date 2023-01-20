@@ -50,7 +50,7 @@ const NewMovies = (props) => {
   }, [])
   
   const newMovieData = useSelector(state => state.newmovie.newMovie, []) || []
-
+  console.log(newMovieData, "ressulsss")
   return (
     <div className="sliders" >
       <p style={{color:'#ffffff', fontSize:'1.7rem',position:'relative', top:'30px',fontWeight:"bold",marginBottom:'0'}}>상영중인 영화</p>
